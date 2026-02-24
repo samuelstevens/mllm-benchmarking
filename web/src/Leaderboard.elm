@@ -1,6 +1,7 @@
 module Leaderboard exposing (..)
 
 import Browser
+import Csv
 import Dict exposing (Dict)
 import Html exposing (Html)
 import Html.Attributes as HA
@@ -650,41 +651,36 @@ warningKey w =
             "not-numeric:" ++ String.fromInt r.line ++ ":" ++ r.modelId ++ ":" ++ r.taskId
 
 
+parseCsv : String -> String -> (Int -> List String -> Result Warning a) -> ( List a, List Warning )
+parseCsv fileName raw parseRow =
+    let
+        csv =
+            Csv.parse raw
+
+        results =
+            List.indexedMap (\i row -> parseRow (i + 2) (List.map String.trim row)) csv.records
+    in
+    ( List.filterMap Result.toMaybe results
+    , List.filterMap
+        (\r ->
+            case r of
+                Err w ->
+                    Just w
+
+                Ok _ ->
+                    Nothing
+        )
+        results
+    )
+
+
 parseModels : String -> ( List ValidModel, List Warning )
 parseModels raw =
-    let
-        lines =
-            String.lines raw |> List.filter (\l -> String.trim l /= "")
-    in
-    case lines of
-        [] ->
-            ( [], [ CsvParseError { file = "models.csv", line = 0, problem = "file is empty" } ] )
-
-        _ :: rest ->
-            let
-                results =
-                    List.indexedMap (\i line -> parseModelRow (i + 2) line) rest
-            in
-            ( List.filterMap Result.toMaybe results
-            , List.filterMap
-                (\r ->
-                    case r of
-                        Err w ->
-                            Just w
-
-                        Ok _ ->
-                            Nothing
-                )
-                results
-            )
+    parseCsv "models.csv" raw parseModelRow
 
 
-parseModelRow : Int -> String -> Result Warning ValidModel
-parseModelRow lineNum line =
-    let
-        cells =
-            splitCsvLine line
-    in
+parseModelRow : Int -> List String -> Result Warning ValidModel
+parseModelRow lineNum cells =
     case cells of
         [ id, name, paramsM, modalities, org, link ] ->
             Ok
@@ -708,39 +704,11 @@ parseModelRow lineNum line =
 
 parseTasks : String -> ( List ValidTask, List Warning )
 parseTasks raw =
-    let
-        lines =
-            String.lines raw |> List.filter (\l -> String.trim l /= "")
-    in
-    case lines of
-        [] ->
-            ( [], [ CsvParseError { file = "tasks.csv", line = 0, problem = "file is empty" } ] )
-
-        _ :: rest ->
-            let
-                results =
-                    List.indexedMap (\i line -> parseTaskRow (i + 2) line) rest
-            in
-            ( List.filterMap Result.toMaybe results
-            , List.filterMap
-                (\r ->
-                    case r of
-                        Err w ->
-                            Just w
-
-                        Ok _ ->
-                            Nothing
-                )
-                results
-            )
+    parseCsv "tasks.csv" raw parseTaskRow
 
 
-parseTaskRow : Int -> String -> Result Warning ValidTask
-parseTaskRow lineNum line =
-    let
-        cells =
-            splitCsvLine line
-    in
+parseTaskRow : Int -> List String -> Result Warning ValidTask
+parseTaskRow lineNum cells =
     case cells of
         [ id, name, metric, description, modality, nImages, meanOutputTokens, questionStyle, domain, capability, minScore, randomScore, maxScore, url ] ->
             Ok
@@ -772,39 +740,11 @@ parseTaskRow lineNum line =
 
 parseScores : String -> ( List ValidScore, List Warning )
 parseScores raw =
-    let
-        lines =
-            String.lines raw |> List.filter (\l -> String.trim l /= "")
-    in
-    case lines of
-        [] ->
-            ( [], [ CsvParseError { file = "scores.csv", line = 0, problem = "file is empty" } ] )
-
-        _ :: rest ->
-            let
-                results =
-                    List.indexedMap (\i line -> parseScoreRow (i + 2) line) rest
-            in
-            ( List.filterMap Result.toMaybe results
-            , List.filterMap
-                (\r ->
-                    case r of
-                        Err w ->
-                            Just w
-
-                        Ok _ ->
-                            Nothing
-                )
-                results
-            )
+    parseCsv "scores.csv" raw parseScoreRow
 
 
-parseScoreRow : Int -> String -> Result Warning ValidScore
-parseScoreRow lineNum line =
-    let
-        cells =
-            splitCsvLine line
-    in
+parseScoreRow : Int -> List String -> Result Warning ValidScore
+parseScoreRow lineNum cells =
     case cells of
         [ modelId, taskId, scoreStr, reportedBy, source, notes ] ->
             case String.toFloat scoreStr of
@@ -836,11 +776,6 @@ parseScoreRow lineNum line =
                     , problem = "expected 6 columns, got " ++ String.fromInt (List.length cells)
                     }
                 )
-
-
-splitCsvLine : String -> List String
-splitCsvLine line =
-    String.split "," line |> List.map String.trim
 
 
 
