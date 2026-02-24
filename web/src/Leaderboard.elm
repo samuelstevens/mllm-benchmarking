@@ -1182,8 +1182,8 @@ viewHeader model tasks =
                 [ HA.class "px-2 py-1 font-medium text-left cursor-pointer"
                 , Html.Events.onClick (Sort "model")
                 ]
-                [ Html.text "Model"
-                , sortIndicator model "model"
+                [ sortIndicator model "model"
+                , Html.text "Model"
                 ]
                 :: List.map (viewHeaderCell model) tasks
             )
@@ -1197,19 +1197,19 @@ viewHeaderCell model task =
         , Html.Events.onClick (Sort task.id)
         , HA.title (task.description ++ " (" ++ task.metric ++ ")")
         ]
-        [ if String.isEmpty task.url then
+        [ sortIndicator model task.id
+        , Html.text task.name
+        , if String.isEmpty task.url then
             Html.text ""
 
           else
             Html.a
                 [ HA.href task.url
                 , HA.target "_blank"
-                , HA.class "mr-0.5 text-xs text-blue-600 underline"
+                , HA.class "ml-0.5 text-xs text-blue-600 underline"
                 , Html.Events.stopPropagationOn "click" (Json.Decode.succeed ( NoOp, False ))
                 ]
                 [ Html.text "\u{2197}" ]
-        , Html.text task.name
-        , sortIndicator model task.id
         ]
 
 
@@ -1218,10 +1218,10 @@ sortIndicator model key =
     if model.sortKey == key then
         case model.sortOrder of
             Desc ->
-                Html.span [ HA.class "ml-1 text-xs" ] [ Html.text "▼" ]
+                Html.span [ HA.class "mr-1 text-xs" ] [ Html.text "▼" ]
 
             Asc ->
-                Html.span [ HA.class "ml-1 text-xs" ] [ Html.text "▲" ]
+                Html.span [ HA.class "mr-1 text-xs" ] [ Html.text "▲" ]
 
     else
         Html.text ""
