@@ -1,11 +1,11 @@
 task_id,name,metric,description,modality,n_images,mean_output_tokens,question_style,domain,capability,min_score,random_score,max_score,url
 vqav2, VQAv2,accuracy,Short visual question-answer pairs.,text+image,1,,open-ended,general,,0,0,100,https://openaccess.thecvf.com/content_cvpr_2017/papers/Goyal_Making_the_v_CVPR_2017_paper.pdf
 docvqa,
-chartqa
+chartqa,ChartQA,relaxed accuracy,"Short-answer questions about bar charts, line chart, pie charts, etc.",text+image,1,,short-answer,charts,perception+reasoning,0,100,0,https://arxiv.org/pdf/2203.10244
 realworldqa
 textvqa,TextVQA,accuracy,Short visual questions that require reading from an image,text+image,1,,open-ended,general,ocr,0,0,100,https://arxiv.org/abs/1904.08920
 ocrbench
-mme
+mme,MME,accuracy+accuracy\+,Shallow perception-based yes/no questions across a variety of capabilities,text+image,1,,binary,general,perception+cognition,0,1050,2800,https://arxiv.org/pdf/2306.13394
 blink,BLINK,accuracy,Multiple choice questions about images that can be solved "within a blink" by humans.,text+image,2,,mcq,general,perception,0,38.09,100,https://arxiv.org/pdf/2404.12390
 mmmu,MMMU,accuracy,Multiple choice interleaved visual question answering across six disciplines and 30 college subjects.,text+image,,,mcq,general,reasoning,0,22.1,100,https://mmmu-benchmark.github.io/
 infovqa,InfoVQA,accuracy,Infographic visual question answering,text+image,1,,open-ended,infographics,ocr,0,0,100,https://arxiv.org/pdf/2104.12756
