@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MLLM Benchmarking</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/dist/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="border-t-4 border-accent">
+  <header class="p-4">
+    <h1 class="text-4xl font-semibold">MLLM Benchmarking</h1>
+    <p class="mt-2 max-w-prose">
+      Leaderboard for multimodal large language model benchmarks.
+    </p>
+  </header>
+  <main>
+    <section class="p-4">
+      <h2 class="text-2xl font-bold mb-2">Leaderboard</h2>
+      <div id="leaderboard"></div>
+    </section>
+  </main>
+  <footer class="p-4 text-sm text-gray-500">
+    MIT-licensed
+  </footer>
+
+  <script src="assets/dist/leaderboard.min.js"></script>
+  <script>
+    Elm.Leaderboard.init({ node: document.getElementById("leaderboard") });
+  </script>
+</body>
+</html>

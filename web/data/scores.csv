@@ -1,0 +1,74 @@
+model_id,task_id,score,reported_by,url,notes
+isaac0.1,vqav2,82.12,Perceptron,https://github.com/perceptron-ai-inc/perceptron/blob/main/papers/isaac_01.pdf,
+isaac0.1,textvqa,79.39,Perceptron,https://github.com/perceptron-ai-inc/perceptron/blob/main/papers/isaac_01.pdf,
+isaac0.1,blink,42.6,Perceptron,https://github.com/perceptron-ai-inc/perceptron/blob/main/papers/isaac_01.pdf,
+isaac0.1,mmmu,39.7,Perceptron,https://github.com/perceptron-ai-inc/perceptron/blob/main/papers/isaac_01.pdf,
+isaac0.2-1b,vqav2,80.00,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,textvqa,76.60,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,blink,51.20,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,vqav2,80.80,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,textvqa,78.10,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,blink,55.00,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+lfm2-vl-450m,mmmu,34.44,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-450m,mathvista,45.30,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-450m,blink,42.61,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-450m,infovqa,44.56,Liquid AI,http://arxiv.org/abs/2511.23404,(val)
+lfm2-vl-1.6b,mmmu,39.67,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-1.6b,infovqa,58.35,Liquid AI,http://arxiv.org/abs/2511.23404,(val)
+lfm2-vl-1.6b,mathvista,51.70,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-1.6b,blink,44.50,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-3b,mmmu,45.33,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-3b,blink,51.03,Liquid AI,http://arxiv.org/abs/2511.23404,
+lfm2-vl-3b,infovqa,67.37,Liquid AI,http://arxiv.org/abs/2511.23404,(val)
+lfm2.5-vl-1.6b,mmmu,40.56,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai,
+lfm2.5-vl-1.6b,infovqa,62.71,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai,
+lfm2.5-vl-1.6b,blink,48.82,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai,
+qwen3.5-397b-a17b,mmmu-pro,79.0,Qwen,https://qwen.ai/blog?id=qwen3.5,
+qwen3.5-397b-a17b,mmmu,85.0,Qwen,https://qwen.ai/blog?id=qwen3.5,
+qwen3.5-397b-a17b,mathvista,90.3,Qwen,https://qwen.ai/blog?id=qwen3.5,(mini)
+qwen3-vl-2b,mmmu,53.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b-thinking,mmmu,61.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,mmmu,67.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,mmmu,70.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,mmmu,69.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,mmmu,74.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,mathvista,61.3,Qwen,https://arxiv.org/pdf/2511.21631,(mini)
+qwen3-vl-2b-thinking,mathvista,73.6,Qwen,https://arxiv.org/pdf/2511.21631,(mini)
+qwen3-vl-4b,mathvista,73.7,Qwen,https://arxiv.org/pdf/2511.21631,(mini)
+qwen3-vl-4b-thinking,mathvista,79.5,Qwen,https://arxiv.org/pdf/2511.21631,(mini)
+qwen3-vl-8b,mathvista,77.2,Qwen,https://arxiv.org/pdf/2511.21631,(mini)
+qwen3-vl-8b-thinking,mathvista,81.4,Qwen,https://arxiv.org/pdf/2511.21631,(mini)
+qwen3-vl-2b,docvqa,93.3,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-2b-thinking,docvqa,92.9,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-4b,docvqa,95.3,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-4b-thinking,docvqa,94.2,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b,docvqa,96.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b-thinking,docvqa,95.3,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-2b,infovqa,72.4,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-2b-thinking,infovqa,77.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-4b,infovqa,80.3,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-4b-thinking,infovqa,83.0,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b,infovqa,86.0,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b-thinking,infovqa,83.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-2b,blink,53.8,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-2b-thinking,blink,57.2,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-4b,blink,65.,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-4b-thinking,blink,63.4,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b,blink,69.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b-thinking,blink,64.7,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+molmo2-4b,chartqa,86.1,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-4b,docvqa,87.8,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-4b,infovqa,78.6,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-4b,textvqa,85.0,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-4b,vqav2,86.6,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-4b,mmmu,50.9,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-4b,mathvista,56.7,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-4b,blink,57.5,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,chartqa,86.0,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,docvqa,93.2,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,infovqa,80.1,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,textvqa,85.7,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,vqav2,87.0Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,mmmu,53.0Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,mathvista,58.9,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
+molmo2-8b,blink,50.5,Allen Institute for AI,http://arxiv.org/abs/2601.10611,

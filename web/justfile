@@ -1,0 +1,23 @@
+default: build
+
+# Compile Elm to JS
+build:
+    mkdir -p assets/dist
+    elm make src/Leaderboard.elm --optimize --output=assets/dist/leaderboard.min.js
+
+# Development: compile without optimization
+dev:
+    mkdir -p assets/dist
+    elm make src/Leaderboard.elm --output=assets/dist/leaderboard.min.js
+
+# Rebuild on file changes
+watch:
+    fd -e elm -e css -e html -e csv | entr -c just dev
+
+# Serve locally
+serve:
+    uv run python -m http.server 8000
+
+# Clean build artifacts
+clean:
+    rm -rf assets/dist elm-stuff
