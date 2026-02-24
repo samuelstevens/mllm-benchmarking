@@ -1185,6 +1185,14 @@ viewHeader model tasks =
                 [ sortIndicator model "model"
                 , Html.text "Model"
                 ]
+                :: Html.th
+                    [ HA.class "px-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
+                    , Html.Events.onClick (Sort "mean")
+                    , HA.title "Mean score across selected tasks (only tasks with a score)"
+                    ]
+                    [ sortIndicator model "mean"
+                    , Html.text "Mean"
+                    ]
                 :: List.map (viewHeaderCell model) tasks
             )
         ]
@@ -1241,6 +1249,14 @@ viewModelRow lb m =
               else
                 Html.a [ HA.href m.link, HA.class "underline", HA.target "_blank" ] [ Html.text m.name ]
             ]
+            :: Html.td [ HA.class "px-2 py-1 text-right font-mono font-medium" ]
+                [ case meanScore lb m.id of
+                    Just avg ->
+                        Html.text (Round.round 1 avg)
+
+                    Nothing ->
+                        Html.text "-"
+                ]
             :: List.map
                 (\task ->
                     let
@@ -1308,12 +1324,33 @@ scoreTooltip s =
 -- SORTING
 
 
+meanScore : Leaderboard -> String -> Maybe Float
+meanScore lb modelId =
+    let
+        scores =
+            lb.tasks
+                |> List.filterMap (\t -> getModelTaskScore lb modelId t.id)
+    in
+    case scores of
+        [] ->
+            Nothing
+
+        _ ->
+            Just (List.sum scores / toFloat (List.length scores))
+
+
 sortModels : String -> Order -> Leaderboard -> List ValidModel
 sortModels key order lb =
     let
         comparator =
             if key == "model" then
                 \a b -> compare a.name b.name
+
+            else if key == "mean" then
+                \a b ->
+                    compare
+                        (meanScore lb a.id |> Maybe.withDefault -1)
+                        (meanScore lb b.id |> Maybe.withDefault -1)
 
             else
                 \a b ->
