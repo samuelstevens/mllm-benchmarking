@@ -7,6 +7,7 @@ import Html exposing (Html)
 import Html.Attributes as HA
 import Html.Events
 import Http
+import Json.Decode
 import Round
 import Set exposing (Set)
 
@@ -211,6 +212,7 @@ type Msg
     | ToggleParamRange String
     | ToggleTask String
     | ToggleTasksByMetadata String String
+    | NoOp
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -323,6 +325,9 @@ update msg model =
 
                 _ ->
                     ( model, Cmd.none )
+
+        NoOp ->
+            ( model, Cmd.none )
 
 
 toggleSet : comparable -> Set comparable -> Set comparable
@@ -1192,11 +1197,18 @@ viewHeaderCell model task =
         , Html.Events.onClick (Sort task.id)
         , HA.title (task.description ++ " (" ++ task.metric ++ ")")
         ]
-        [ if String.isEmpty task.url then
-            Html.text task.name
+        [ Html.text task.name
+        , if String.isEmpty task.url then
+            Html.text ""
 
           else
-            Html.a [ HA.href task.url, HA.class "underline", HA.target "_blank" ] [ Html.text task.name ]
+            Html.a
+                [ HA.href task.url
+                , HA.target "_blank"
+                , HA.class "ml-0.5 text-xs text-gray-400 hover:text-gray-600"
+                , Html.Events.stopPropagationOn "click" (Json.Decode.succeed ( NoOp, False ))
+                ]
+                [ Html.text "\u{2197}" ]
         , sortIndicator model task.id
         ]
 
