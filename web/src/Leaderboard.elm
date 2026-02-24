@@ -94,12 +94,73 @@ type Order
     | Desc
 
 
+type Fieldset
+    = OrgsFieldset
+    | ParamRangesFieldset
+    | TasksFieldset
+    | ModalityFieldset
+    | QuestionStyleFieldset
+    | DomainFieldset
+    | CapabilityFieldset
+
+
+allParamRanges : List ( Int, Int )
+allParamRanges =
+    [ ( 0, 1000 )
+    , ( 1000, 3000 )
+    , ( 3000, 7000 )
+    , ( 7000, 13000 )
+    , ( 13000, 999999999 )
+    ]
+
+
+paramRangeToString : ( Int, Int ) -> String
+paramRangeToString ( low, high ) =
+    String.fromInt low ++ "-" ++ String.fromInt high
+
+
+paramRangeLabel : ( Int, Int ) -> String
+paramRangeLabel ( low, high ) =
+    if low == 0 then
+        "<1B"
+
+    else if high == 999999999 then
+        String.fromInt (low // 1000) ++ "B+"
+
+    else
+        String.fromInt (low // 1000) ++ "-" ++ String.fromInt (high // 1000) ++ "B"
+
+
+paramRangeMatch : Set String -> Maybe Float -> Bool
+paramRangeMatch selected paramsM =
+    case paramsM of
+        Nothing ->
+            Set.member "unknown" selected
+
+        Just p ->
+            List.any
+                (\( low, high ) ->
+                    p >= toFloat low && p < toFloat high && Set.member (paramRangeToString ( low, high )) selected
+                )
+                allParamRanges
+
+
 type alias Model =
     { loading : LoadState
     , sortKey : String
     , sortOrder : Order
     , warningsExpanded : Bool
     , hintsExpanded : Bool
+    , orgsOpen : Bool
+    , orgsSelected : Set String
+    , paramRangesOpen : Bool
+    , paramRangesSelected : Set String
+    , tasksOpen : Bool
+    , tasksSelected : Set String
+    , modalityOpen : Bool
+    , questionStyleOpen : Bool
+    , domainOpen : Bool
+    , capabilityOpen : Bool
     }
 
 
@@ -114,6 +175,16 @@ init () =
       , sortOrder = Asc
       , warningsExpanded = False
       , hintsExpanded = False
+      , orgsOpen = False
+      , orgsSelected = Set.empty
+      , paramRangesOpen = False
+      , paramRangesSelected = Set.empty
+      , tasksOpen = False
+      , tasksSelected = Set.empty
+      , modalityOpen = False
+      , questionStyleOpen = False
+      , domainOpen = False
+      , capabilityOpen = False
       }
     , Cmd.batch
         [ Http.get { url = "data/models.csv", expect = Http.expectString GotModels }
@@ -134,6 +205,11 @@ type Msg
     | Sort String
     | ToggleWarnings
     | ToggleHints
+    | ToggleFieldset Fieldset
+    | ToggleOrg String
+    | ToggleParamRange String
+    | ToggleTask String
+    | ToggleTasksByMetadata String String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -191,6 +267,90 @@ update msg model =
         ToggleHints ->
             ( { model | hintsExpanded = not model.hintsExpanded }, Cmd.none )
 
+        ToggleFieldset fieldset ->
+            case fieldset of
+                OrgsFieldset ->
+                    ( { model | orgsOpen = not model.orgsOpen }, Cmd.none )
+
+                ParamRangesFieldset ->
+                    ( { model | paramRangesOpen = not model.paramRangesOpen }, Cmd.none )
+
+                TasksFieldset ->
+                    ( { model | tasksOpen = not model.tasksOpen }, Cmd.none )
+
+                ModalityFieldset ->
+                    ( { model | modalityOpen = not model.modalityOpen }, Cmd.none )
+
+                QuestionStyleFieldset ->
+                    ( { model | questionStyleOpen = not model.questionStyleOpen }, Cmd.none )
+
+                DomainFieldset ->
+                    ( { model | domainOpen = not model.domainOpen }, Cmd.none )
+
+                CapabilityFieldset ->
+                    ( { model | capabilityOpen = not model.capabilityOpen }, Cmd.none )
+
+        ToggleOrg org ->
+            ( { model | orgsSelected = toggleSet org model.orgsSelected }, Cmd.none )
+
+        ToggleParamRange range ->
+            ( { model | paramRangesSelected = toggleSet range model.paramRangesSelected }, Cmd.none )
+
+        ToggleTask taskId ->
+            ( { model | tasksSelected = toggleSet taskId model.tasksSelected }, Cmd.none )
+
+        ToggleTasksByMetadata field value ->
+            case model.loading of
+                Ready lb _ _ ->
+                    let
+                        matchingTaskIds =
+                            lb.tasks
+                                |> List.filter (\t -> getTaskMetadataField field t == value)
+                                |> List.map .id
+
+                        allSelected =
+                            List.all (\id -> Set.member id model.tasksSelected) matchingTaskIds
+
+                        newSelected =
+                            if allSelected then
+                                List.foldl Set.remove model.tasksSelected matchingTaskIds
+
+                            else
+                                List.foldl Set.insert model.tasksSelected matchingTaskIds
+                    in
+                    ( { model | tasksSelected = newSelected }, Cmd.none )
+
+                _ ->
+                    ( model, Cmd.none )
+
+
+toggleSet : comparable -> Set comparable -> Set comparable
+toggleSet item set =
+    if Set.member item set then
+        Set.remove item set
+
+    else
+        Set.insert item set
+
+
+getTaskMetadataField : String -> ValidTask -> String
+getTaskMetadataField field task =
+    case field of
+        "modality" ->
+            task.modality
+
+        "questionStyle" ->
+            task.questionStyle
+
+        "domain" ->
+            task.domain
+
+        "capability" ->
+            task.capability
+
+        _ ->
+            ""
+
 
 tryFinalize : { models : Maybe String, tasks : Maybe String, scores : Maybe String } -> Model -> ( Model, Cmd Msg )
 tryFinalize state model =
@@ -199,8 +359,33 @@ tryFinalize state model =
             let
                 ( leaderboard, warnings, hints ) =
                     parseAndValidate m t s
+
+                orgs =
+                    Set.fromList (List.map .org leaderboard.models)
+
+                hasUnknownSize =
+                    List.any (\mdl -> mdl.paramsM == Nothing) leaderboard.models
+
+                ranges =
+                    List.map paramRangeToString allParamRanges
+                        ++ (if hasUnknownSize then
+                                [ "unknown" ]
+
+                            else
+                                []
+                           )
+
+                tasks =
+                    Set.fromList (List.map .id leaderboard.tasks)
             in
-            ( { model | loading = Ready leaderboard warnings hints }, Cmd.none )
+            ( { model
+                | loading = Ready leaderboard warnings hints
+                , orgsSelected = orgs
+                , paramRangesSelected = Set.fromList ranges
+                , tasksSelected = tasks
+              }
+            , Cmd.none
+            )
 
         _ ->
             ( { model | loading = Loading state }, Cmd.none )
@@ -809,17 +994,233 @@ hintToString h =
             "Score " ++ r.modelId ++ "/" ++ r.taskId ++ " is missing " ++ r.field
 
 
+viewCheckbox : Bool -> Msg -> String -> Html Msg
+viewCheckbox checked msg label =
+    Html.label [ HA.class "flex items-center gap-1.5 cursor-pointer select-none whitespace-nowrap" ]
+        [ Html.input
+            [ HA.type_ "checkbox"
+            , HA.checked checked
+            , Html.Events.onClick msg
+            , HA.class "cursor-pointer"
+            ]
+            []
+        , Html.text label
+        ]
+
+
+viewFieldset : String -> Bool -> Msg -> Int -> Int -> List (Html Msg) -> Html Msg
+viewFieldset title isOpen toggleMsg selected total children =
+    Html.div [ HA.class "inline-block" ]
+        [ Html.button
+            [ HA.class "px-3 py-1.5 text-sm border rounded cursor-pointer select-none hover:bg-gray-50 flex items-center gap-1"
+            , Html.Events.onClick toggleMsg
+            ]
+            [ Html.text
+                (title
+                    ++ " ("
+                    ++ String.fromInt selected
+                    ++ "/"
+                    ++ String.fromInt total
+                    ++ ") "
+                    ++ (if isOpen then
+                            "▲"
+
+                        else
+                            "▼"
+                       )
+                )
+            ]
+        , if isOpen then
+            Html.div [ HA.class "absolute z-10 mt-1 p-2 bg-white border rounded shadow-lg flex flex-col gap-1 text-sm max-h-64 overflow-y-auto" ]
+                children
+
+          else
+            Html.text ""
+        ]
+
+
+uniqueValues : (ValidTask -> String) -> List ValidTask -> List String
+uniqueValues accessor tasks =
+    tasks
+        |> List.map accessor
+        |> List.filter (\v -> not (String.isEmpty v))
+        |> Set.fromList
+        |> Set.toList
+        |> List.sort
+
+
+metadataAllSelected : String -> String -> List ValidTask -> Set String -> Bool
+metadataAllSelected field value tasks tasksSelected =
+    tasks
+        |> List.filter (\t -> getTaskMetadataField field t == value)
+        |> List.all (\t -> Set.member t.id tasksSelected)
+
+
+viewFilters : Model -> Leaderboard -> Html Msg
+viewFilters model lb =
+    let
+        allOrgs =
+            List.map .org lb.models |> Set.fromList |> Set.toList |> List.sort
+
+        hasUnknownSize =
+            List.any (\m -> m.paramsM == Nothing) lb.models
+
+        totalRanges =
+            List.length allParamRanges
+                + (if hasUnknownSize then
+                    1
+
+                   else
+                    0
+                  )
+
+        selectedRanges =
+            Set.size model.paramRangesSelected
+
+        modalities =
+            uniqueValues .modality lb.tasks
+
+        questionStyles =
+            uniqueValues .questionStyle lb.tasks
+
+        domains =
+            uniqueValues .domain lb.tasks
+
+        capabilities =
+            uniqueValues .capability lb.tasks
+    in
+    Html.div [ HA.class "mx-4 mb-3 flex flex-wrap gap-2 items-start" ]
+        [ viewFieldset "Orgs"
+            model.orgsOpen
+            (ToggleFieldset OrgsFieldset)
+            (Set.size model.orgsSelected)
+            (List.length allOrgs)
+            (List.map
+                (\org ->
+                    viewCheckbox (Set.member org model.orgsSelected) (ToggleOrg org) org
+                )
+                allOrgs
+            )
+        , viewFieldset "Size"
+            model.paramRangesOpen
+            (ToggleFieldset ParamRangesFieldset)
+            selectedRanges
+            totalRanges
+            (List.map
+                (\range ->
+                    viewCheckbox
+                        (Set.member (paramRangeToString range) model.paramRangesSelected)
+                        (ToggleParamRange (paramRangeToString range))
+                        (paramRangeLabel range)
+                )
+                allParamRanges
+                ++ (if hasUnknownSize then
+                        [ viewCheckbox
+                            (Set.member "unknown" model.paramRangesSelected)
+                            (ToggleParamRange "unknown")
+                            "Unknown"
+                        ]
+
+                    else
+                        []
+                   )
+            )
+        , viewFieldset "Tasks"
+            model.tasksOpen
+            (ToggleFieldset TasksFieldset)
+            (Set.size model.tasksSelected)
+            (List.length lb.tasks)
+            (List.map
+                (\task ->
+                    viewCheckbox (Set.member task.id model.tasksSelected) (ToggleTask task.id) task.name
+                )
+                lb.tasks
+            )
+        , viewFieldset "Style"
+            model.questionStyleOpen
+            (ToggleFieldset QuestionStyleFieldset)
+            (List.length (List.filter (\v -> metadataAllSelected "questionStyle" v lb.tasks model.tasksSelected) questionStyles))
+            (List.length questionStyles)
+            (List.map
+                (\v ->
+                    viewCheckbox
+                        (metadataAllSelected "questionStyle" v lb.tasks model.tasksSelected)
+                        (ToggleTasksByMetadata "questionStyle" v)
+                        v
+                )
+                questionStyles
+            )
+        , viewFieldset "Domain"
+            model.domainOpen
+            (ToggleFieldset DomainFieldset)
+            (List.length (List.filter (\v -> metadataAllSelected "domain" v lb.tasks model.tasksSelected) domains))
+            (List.length domains)
+            (List.map
+                (\v ->
+                    viewCheckbox
+                        (metadataAllSelected "domain" v lb.tasks model.tasksSelected)
+                        (ToggleTasksByMetadata "domain" v)
+                        v
+                )
+                domains
+            )
+        , viewFieldset "Modality"
+            model.modalityOpen
+            (ToggleFieldset ModalityFieldset)
+            (List.length (List.filter (\v -> metadataAllSelected "modality" v lb.tasks model.tasksSelected) modalities))
+            (List.length modalities)
+            (List.map
+                (\v ->
+                    viewCheckbox
+                        (metadataAllSelected "modality" v lb.tasks model.tasksSelected)
+                        (ToggleTasksByMetadata "modality" v)
+                        v
+                )
+                modalities
+            )
+        , viewFieldset "Capability"
+            model.capabilityOpen
+            (ToggleFieldset CapabilityFieldset)
+            (List.length (List.filter (\v -> metadataAllSelected "capability" v lb.tasks model.tasksSelected) capabilities))
+            (List.length capabilities)
+            (List.map
+                (\v ->
+                    viewCheckbox
+                        (metadataAllSelected "capability" v lb.tasks model.tasksSelected)
+                        (ToggleTasksByMetadata "capability" v)
+                        v
+                )
+                capabilities
+            )
+        ]
+
+
 viewLeaderboard : Model -> Leaderboard -> Html Msg
 viewLeaderboard model lb =
     let
+        filteredModels =
+            lb.models
+                |> List.filter (\m -> Set.member m.org model.orgsSelected)
+                |> List.filter (\m -> paramRangeMatch model.paramRangesSelected m.paramsM)
+
+        filteredTasks =
+            lb.tasks
+                |> List.filter (\t -> Set.member t.id model.tasksSelected)
+
+        filteredLb =
+            { lb | models = filteredModels, tasks = filteredTasks }
+
         sorted =
-            sortModels model.sortKey model.sortOrder lb
+            sortModels model.sortKey model.sortOrder filteredLb
     in
-    Html.div [ HA.class "overflow-x-auto" ]
-        [ Html.table [ HA.class "w-full md:text-sm" ]
-            [ viewHeader model lb.tasks
-            , Html.tbody [ HA.class "border-b" ]
-                (List.map (viewModelRow lb) sorted)
+    Html.div []
+        [ viewFilters model lb
+        , Html.div [ HA.class "overflow-x-auto" ]
+            [ Html.table [ HA.class "w-full text-sm" ]
+                [ viewHeader model filteredTasks
+                , Html.tbody [ HA.class "border-b" ]
+                    (List.map (viewModelRow filteredLb) sorted)
+                ]
             ]
         ]
 
