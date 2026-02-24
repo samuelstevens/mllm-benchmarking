@@ -1193,7 +1193,7 @@ viewHeader model tasks =
 viewHeaderCell : Model -> ValidTask -> Html Msg
 viewHeaderCell model task =
     Html.th
-        [ HA.class "px-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
+        [ HA.class "pl-0 pr-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
         , Html.Events.onClick (Sort task.id)
         , HA.title (task.description ++ " (" ++ task.metric ++ ")")
         ]
@@ -1250,16 +1250,33 @@ viewModelRow lb m =
                     Html.td [ HA.class "px-2 py-1 text-right font-mono" ]
                         [ case maybeScore of
                             Just s ->
+                                let
+                                    tooltip =
+                                        scoreTooltip s
+                                in
                                 if String.isEmpty s.source then
-                                    Html.text (Round.round 1 s.score)
+                                    Html.span
+                                        (if String.isEmpty tooltip then
+                                            []
+
+                                         else
+                                            [ HA.title tooltip ]
+                                        )
+                                        [ Html.text (Round.round 1 s.score) ]
 
                                 else
                                     Html.a
-                                        [ HA.href s.source
-                                        , HA.class "underline"
-                                        , HA.target "_blank"
-                                        , HA.title ("Source: " ++ s.reportedBy)
-                                        ]
+                                        ([ HA.href s.source
+                                         , HA.class "underline"
+                                         , HA.target "_blank"
+                                         ]
+                                            ++ (if String.isEmpty tooltip then
+                                                    []
+
+                                                else
+                                                    [ HA.title tooltip ]
+                                               )
+                                        )
                                         [ Html.text (Round.round 1 s.score) ]
 
                             Nothing ->
@@ -1268,6 +1285,23 @@ viewModelRow lb m =
                 )
                 lb.tasks
         )
+
+
+
+scoreTooltip : ValidScore -> String
+scoreTooltip s =
+    let
+        parts =
+            List.filter (\p -> not (String.isEmpty p))
+                [ s.notes
+                , if String.isEmpty s.reportedBy then
+                    ""
+
+                  else
+                    "Source: " ++ s.reportedBy
+                ]
+    in
+    String.join " | " parts
 
 
 
