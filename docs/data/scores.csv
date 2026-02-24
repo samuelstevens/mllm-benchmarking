@@ -62,9 +62,14 @@ lfm2.5-vl-1.6b,infovqa,62.71,Liquid AI,https://www.liquid.ai/blog/introducing-lf
 lfm2.5-vl-1.6b,ocrbenchv2,41.44,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai#vision-and-text-benchmark-results,(val)
 lfm2.5-vl-1.6b,rwqa,64.84,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai#vision-and-text-benchmark-results,
 lfm2.5-vl-1.6b,mmmu,40.56,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai#vision-and-text-benchmark-results,
-qwen3.5-397b-a17b,mmmu-pro,79.0,Qwen,https://qwen.ai/blog?id=qwen3.5,
-qwen3.5-397b-a17b,mmmu,85.0,Qwen,https://qwen.ai/blog?id=qwen3.5,
-qwen3.5-397b-a17b,mathvista,90.3,Qwen,https://qwen.ai/blog?id=qwen3.5,(mini)
+qwen3.5-397b-a17b,mmmu-pro,79.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,mmmu,85.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,mmstar,78.7,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,rwqa,81.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,simplevqa,61.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,mathvista,90.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,(mini)
+qwen3.5-397b-a17b,zerobench,4,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,ocrbench,87.5,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
 qwen3-vl-2b,mmmu,53.4,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-2b-thinking,mmmu,61.4,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-4b,mmmu,67.4,Qwen,https://arxiv.org/pdf/2511.21631,
@@ -89,12 +94,36 @@ qwen3-vl-4b,infovqa,80.3,Qwen,https://arxiv.org/pdf/2511.21631,(test)
 qwen3-vl-4b-thinking,infovqa,83.0,Qwen,https://arxiv.org/pdf/2511.21631,(test)
 qwen3-vl-8b,infovqa,86.0,Qwen,https://arxiv.org/pdf/2511.21631,(test)
 qwen3-vl-8b-thinking,infovqa,83.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-2b,blink,53.8,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-2b-thinking,blink,57.2,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-4b,blink,65.,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-4b-thinking,blink,63.4,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-8b,blink,69.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-8b-thinking,blink,64.7,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-2b,blink,53.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b-thinking,blink,57.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,blink,65.,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,blink,63.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,blink,69.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,blink,64.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,rwqa,63.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b-thinking,rwqa,69.5,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,rwqa,70.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,rwqa,73.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,rwqa,71.5,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,rwqa,73.5,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,mmstar,58.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b-thinking,mmstar,68.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,mmstar,69.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,mmstar,73.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,mmstar,70.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,mmstar,75.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,chartqa,79.1,Qwen,https://arxiv.org/pdf/2511.21631,Test split
+qwen3-vl-2b-thinking,chartqa,86.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
+qwen3-vl-4b,chartqa,84.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
+qwen3-vl-4b-thinking,chartqa,88.8,Qwen,https://arxiv.org/pdf/2511.21631,Test split
+qwen3-vl-8b,chartqa,89.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
+qwen3-vl-8b-thinking,chartqa,88.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
+qwen3-vl-2b,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b-thinking,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,zerobench,1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,zerobench,2,Qwen,https://arxiv.org/pdf/2511.21631,
 molmo2-4b,chartqa,86.1,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
 molmo2-4b,docvqa,87.8,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
 molmo2-4b,infovqa,78.6,Allen Institute for AI,http://arxiv.org/abs/2601.10611,
