@@ -1,13 +1,15 @@
 default: build
 
-# Compile Elm to JS
+# Compile Elm + Tailwind for local development
 build:
     mkdir -p assets/dist
-    elm make src/Leaderboard.elm --optimize --output=assets/dist/leaderboard.min.js
+    tailwindcss --input main.css --output assets/dist/main.css
+    elm make src/Leaderboard.elm --output=assets/dist/leaderboard.min.js
 
-# Development: compile without optimization
+# Development: compile without Elm optimization
 dev:
     mkdir -p assets/dist
+    tailwindcss --input main.css --output assets/dist/main.css
     elm make src/Leaderboard.elm --output=assets/dist/leaderboard.min.js
 
 # Rebuild on file changes
@@ -18,6 +20,18 @@ watch:
 serve:
     uv run python -m http.server 8000
 
+# Build optimized output into docs/ for GitHub Pages
+deploy: build
+    rm -rf ../docs
+    mkdir -p ../docs/assets/dist ../docs/data
+    cp index.html ../docs/
+    cp assets/dist/main.css ../docs/assets/dist/
+    elm make src/Leaderboard.elm --optimize --output=../docs/assets/dist/leaderboard.js
+    bunx --bun uglify-js ../docs/assets/dist/leaderboard.js --compress 'pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe' | bunx --bun uglify-js --mangle --output ../docs/assets/dist/leaderboard.min.js
+    rm ../docs/assets/dist/leaderboard.js
+    cp data/*.csv ../docs/data/
+    touch ../docs/.nojekyll
+
 # Clean build artifacts
 clean:
-    rm -rf assets/dist elm-stuff
+    rm -rf assets/dist elm-stuff ../docs
