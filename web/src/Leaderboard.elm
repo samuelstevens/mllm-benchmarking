@@ -1179,7 +1179,7 @@ viewHeader model tasks =
     Html.thead [ HA.class "border-t border-b" ]
         [ Html.tr []
             (Html.th
-                [ HA.class "px-2 py-1 font-medium text-left cursor-pointer"
+                [ HA.class "px-2 py-1 font-medium text-left cursor-pointer hover:bg-gray-100 transition-colors"
                 , Html.Events.onClick (Sort "model")
                 ]
                 [ sortIndicator model "model"
@@ -1193,7 +1193,7 @@ viewHeader model tasks =
 viewHeaderCell : Model -> ValidTask -> Html Msg
 viewHeaderCell model task =
     Html.th
-        [ HA.class "px-2 py-1 font-medium text-right cursor-pointer"
+        [ HA.class "px-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
         , Html.Events.onClick (Sort task.id)
         , HA.title (task.description ++ " (" ++ task.metric ++ ")")
         ]
@@ -1206,7 +1206,7 @@ viewHeaderCell model task =
             Html.a
                 [ HA.href task.url
                 , HA.target "_blank"
-                , HA.class "ml-0.5 text-xs text-blue-600 underline"
+                , HA.class "ml-1 text-blue-600 underline"
                 , Html.Events.stopPropagationOn "click" (Json.Decode.succeed ( NoOp, False ))
                 ]
                 [ Html.text "\u{2197}" ]
