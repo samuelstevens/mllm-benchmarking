@@ -1,20 +1,20 @@
 task_id,name,metric,description,modality,n_images,mean_output_tokens,question_style,domain,capability,min_score,random_score,max_score,url
-vqav2, VQAv2,accuracy,Short visual question-answer pairs.,text+image,1,,open-ended,general,,0,0,100,https://openaccess.thecvf.com/content_cvpr_2017/papers/Goyal_Making_the_v_CVPR_2017_paper.pdf
+vqav2, VQAv2,accuracy,Short visual question-answer pairs.,text & image,1,,open-ended,general,,0,0,100,https://openaccess.thecvf.com/content_cvpr_2017/papers/Goyal_Making_the_v_CVPR_2017_paper.pdf
 docvqa,
-chartqa,ChartQA,relaxed accuracy,"Short-answer questions about bar charts, line chart, pie charts, etc.",text+image,1,,short answer,charts,perception+reasoning,0,100,0,https://arxiv.org/pdf/2203.10244
-textvqa,TextVQA,accuracy,Short visual questions that require reading from an image,text+image,1,,open-ended,general,ocr,0,0,100,https://arxiv.org/abs/1904.08920
+chartqa,ChartQA,relaxed accuracy,"Short-answer questions about bar charts, line chart, pie charts, etc.",text & image,1,,short answer,charts,perception+reasoning,0,100,0,https://arxiv.org/pdf/2203.10244
+textvqa,TextVQA,accuracy,Short visual questions that require reading from an image,text & image,1,,open-ended,general,ocr,0,0,100,https://arxiv.org/abs/1904.08920
 ocrbench
-mme,MME,accuracy+accuracy\+,Shallow perception-based yes/no questions across a variety of capabilities,text+image,1,,yes/no,general,perception+cognition,0,1050,2800,https://arxiv.org/pdf/2306.13394
-blink,BLINK,accuracy,Multiple choice questions about images that can be solved "within a blink" by humans.,text+image,2,,mcq,general,perception,0,38.09,100,https://arxiv.org/pdf/2404.12390
-mmmu,MMMU,accuracy,Multiple choice interleaved visual question answering across six disciplines and 30 college subjects.,text+image,,,mcq,general,reasoning,0,22.1,100,https://mmmu-benchmark.github.io/
-infovqa,InfoVQA,accuracy,Infographic visual question answering,text+image,1,,open-ended,infographics,ocr,0,0,100,https://arxiv.org/pdf/2104.12756
-zerobench,ZeroBench,accuracy,100 very challenging VQA tasks,text+image,1,,short answer,general,reasoning,0,0,100,https://zerobench.github.io/
+mme,MME,accuracy & accuracy+,Shallow perception-based yes/no questions across a variety of capabilities,text & image,1,,yes/no,general,perception+cognition,0,1050,2800,https://arxiv.org/pdf/2306.13394
+blink,BLINK,accuracy,Multiple choice questions about images that can be solved "within a blink" by humans.,text & image,2,,mcq,general,perception,0,38.09,100,https://arxiv.org/pdf/2404.12390
+mmmu,MMMU,accuracy,Multiple choice interleaved visual question answering across six disciplines and 30 college subjects.,text & image,,,mcq,general,reasoning,0,22.1,100,https://mmmu-benchmark.github.io/
+infovqa,InfoVQA,accuracy,Infographic visual question answering,text & image,1,,open-ended,infographics,ocr,0,0,100,https://arxiv.org/pdf/2104.12756
+zerobench,ZeroBench,accuracy,100 very challenging VQA tasks,text & image,1,,short answer,general,reasoning,0,0,100,https://zerobench.github.io/
 mathvista
 simplevqa
 mmbench,MMBench
 seedbench,SEEDBench,
-pope,POPE,f1,,text+image,1,,yes/no,general,visual hallucination,0,50,100,https://arxiv.org/abs/2305.10355
-mmstar,MMStar,accuracy,Multiple choice VQA where the image is required to answer the question,text+image,1,,mcq,,perception+reasoning,0,25,100,https://mmstar-benchmark.github.io/
-rwqa,RealWorldQA,accuracy,,text+image,1,,mcq,general,reasoning,0,37.7,100,https://huggingface.co/blog/KennyUTC/realworldqa
+pope,POPE,f1,,text & image,1,,yes/no,general,visual hallucination,0,50,100,https://arxiv.org/abs/2305.10355
+mmstar,MMStar,accuracy,Multiple choice VQA where the image is required to answer the question,text & image,1,,mcq,,perception+reasoning,0,25,100,https://mmstar-benchmark.github.io/
+rwqa,RealWorldQA,accuracy,,text & image,1,,mcq,general,reasoning,0,37.7,100,https://huggingface.co/blog/KennyUTC/realworldqa
 mmmb,MMMB,
 mm-ifeval,MM-IFEval,

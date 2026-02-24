@@ -306,7 +306,7 @@ update msg model =
                     let
                         matchingTaskIds =
                             lb.tasks
-                                |> List.filter (\t -> getTaskMetadataField field t == value)
+                                |> List.filter (\t -> List.member value (getTaskMetadataValues field t))
                                 |> List.map .id
 
                         allSelected =
@@ -351,6 +351,14 @@ getTaskMetadataField field task =
 
         _ ->
             ""
+
+
+getTaskMetadataValues : String -> ValidTask -> List String
+getTaskMetadataValues field task =
+    getTaskMetadataField field task
+        |> String.split "+"
+        |> List.map String.trim
+        |> List.filter (\v -> not (String.isEmpty v))
 
 
 tryFinalize : { models : Maybe String, tasks : Maybe String, scores : Maybe String } -> Model -> ( Model, Cmd Msg )
@@ -977,7 +985,8 @@ viewFieldset title isOpen toggleMsg selected total children =
 uniqueValues : (ValidTask -> String) -> List ValidTask -> List String
 uniqueValues accessor tasks =
     tasks
-        |> List.map accessor
+        |> List.concatMap (\t -> String.split "+" (accessor t))
+        |> List.map String.trim
         |> List.filter (\v -> not (String.isEmpty v))
         |> Set.fromList
         |> Set.toList
@@ -987,7 +996,7 @@ uniqueValues accessor tasks =
 metadataAllSelected : String -> String -> List ValidTask -> Set String -> Bool
 metadataAllSelected field value tasks tasksSelected =
     tasks
-        |> List.filter (\t -> getTaskMetadataField field t == value)
+        |> List.filter (\t -> List.member value (getTaskMetadataValues field t))
         |> List.all (\t -> Set.member t.id tasksSelected)
 
 
