@@ -1331,12 +1331,11 @@ meanScore lb modelId =
             lb.tasks
                 |> List.filterMap (\t -> getModelTaskScore lb modelId t.id)
     in
-    case scores of
-        [] ->
-            Nothing
+    if List.length scores == List.length lb.tasks && not (List.isEmpty scores) then
+        Just (List.sum scores / toFloat (List.length scores))
 
-        _ ->
-            Just (List.sum scores / toFloat (List.length scores))
+    else
+        Nothing
 
 
 sortModels : String -> Order -> Leaderboard -> List ValidModel
