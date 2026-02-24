@@ -1205,7 +1205,7 @@ viewHeaderCell model task =
             Html.a
                 [ HA.href task.url
                 , HA.target "_blank"
-                , HA.class "ml-0.5 text-xs text-gray-400 hover:text-gray-600"
+                , HA.class "ml-0.5 text-xs text-blue-600 underline"
                 , Html.Events.stopPropagationOn "click" (Json.Decode.succeed ( NoOp, False ))
                 ]
                 [ Html.text "\u{2197}" ]
