@@ -13,6 +13,13 @@ qwen3-vl-4b-thinking,Qwen3-VL-4B (Thinking),4438,text+image,Qwen,https://arxiv.o
 qwen3-vl-8b,Qwen3-VL-8B,8767,text+image,Qwen,https://arxiv.org/pdf/2511.21631
 qwen3-vl-8b-thinking,Qwen3-VL-8B (Thinking),8767,text+image,Qwen,https://arxiv.org/pdf/2511.21631
 qwen3.5-397b-a17b,Qwen3.5-397B-A17B,,text+image,Qwen,https://qwen.ai/blog?id=qwen3.5
+qwen3.5-122b-a10b,Qwen3.5-122B-A10B,,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B
+qwen3.5-35b-a3b,Qwen3.5-35B-A3B,,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B
+qwen3.5-27b,Qwen3.5-27B,,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B
 molmo2-4b,Molmo2-4B,4851,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
 molmo2-8b,Molmo2-8B,8662,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
-moondream3-preview,Moondream3 (Preview),,text+image,Moondream,https://huggingface.co/moondream/moondream3-preview
+moondream3-preview,Moondream3 (Preview),18537,text+image,Moondream,https://huggingface.co/moondream/moondream3-preview
+gemma3-4b,Gemma3-4B,4300,text+image,Google,https://huggingface.co/google/gemma-3-4b-it
+gemma3-12b,Gemma3-12B,12187,text+image,Google,https://huggingface.co/google/gemma-3-12b-it
+gemma3-27b,Gemma3-27B,27432,text+image,Google,https://huggingface.co/google/gemma-3-27b-it
+step3-vl-10b,Step3-VL-10B,10172,text+image,StepFun,https://arxiv.org/pdf/2601.09668
