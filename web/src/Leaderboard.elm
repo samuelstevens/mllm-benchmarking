@@ -173,7 +173,7 @@ type alias Model =
 init : () -> ( Model, Cmd Msg )
 init () =
     ( { loading = Loading { models = Nothing, tasks = Nothing, scores = Nothing }
-      , sortKey = "model"
+      , sortKey = "params"
       , sortOrder = Asc
       , warningsExpanded = False
       , hintsExpanded = False
