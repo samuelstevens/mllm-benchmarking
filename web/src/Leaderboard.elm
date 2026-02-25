@@ -66,7 +66,8 @@ type alias ValidScore =
 type alias Leaderboard =
     { models : List ValidModel
     , tasks : List ValidTask
-    , scoresByModel : Dict String (Dict String ValidScore)
+    , scoresByModel : Dict String (Dict String (List ValidScore))
+    , orgColors : Dict String String
     }
 
 
@@ -77,6 +78,8 @@ type Warning
     | TaskHasNoScores { taskId : String, taskName : String }
     | CsvParseError { file : String, line : Int, problem : String }
     | ScoreNotNumeric { line : Int, modelId : String, taskId : String, raw : String }
+    | ModelMissingProviderScore { modelId : String, modelName : String, taskId : String, taskName : String }
+    | DuplicateProviderScore { modelId : String, taskId : String }
 
 
 type Hint
@@ -163,6 +166,7 @@ type alias Model =
     , questionStyleOpen : Bool
     , domainOpen : Bool
     , capabilityOpen : Bool
+    , hoveredCell : Maybe ( String, String )
     }
 
 
@@ -174,7 +178,7 @@ init : () -> ( Model, Cmd Msg )
 init () =
     ( { loading = Loading { models = Nothing, tasks = Nothing, scores = Nothing }
       , sortKey = "params"
-      , sortOrder = Asc
+      , sortOrder = Desc
       , warningsExpanded = False
       , hintsExpanded = False
       , orgsOpen = False
@@ -187,6 +191,7 @@ init () =
       , questionStyleOpen = False
       , domainOpen = False
       , capabilityOpen = False
+      , hoveredCell = Nothing
       }
     , Cmd.batch
         [ Http.get { url = "data/models.csv", expect = Http.expectString GotModels }
@@ -212,6 +217,7 @@ type Msg
     | ToggleParamRange String
     | ToggleTask String
     | ToggleTasksByMetadata String String
+    | HoverCell (Maybe ( String, String ))
     | NoOp
 
 
@@ -326,6 +332,9 @@ update msg model =
                 _ ->
                     ( model, Cmd.none )
 
+        HoverCell cell ->
+            ( { model | hoveredCell = cell }, Cmd.none )
+
         NoOp ->
             ( model, Cmd.none )
 
@@ -364,6 +373,37 @@ getTaskMetadataValues field task =
         |> String.split "+"
         |> List.map String.trim
         |> List.filter (\v -> not (String.isEmpty v))
+
+
+orgPalette : List String
+orgPalette =
+    [ "bg-blue-500"
+    , "bg-emerald-500"
+    , "bg-violet-500"
+    , "bg-amber-500"
+    , "bg-rose-500"
+    , "bg-cyan-500"
+    , "bg-orange-500"
+    , "bg-pink-500"
+    , "bg-teal-500"
+    , "bg-indigo-500"
+    ]
+
+
+providerScore : List ValidScore -> String -> Maybe ValidScore
+providerScore scores org =
+    scores
+        |> List.filter (\s -> String.toLower (String.trim s.reportedBy) == String.toLower (String.trim org))
+        |> List.head
+
+
+getModelOrg : Leaderboard -> String -> String
+getModelOrg lb modelId =
+    lb.models
+        |> List.filter (\m -> m.id == modelId)
+        |> List.head
+        |> Maybe.map .org
+        |> Maybe.withDefault ""
 
 
 tryFinalize : { models : Maybe String, tasks : Maybe String, scores : Maybe String } -> Model -> ( Model, Cmd Msg )
@@ -514,18 +554,107 @@ parseAndValidate rawModels rawTasks rawScores =
                             Just (TaskHasNoScores { taskId = t.id, taskName = t.name })
                     )
 
-        -- Build nested dict: model_id -> (task_id -> score)
+        -- Build nested dict: model_id -> (task_id -> [scores])
         scoresByModel =
             List.foldl
                 (\s acc ->
                     let
                         inner =
                             Dict.get s.modelId acc |> Maybe.withDefault Dict.empty
+
+                        existing =
+                            Dict.get s.taskId inner |> Maybe.withDefault []
                     in
-                    Dict.insert s.modelId (Dict.insert s.taskId s inner) acc
+                    Dict.insert s.modelId (Dict.insert s.taskId (existing ++ [ s ]) inner) acc
                 )
                 Dict.empty
                 validScores
+
+        -- Build org color map from first appearance order in scores
+        orgColors =
+            let
+                uniqueOrgs =
+                    List.foldl
+                        (\s ( seen, acc ) ->
+                            let
+                                rb =
+                                    String.trim s.reportedBy
+                            in
+                            if String.isEmpty rb || Set.member rb seen then
+                                ( seen, acc )
+
+                            else
+                                ( Set.insert rb seen, acc ++ [ rb ] )
+                        )
+                        ( Set.empty, [] )
+                        validScores
+                        |> Tuple.second
+
+                paletteLen =
+                    List.length orgPalette
+            in
+            List.indexedMap
+                (\i org ->
+                    ( org
+                    , List.drop (modBy paletteLen i) orgPalette
+                        |> List.head
+                        |> Maybe.withDefault "bg-gray-400"
+                    )
+                )
+                uniqueOrgs
+                |> Dict.fromList
+
+        -- Provider score validation
+        modelOrgDict =
+            Dict.fromList (List.map (\m -> ( m.id, m.org )) models)
+
+        modelNameDict =
+            Dict.fromList (List.map (\m -> ( m.id, m.name )) models)
+
+        taskNameDict =
+            Dict.fromList (List.map (\t -> ( t.id, t.name )) tasks)
+
+        providerWarnings =
+            Dict.toList scoresByModel
+                |> List.concatMap
+                    (\( modelId, taskScores ) ->
+                        let
+                            org =
+                                Dict.get modelId modelOrgDict |> Maybe.withDefault ""
+
+                            modelName =
+                                Dict.get modelId modelNameDict |> Maybe.withDefault modelId
+                        in
+                        Dict.toList taskScores
+                            |> List.concatMap
+                                (\( taskId, scoreList ) ->
+                                    let
+                                        taskName =
+                                            Dict.get taskId taskNameDict |> Maybe.withDefault taskId
+
+                                        providerMatches =
+                                            List.filter
+                                                (\s ->
+                                                    String.toLower (String.trim s.reportedBy)
+                                                        == String.toLower (String.trim org)
+                                                )
+                                                scoreList
+                                    in
+                                    (if List.length scoreList > 1 && List.isEmpty providerMatches && not (String.isEmpty org) then
+                                        [ ModelMissingProviderScore { modelId = modelId, modelName = modelName, taskId = taskId, taskName = taskName } ]
+
+                                     else
+                                        []
+                                    )
+                                        ++ (if List.length providerMatches > 1 then
+                                                [ DuplicateProviderScore { modelId = modelId, taskId = taskId } ]
+
+                                            else
+                                                []
+                                           )
+                                )
+                    )
+                |> dedup warningKey
 
         allWarnings =
             modelWarnings
@@ -535,6 +664,7 @@ parseAndValidate rawModels rawTasks rawScores =
                 ++ danglingTaskWarnings
                 ++ noScoreModelWarnings
                 ++ noScoreTaskWarnings
+                ++ providerWarnings
 
         -- Hints: missing/empty optional fields
         modelHints =
@@ -549,7 +679,7 @@ parseAndValidate rawModels rawTasks rawScores =
         allHints =
             modelHints ++ taskHints ++ scoreHints
     in
-    ( { models = models, tasks = tasks, scoresByModel = scoresByModel }
+    ( { models = models, tasks = tasks, scoresByModel = scoresByModel, orgColors = orgColors }
     , allWarnings
     , allHints
     )
@@ -662,6 +792,12 @@ warningKey w =
 
         ScoreNotNumeric r ->
             "not-numeric:" ++ String.fromInt r.line ++ ":" ++ r.modelId ++ ":" ++ r.taskId
+
+        ModelMissingProviderScore r ->
+            "missing-provider:" ++ r.modelId ++ ":" ++ r.taskId
+
+        DuplicateProviderScore r ->
+            "dup-provider:" ++ r.modelId ++ ":" ++ r.taskId
 
 
 parseCsv : String -> String -> (Int -> List String -> Result Warning a) -> ( List a, List Warning )
@@ -885,6 +1021,12 @@ warningToString w =
                 ++ "/"
                 ++ r.taskId
                 ++ " is not a number"
+
+        ModelMissingProviderScore r ->
+            "No provider score for \"" ++ r.modelName ++ "\" on task \"" ++ r.taskName ++ "\" (reported_by doesn't match org)"
+
+        DuplicateProviderScore r ->
+            "Duplicate provider score for " ++ r.modelId ++ " on " ++ r.taskId ++ " (using first)"
 
 
 viewHints : Bool -> List Hint -> Html Msg
@@ -1168,7 +1310,7 @@ viewLeaderboard model lb =
             [ Html.table [ HA.class "w-full text-sm" ]
                 [ viewHeader model filteredTasks
                 , Html.tbody [ HA.class "border-b" ]
-                    (List.map (viewModelRow filteredLb) sorted)
+                    (List.map (viewModelRow model filteredLb) sorted)
                 ]
             ]
         ]
@@ -1242,19 +1384,37 @@ sortIndicator model key =
         Html.text ""
 
 
-viewModelRow : Leaderboard -> ValidModel -> Html Msg
-viewModelRow lb m =
+viewModelRow : Model -> Leaderboard -> ValidModel -> Html Msg
+viewModelRow appModel lb m =
     let
         modelScores =
             Dict.get m.id lb.scoresByModel |> Maybe.withDefault Dict.empty
     in
     Html.tr [ HA.class "hover:bg-gray-100 transition-colors" ]
-        (Html.td [ HA.class "px-2 py-1 text-left" ]
-            [ if String.isEmpty m.link then
-                Html.text m.name
+        (let
+            orgColorClass =
+                if String.isEmpty (String.trim m.org) then
+                    "bg-gray-400"
 
-              else
-                Html.a [ HA.href m.link, HA.class "underline", HA.target "_blank" ] [ Html.text m.name ]
+                else
+                    Dict.get (String.trim m.org) lb.orgColors
+                        |> Maybe.withDefault "bg-gray-400"
+
+            orgDot =
+                Html.span
+                    [ HA.class ("inline-block w-2 h-2 rounded-full mr-1.5 flex-shrink-0 " ++ orgColorClass) ]
+                    []
+
+            nameEl =
+                if String.isEmpty m.link then
+                    Html.text m.name
+
+                else
+                    Html.a [ HA.href m.link, HA.class "underline", HA.target "_blank" ] [ Html.text m.name ]
+         in
+         Html.td [ HA.class "px-2 py-1 text-left" ]
+            [ Html.span [ HA.class "flex items-center" ]
+                [ orgDot, nameEl ]
             ]
             :: Html.td [ HA.class "px-2 py-1 text-right font-mono text-gray-500" ]
                 [ Html.text (formatParams m.paramsM) ]
@@ -1269,48 +1429,277 @@ viewModelRow lb m =
             :: List.map
                 (\task ->
                     let
-                        maybeScore =
-                            Dict.get task.id modelScores
+                        scoreList =
+                            Dict.get task.id modelScores |> Maybe.withDefault []
+
+                        displayScore =
+                            case providerScore scoreList m.org of
+                                Just ps ->
+                                    Just ps
+
+                                Nothing ->
+                                    -- No provider match: use highest score
+                                    scoreList
+                                        |> List.sortBy (\s -> negate s.score)
+                                        |> List.head
                     in
-                    Html.td [ HA.class "px-2 py-1 text-right font-mono" ]
-                        [ case maybeScore of
-                            Just s ->
-                                let
-                                    tooltip =
-                                        scoreTooltip s
-                                in
-                                if String.isEmpty s.source then
-                                    Html.span
-                                        (if String.isEmpty tooltip then
-                                            []
-
-                                         else
-                                            [ HA.title tooltip ]
-                                        )
-                                        [ Html.text (Round.round 1 s.score) ]
-
-                                else
-                                    Html.a
-                                        ([ HA.href s.source
-                                         , HA.class "underline"
-                                         , HA.target "_blank"
-                                         ]
-                                            ++ (if String.isEmpty tooltip then
-                                                    []
-
-                                                else
-                                                    [ HA.title tooltip ]
-                                               )
-                                        )
-                                        [ Html.text (Round.round 1 s.score) ]
-
-                            Nothing ->
-                                Html.text "-"
-                        ]
+                    viewScoreCell appModel lb task m scoreList displayScore
                 )
                 lb.tasks
         )
 
+
+viewScoreCell : Model -> Leaderboard -> ValidTask -> ValidModel -> List ValidScore -> Maybe ValidScore -> Html Msg
+viewScoreCell appModel lb task m scoreList displayScore =
+    let
+        hasMultiple =
+            List.length scoreList >= 2
+
+        hasDisagreement =
+            if not hasMultiple then
+                False
+
+            else
+                let
+                    allScores =
+                        List.map .score scoreList
+
+                    minVal =
+                        List.minimum allScores |> Maybe.withDefault 0
+
+                    maxVal =
+                        List.maximum allScores |> Maybe.withDefault 0
+
+                    spread =
+                        maxVal - minVal
+
+                    threshold =
+                        case ( task.minScore, task.maxScore ) of
+                            ( Just tMin, Just tMax ) ->
+                                0.02 * (tMax - tMin)
+
+                            _ ->
+                                0
+                in
+                spread > threshold
+
+        cellClass =
+            "px-2 py-1 text-right font-mono"
+                ++ (if hasDisagreement then
+                        " bg-amber-50"
+
+                    else
+                        ""
+                   )
+                ++ (if hasMultiple then
+                        " relative cursor-help"
+
+                    else
+                        ""
+                   )
+
+        hoverAttrs =
+            if hasMultiple then
+                [ Html.Events.onMouseEnter (HoverCell (Just ( m.id, task.id )))
+                , Html.Events.onMouseLeave (HoverCell Nothing)
+                ]
+
+            else
+                []
+
+        isHovered =
+            appModel.hoveredCell == Just ( m.id, task.id )
+    in
+    Html.td (HA.class cellClass :: hoverAttrs)
+        ([ case displayScore of
+            Just s ->
+                Html.div [ HA.class "flex items-center justify-end gap-1" ]
+                    [ if hasMultiple then
+                        viewDotGrid lb.orgColors scoreList
+
+                      else
+                        Html.text ""
+                    , Html.span []
+                        [ Html.text (Round.round 1 s.score) ]
+                    ]
+
+            Nothing ->
+                Html.text "-"
+         ]
+            ++ (if isHovered then
+                    [ viewScoreTooltip lb.orgColors m.org ( m.id, task.id ) scoreList ]
+
+                else
+                    []
+               )
+        )
+
+
+viewDotGrid : Dict String String -> List ValidScore -> Html Msg
+viewDotGrid orgColors scores =
+    let
+        dots =
+            scores
+                |> List.sortBy (\s -> negate s.score)
+                |> List.map
+                (\s ->
+                    let
+                        colorClass =
+                            if String.isEmpty (String.trim s.reportedBy) then
+                                "bg-gray-400"
+
+                            else
+                                Dict.get (String.trim s.reportedBy) orgColors
+                                    |> Maybe.withDefault "bg-gray-400"
+                    in
+                    Html.span
+                        [ HA.class ("inline-block w-2 h-2 rounded-full " ++ colorClass)
+                        , HA.title (String.trim s.reportedBy ++ ": " ++ Round.round 1 s.score)
+                        ]
+                        []
+                )
+
+        -- Arrange in columns of up to 3
+        col1 =
+            List.take 3 dots
+
+        col2 =
+            List.drop 3 dots |> List.take 3
+    in
+    Html.div [ HA.class "inline-flex gap-0.5" ]
+        (Html.div [ HA.class "flex flex-col gap-0.5" ] col1
+            :: (if List.isEmpty col2 then
+                    []
+
+                else
+                    [ Html.div [ HA.class "flex flex-col gap-0.5" ] col2 ]
+               )
+        )
+
+
+
+viewScoreTooltip : Dict String String -> String -> ( String, String ) -> List ValidScore -> Html Msg
+viewScoreTooltip orgColors modelOrg cell scoreList =
+    let
+        sorted =
+            List.sortBy (\s -> negate s.score) scoreList
+
+        maybeProviderVal =
+            providerScore scoreList modelOrg
+                |> Maybe.map .score
+    in
+    Html.div
+        [ HA.class "absolute z-10 bg-white border border-gray-300 rounded shadow-lg p-2 text-sm whitespace-nowrap"
+        , HA.style "bottom" "100%"
+        , HA.style "right" "0"
+        , HA.style "padding-bottom" "8px"
+        , HA.style "margin-bottom" "-4px"
+        , Html.Events.onMouseEnter (HoverCell (Just cell))
+        , Html.Events.onMouseLeave (HoverCell Nothing)
+        ]
+        [ Html.table [ HA.class "text-left" ]
+            [ Html.thead []
+                [ Html.tr []
+                    [ Html.th [ HA.class "pr-3 font-medium" ] [ Html.text "Reporter" ]
+                    , Html.th [ HA.class "pr-3 font-medium text-right" ] [ Html.text "Score" ]
+                    , Html.th [ HA.class "pr-3 font-medium text-right" ] [ Html.text "\u{0394}" ]
+                    , Html.th [ HA.class "font-medium" ] [ Html.text "Notes" ]
+                    ]
+                ]
+            , Html.tbody []
+                (List.map
+                    (\s ->
+                        let
+                            rb =
+                                String.trim s.reportedBy
+
+                            colorClass =
+                                if String.isEmpty rb then
+                                    "bg-gray-400"
+
+                                else
+                                    Dict.get rb orgColors
+                                        |> Maybe.withDefault "bg-gray-400"
+
+                            name =
+                                if String.isEmpty rb then
+                                    "unknown"
+
+                                else
+                                    rb
+
+                            isProvider =
+                                String.toLower (String.trim s.reportedBy)
+                                    == String.toLower (String.trim modelOrg)
+
+                            dot =
+                                Html.span
+                                    [ HA.class ("inline-block w-2 h-2 rounded-full mr-1.5 " ++ colorClass) ]
+                                    []
+
+                            deltaCell =
+                                case maybeProviderVal of
+                                    Just pv ->
+                                        if isProvider then
+                                            Html.td [ HA.class "pr-3 text-right font-mono text-gray-300" ]
+                                                [ Html.text "-" ]
+
+                                        else
+                                            let
+                                                d =
+                                                    s.score - pv
+
+                                                sign =
+                                                    if d > 0 then
+                                                        "+"
+
+                                                    else
+                                                        ""
+
+                                                color =
+                                                    if d > 0 then
+                                                        "text-green-600"
+
+                                                    else if d < 0 then
+                                                        "text-red-600"
+
+                                                    else
+                                                        "text-gray-400"
+                                            in
+                                            Html.td [ HA.class ("pr-3 text-right font-mono " ++ color) ]
+                                                [ Html.text (sign ++ Round.round 1 d) ]
+
+                                    Nothing ->
+                                        Html.td [ HA.class "pr-3 text-right font-mono text-gray-300" ]
+                                            [ Html.text "-" ]
+                        in
+                        Html.tr []
+                            [ Html.td [ HA.class "pr-3" ]
+                                [ Html.span [ HA.class "flex items-center" ]
+                                    [ dot
+                                    , if String.isEmpty s.source then
+                                        Html.text name
+
+                                      else
+                                        Html.a
+                                            [ HA.href s.source
+                                            , HA.target "_blank"
+                                            , HA.class "underline"
+                                            ]
+                                            [ Html.text name ]
+                                    ]
+                                ]
+                            , Html.td [ HA.class "pr-3 text-right font-mono" ]
+                                [ Html.text (Round.round 1 s.score) ]
+                            , deltaCell
+                            , Html.td [ HA.class "text-gray-500" ]
+                                [ Html.text s.notes ]
+                            ]
+                    )
+                    sorted
+                )
+            ]
+        ]
 
 
 formatParams : Maybe Float -> String
@@ -1360,23 +1749,6 @@ formatParams paramsM =
 
                 else
                     Round.round 1 p ++ "M"
-
-
-scoreTooltip : ValidScore -> String
-scoreTooltip s =
-    let
-        parts =
-            List.filter (\p -> not (String.isEmpty p))
-                [ s.notes
-                , if String.isEmpty s.reportedBy then
-                    ""
-
-                  else
-                    "Source: " ++ s.reportedBy
-                ]
-    in
-    String.join " | " parts
-
 
 
 -- SORTING
@@ -1439,9 +1811,25 @@ sortModels key order lb =
 
 getModelTaskScore : Leaderboard -> String -> String -> Maybe Float
 getModelTaskScore lb modelId taskId =
+    let
+        org =
+            getModelOrg lb modelId
+    in
     Dict.get modelId lb.scoresByModel
         |> Maybe.andThen (Dict.get taskId)
-        |> Maybe.map .score
+        |> Maybe.andThen
+            (\scores ->
+                case providerScore scores org of
+                    Just ps ->
+                        Just ps.score
+
+                    Nothing ->
+                        -- Fallback: highest non-provider score
+                        scores
+                            |> List.sortBy (\s -> negate s.score)
+                            |> List.head
+                            |> Maybe.map .score
+            )
 
 
 
