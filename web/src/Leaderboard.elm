@@ -429,8 +429,14 @@ tryFinalize state model =
                                 []
                            )
 
+                defaultHidden =
+                    Set.fromList [ "mme", "zerobench" ]
+
                 tasks =
-                    Set.fromList (List.map .id leaderboard.tasks)
+                    leaderboard.tasks
+                        |> List.map .id
+                        |> List.filter (\id -> not (Set.member id defaultHidden))
+                        |> Set.fromList
             in
             ( { model
                 | loading = Ready leaderboard warnings hints
@@ -945,8 +951,8 @@ view model =
 
         Ready leaderboard warnings hints ->
             Html.div []
-                [ viewWarnings model.warningsExpanded warnings
-                , viewLeaderboard model leaderboard
+                [ viewLeaderboard model leaderboard
+                , viewWarnings model.warningsExpanded warnings
                 , viewHints model.hintsExpanded hints
                 ]
 

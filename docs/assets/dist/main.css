@@ -8,18 +8,31 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
     --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-amber-50: oklch(98.7% 0.022 95.277);
     --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-amber-800: oklch(47.3% 0.137 46.201);
     --color-amber-900: oklch(41.4% 0.112 45.904);
+    --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-emerald-500: oklch(69.6% 0.17 162.48);
+    --color-teal-500: oklch(70.4% 0.14 182.503);
+    --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-200: oklch(88.2% 0.059 254.128);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-blue-900: oklch(37.9% 0.146 265.522);
+    --color-indigo-500: oklch(58.5% 0.233 277.117);
+    --color-violet-500: oklch(60.6% 0.25 292.717);
+    --color-pink-500: oklch(65.6% 0.241 354.308);
+    --color-rose-500: oklch(64.5% 0.246 16.439);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -190,6 +203,9 @@
   .absolute {
     position: absolute;
   }
+  .relative {
+    position: relative;
+  }
   .z-10 {
     z-index: 10;
   }
@@ -210,6 +226,9 @@
   }
   .mr-1 {
     margin-right: calc(var(--spacing) * 1);
+  }
+  .mr-1\.5 {
+    margin-right: calc(var(--spacing) * 1.5);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -232,17 +251,32 @@
   .inline-block {
     display: inline-block;
   }
+  .inline-flex {
+    display: inline-flex;
+  }
   .table {
     display: table;
   }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
   .max-h-64 {
     max-height: calc(var(--spacing) * 64);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
   }
   .w-full {
     width: 100%;
   }
   .max-w-prose {
     max-width: 65ch;
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  .cursor-help {
+    cursor: help;
   }
   .cursor-pointer {
     cursor: pointer;
@@ -264,6 +298,12 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .gap-0\.5 {
+    gap: calc(var(--spacing) * 0.5);
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
@@ -290,6 +330,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -315,11 +358,47 @@
   .border-blue-200 {
     border-color: var(--color-blue-200);
   }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
   }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
+  }
   .bg-blue-50 {
     background-color: var(--color-blue-50);
+  }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
+  .bg-cyan-500 {
+    background-color: var(--color-cyan-500);
+  }
+  .bg-emerald-500 {
+    background-color: var(--color-emerald-500);
+  }
+  .bg-gray-400 {
+    background-color: var(--color-gray-400);
+  }
+  .bg-indigo-500 {
+    background-color: var(--color-indigo-500);
+  }
+  .bg-orange-500 {
+    background-color: var(--color-orange-500);
+  }
+  .bg-pink-500 {
+    background-color: var(--color-pink-500);
+  }
+  .bg-rose-500 {
+    background-color: var(--color-rose-500);
+  }
+  .bg-teal-500 {
+    background-color: var(--color-teal-500);
+  }
+  .bg-violet-500 {
+    background-color: var(--color-violet-500);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -350,6 +429,9 @@
   }
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
+  }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
   }
   .pl-0 {
     padding-left: calc(var(--spacing) * 0);
@@ -412,8 +494,17 @@
   .text-blue-900 {
     color: var(--color-blue-900);
   }
+  .text-gray-300 {
+    color: var(--color-gray-300);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
   .text-gray-500 {
     color: var(--color-gray-500);
+  }
+  .text-green-600 {
+    color: var(--color-green-600);
   }
   .text-red-600 {
     color: var(--color-red-600);

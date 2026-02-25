@@ -31,6 +31,6 @@ internvl3.5-14b,InternVL3.5 14B,15120,text+image,InternVL,https://arxiv.org/pdf/
 internvl3.5-38b,InternVL3.5 38B,38390,text+image,InternVL,https://arxiv.org/pdf/2508.18265
 internvl3.5-20b-a4b,InternVL3.5 20B-A4B,21233,text+image,InternVL,https://arxiv.org/pdf/2508.18265
 internvl3.5-30b-a3b,InternVL3.5 30B-A3B,30849,text+image,InternVL,https://arxiv.org/pdf/2508.18265
-internvl3.5-241b-a28b,InternVL3.5 241B-A28B,,text+image,InternVL,https://arxiv.org/pdf/2508.18265
+internvl3.5-241b-a28b,InternVL3.5 241B-A28B,240699,text+image,InternVL,https://arxiv.org/pdf/2508.18265
 smolvlm2-2.2b,SmolVLM2 2.2B,2247,text+image,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct
 smolvlm2-500m,SmolVLM2 500M,507,text+image+video,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct
