@@ -1187,6 +1187,13 @@ viewHeader model tasks =
                 ]
                 :: Html.th
                     [ HA.class "px-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
+                    , Html.Events.onClick (Sort "params")
+                    ]
+                    [ sortIndicator model "params"
+                    , Html.text "Params"
+                    ]
+                :: Html.th
+                    [ HA.class "px-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
                     , Html.Events.onClick (Sort "mean")
                     , HA.title "Mean score across selected tasks (only tasks with a score)"
                     ]
@@ -1249,6 +1256,8 @@ viewModelRow lb m =
               else
                 Html.a [ HA.href m.link, HA.class "underline", HA.target "_blank" ] [ Html.text m.name ]
             ]
+            :: Html.td [ HA.class "px-2 py-1 text-right font-mono text-gray-500" ]
+                [ Html.text (formatParams m.paramsM) ]
             :: Html.td [ HA.class "px-2 py-1 text-right font-mono font-medium" ]
                 [ case meanScore lb m.id of
                     Just avg ->
@@ -1304,6 +1313,55 @@ viewModelRow lb m =
 
 
 
+formatParams : Maybe Float -> String
+formatParams paramsM =
+    case paramsM of
+        Nothing ->
+            "-"
+
+        Just p ->
+            if p >= 1000000 then
+                -- Trillions
+                let
+                    t =
+                        p / 1000000
+                in
+                if t >= 100 then
+                    Round.round 0 t ++ "T"
+
+                else if t >= 10 then
+                    Round.round 0 t ++ "T"
+
+                else
+                    Round.round 1 t ++ "T"
+
+            else if p >= 1000 then
+                -- Billions
+                let
+                    b =
+                        p / 1000
+                in
+                if b >= 100 then
+                    Round.round 0 b ++ "B"
+
+                else if b >= 10 then
+                    Round.round 0 b ++ "B"
+
+                else
+                    Round.round 1 b ++ "B"
+
+            else
+                -- Millions
+                if p >= 100 then
+                    Round.round 0 p ++ "M"
+
+                else if p >= 10 then
+                    Round.round 0 p ++ "M"
+
+                else
+                    Round.round 1 p ++ "M"
+
+
 scoreTooltip : ValidScore -> String
 scoreTooltip s =
     let
@@ -1344,6 +1402,12 @@ sortModels key order lb =
         comparator =
             if key == "model" then
                 \a b -> compare a.name b.name
+
+            else if key == "params" then
+                \a b ->
+                    compare
+                        (a.paramsM |> Maybe.withDefault -1)
+                        (b.paramsM |> Maybe.withDefault -1)
 
             else if key == "mean" then
                 \a b ->
