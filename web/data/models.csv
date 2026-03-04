@@ -16,6 +16,12 @@ qwen3.5-397b-a17b,Qwen3.5-397B-A17B,403398,text+image,Qwen,https://qwen.ai/blog?
 qwen3.5-122b-a10b,Qwen3.5-122B-A10B,125086,,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B
 qwen3.5-35b-a3b,Qwen3.5-35B-A3B,35952,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B
 qwen3.5-27b,Qwen3.5-27B,27781,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B
+qwen3.5-2b,Qwen3.5-2B,2274,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B
+qwen3.5-2b-thinking,Qwen3.5-2B (Thinking),2274,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B
+qwen3.5-4b,Qwen3.5-4B,4660,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B
+qwen3.5-0.8b,Qwen3.5-0.8B,873,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B
+qwen3.5-0.8b-thinking,Qwen3.5-0.8B (Thinking),873,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B
+qwen3.5-9b,Qwen3.5-9B,9653,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B
 molmo2-4b,Molmo2-4B,4851,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
 molmo2-8b,Molmo2-8B,8662,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
 moondream3-preview,Moondream3 (Preview),18537,text+image,Moondream,https://huggingface.co/moondream/moondream3-preview
