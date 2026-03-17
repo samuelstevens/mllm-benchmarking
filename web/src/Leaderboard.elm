@@ -1313,17 +1313,6 @@ viewFilters model lb =
         selectedRanges =
             Set.size model.paramRangesSelected
 
-        modalities =
-            uniqueValues .modality lb.tasks
-
-        questionStyles =
-            uniqueValues .questionStyle lb.tasks
-
-        domains =
-            uniqueValues .domain lb.tasks
-
-        capabilities =
-            uniqueValues .capability lb.tasks
     in
     Html.div [ HA.class "mx-4 mb-3 flex flex-wrap gap-2 items-start" ]
         [ viewFieldset "Orgs"
@@ -1371,62 +1360,6 @@ viewFilters model lb =
                     viewCheckbox (Set.member task.id model.tasksSelected) (ToggleTask task.id) task.name
                 )
                 lb.tasks
-            )
-        , viewFieldset "Style"
-            model.questionStyleOpen
-            (ToggleFieldset QuestionStyleFieldset)
-            (List.length (List.filter (\v -> metadataAllSelected "questionStyle" v lb.tasks model.tasksSelected) questionStyles))
-            (List.length questionStyles)
-            (List.map
-                (\v ->
-                    viewCheckbox
-                        (metadataAllSelected "questionStyle" v lb.tasks model.tasksSelected)
-                        (ToggleTasksByMetadata "questionStyle" v)
-                        v
-                )
-                questionStyles
-            )
-        , viewFieldset "Domain"
-            model.domainOpen
-            (ToggleFieldset DomainFieldset)
-            (List.length (List.filter (\v -> metadataAllSelected "domain" v lb.tasks model.tasksSelected) domains))
-            (List.length domains)
-            (List.map
-                (\v ->
-                    viewCheckbox
-                        (metadataAllSelected "domain" v lb.tasks model.tasksSelected)
-                        (ToggleTasksByMetadata "domain" v)
-                        v
-                )
-                domains
-            )
-        , viewFieldset "Modality"
-            model.modalityOpen
-            (ToggleFieldset ModalityFieldset)
-            (List.length (List.filter (\v -> metadataAllSelected "modality" v lb.tasks model.tasksSelected) modalities))
-            (List.length modalities)
-            (List.map
-                (\v ->
-                    viewCheckbox
-                        (metadataAllSelected "modality" v lb.tasks model.tasksSelected)
-                        (ToggleTasksByMetadata "modality" v)
-                        v
-                )
-                modalities
-            )
-        , viewFieldset "Capability"
-            model.capabilityOpen
-            (ToggleFieldset CapabilityFieldset)
-            (List.length (List.filter (\v -> metadataAllSelected "capability" v lb.tasks model.tasksSelected) capabilities))
-            (List.length capabilities)
-            (List.map
-                (\v ->
-                    viewCheckbox
-                        (metadataAllSelected "capability" v lb.tasks model.tasksSelected)
-                        (ToggleTasksByMetadata "capability" v)
-                        v
-                )
-                capabilities
             )
         ]
 
