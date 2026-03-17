@@ -484,5 +484,75 @@ internvl3.5-241b-a28b,blink,61.4,InternVL,https://arxiv.org/pdf/2508.18265,
 smolvlm2-2.2b,mmmu,42,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,
 smolvlm2-2.2b,mmstar,46,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,
 smolvlm2-2.2b,textvqa,73.21,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,Val
-smolvlm2-2.2b,79.98,docvqa,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,Val
-smolvlm2-2.2b,68.84,chartqa,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,Test
+smolvlm2-2.2b,docvqa,79.98,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,Val
+smolvlm2-2.2b,chartqa,68.84,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,Test
+penguin-vl-2b,infovqa,77.8,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-2b,chartqa,86.6,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-2b,docvqa,94.1,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-2b,charxiv,66.4,Tencent AI,http://arxiv.org/pdf/2603.06569,DQ
+penguin-vl-2b,charxiv,35.8,Tencent AI,http://arxiv.org/pdf/2603.06569,RQ
+penguin-vl-2b,ocrbench,810,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-2b,rwqa,70.2,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-2b,mmmu-pro,31.4,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-2b,blink,51.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-2b,mmvu,42.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,infovqa,72.4,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,chartqa,76.9,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,docvqa,93.3,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,charxiv,62.3,Tencent AI,http://arxiv.org/pdf/2603.06569,DQ
+qwen3-vl-2b,charxiv,26.8,Tencent AI,http://arxiv.org/pdf/2603.06569,RQ
+qwen3-vl-2b,ocrbench,858,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,rwqa,63.9,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,mmmu-pro,36.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,blink,53.8,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-2b,mmvu,41.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,infovqa,70.8,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,chartqa,80.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,docvqa,89.4,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,charxiv,65.0,Tencent AI,http://arxiv.org/pdf/2603.06569,DQ
+internvl3.5-2b,charxiv,31.6,Tencent AI,http://arxiv.org/pdf/2603.06569,RQ
+internvl3.5-2b,ocrbench,836,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,rwqa,62.0,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,mmmu-pro,31.6,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,blink,36.6,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-2b,mmvu,42.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,infovqa,86.8,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,chartqa,90.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,docvqa,962,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,charxiv,75.7,Tencent AI,http://arxiv.org/pdf/2603.06569,DQ
+penguin-vl-8b,charxiv,40.0,Tencent AI,http://arxiv.org/pdf/2603.06569,RQ
+penguin-vl-8b,ocrbench,852,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,rwqa,75.8,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,mmmu-pro,40.2,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,blink,58.2,Tencent AI,http://arxiv.org/pdf/2603.06569,
+penguin-vl-8b,mmvu,53.9,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,infovqa,49.2,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,chartqa,48.6,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,docvqa,78.3,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,charxiv,64.4,Tencent AI,http://arxiv.org/pdf/2603.06569,DQ
+gpt-5-nano,charxiv,31.7,Tencent AI,http://arxiv.org/pdf/2603.06569,RQ
+gpt-5-nano,ocrbench,701,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,rwqa,60.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,mmmu-pro,36.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,blink,42.2,Tencent AI,http://arxiv.org/pdf/2603.06569,
+gpt-5-nano,mmvu,51.0,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,infovqa,83.1,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,chartqa,89.6,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,docvqa,96.1,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,charxiv,83.0,Tencent AI,http://arxiv.org/pdf/2603.06569,DQ
+qwen3-vl-8b,charxiv,46.4,Tencent AI,http://arxiv.org/pdf/2603.06569,RQ
+qwen3-vl-8b,ocrbench,896,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,rwqa,71.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,mmmu-pro,55.9,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,blink,69.1,Tencent AI,http://arxiv.org/pdf/2603.06569,
+qwen3-vl-8b,mmvu,58.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,infovqa,79.1,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,chartqa,86.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,docvqa,92.3,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,charxiv,72.2,Tencent AI,http://arxiv.org/pdf/2603.06569,DQ
+internvl3.5-8b,charxiv,44.4,Tencent AI,http://arxiv.org/pdf/2603.06569,RQ
+internvl3.5-8b,ocrbench,840,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,rwqa,67.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,mmmu-pro,39.7,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,blink,59.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
+internvl3.5-8b,mmvu,51.5,Tencent AI,http://arxiv.org/pdf/2603.06569,

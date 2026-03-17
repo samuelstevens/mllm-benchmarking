@@ -377,17 +377,108 @@ getTaskMetadataValues field task =
 
 orgPalette : List String
 orgPalette =
-    [ "bg-blue-500"
-    , "bg-emerald-500"
-    , "bg-violet-500"
-    , "bg-amber-500"
-    , "bg-rose-500"
-    , "bg-cyan-500"
-    , "bg-orange-500"
-    , "bg-pink-500"
-    , "bg-teal-500"
-    , "bg-indigo-500"
+    [ "#332288"
+    , "#117733"
+    , "#44AA99"
+    , "#88CCEE"
+    , "#DDCC77"
+    , "#CCBB44"
+    , "#EE6677"
+    , "#CC6677"
+    , "#AA4499"
+    , "#882255"
+    , "#E69F00"
+    , "#999933"
     ]
+
+
+orgColorOverrides : Dict String String
+orgColorOverrides =
+    Dict.fromList
+        [ ( "Allen Institute for AI", "#88CCEE" )
+        , ( "Google", "#CCBB44" )
+        , ( "HuggingFace", "#AA4499" )
+        , ( "InternVL", "#CC6677" )
+        , ( "Liquid AI", "#117733" )
+        , ( "Moondream", "#DDCC77" )
+        , ( "OpenAI", "#E69F00" )
+        , ( "Perceptron", "#332288" )
+        , ( "Qwen", "#44AA99" )
+        , ( "StepFun", "#EE6677" )
+        , ( "Tencent AI", "#882255" )
+        ]
+
+
+defaultOrgColor : String
+defaultOrgColor =
+    "#9CA3AF"
+
+
+orgPattern : String -> Maybe String
+orgPattern org =
+    case String.trim org of
+        "Moondream" ->
+            Just "repeating-linear-gradient(45deg, rgba(17,24,39,0.34) 0 1px, transparent 1px 3px)"
+
+        "Google" ->
+            Just "repeating-linear-gradient(0deg, rgba(17,24,39,0.28) 0 1px, transparent 1px 3px)"
+
+        "InternVL" ->
+            Just "repeating-linear-gradient(135deg, rgba(255,255,255,0.55) 0 1px, transparent 1px 3px)"
+
+        "StepFun" ->
+            Just "radial-gradient(rgba(255,255,255,0.85) 0.7px, transparent 0.8px)"
+
+        _ ->
+            Nothing
+
+
+orgColor : Dict String String -> String -> String
+orgColor orgColors org =
+    let
+        trimmed =
+            String.trim org
+    in
+    if String.isEmpty trimmed then
+        defaultOrgColor
+
+    else
+        Dict.get trimmed orgColors
+            |> Maybe.withDefault defaultOrgColor
+
+
+orgSwatchAttrs : Dict String String -> String -> List (Html.Attribute msg)
+orgSwatchAttrs orgColors org =
+    let
+        baseColor =
+            orgColor orgColors org
+
+        patternStyles =
+            case orgPattern org of
+                Just pattern ->
+                    [ HA.style "background-image" pattern
+                    , HA.style "background-size" "4px 4px"
+                    ]
+
+                Nothing ->
+                    []
+
+        borderColor =
+            case String.trim org of
+                "Moondream" ->
+                    "rgba(17,24,39,0.28)"
+
+                "Google" ->
+                    "rgba(17,24,39,0.20)"
+
+                _ ->
+                    "rgba(255,255,255,0.0)"
+    in
+    [ HA.style "background-color" baseColor
+    , HA.style "border" ("1px solid " ++ borderColor)
+    , HA.style "box-sizing" "border-box"
+    ]
+        ++ patternStyles
 
 
 providerScore : List ValidScore -> String -> Maybe ValidScore
@@ -417,17 +508,10 @@ tryFinalize state model =
                 orgs =
                     Set.fromList (List.map .org leaderboard.models)
 
-                hasUnknownSize =
-                    List.any (\mdl -> mdl.paramsM == Nothing) leaderboard.models
-
                 ranges =
-                    List.map paramRangeToString allParamRanges
-                        ++ (if hasUnknownSize then
-                                [ "unknown" ]
-
-                            else
-                                []
-                           )
+                    allParamRanges
+                        |> List.filter (\( _, high ) -> high <= 12000)
+                        |> List.map paramRangeToString
 
                 defaultHidden =
                     Set.fromList [ "mme", "zerobench" ]
@@ -576,10 +660,17 @@ parseAndValidate rawModels rawTasks rawScores =
                 Dict.empty
                 validScores
 
-        -- Build org color map from first appearance order in scores
+        -- Keep known organizations pinned to explicit colors.
+        -- Unknown organizations get deterministic fallback colors without
+        -- reshuffling the existing assignments.
         orgColors =
             let
-                uniqueOrgs =
+                modelOrgs =
+                    models
+                        |> List.map (.org >> String.trim)
+                        |> List.filter (\org -> not (String.isEmpty org))
+
+                reporterOrgs =
                     List.foldl
                         (\s ( seen, acc ) ->
                             let
@@ -596,15 +687,44 @@ parseAndValidate rawModels rawTasks rawScores =
                         validScores
                         |> Tuple.second
 
+                uniqueOrgs =
+                    List.foldl
+                        (\org ( seen, acc ) ->
+                            if Set.member org seen then
+                                ( seen, acc )
+
+                            else
+                                ( Set.insert org seen, acc ++ [ org ] )
+                        )
+                        ( Set.empty, [] )
+                        (modelOrgs ++ reporterOrgs)
+                        |> Tuple.second
+
+                usedColors =
+                    orgColorOverrides
+                        |> Dict.values
+                        |> Set.fromList
+
+                fallbackPalette =
+                    orgPalette
+                        |> List.filter (\color -> not (Set.member color usedColors))
+
                 paletteLen =
-                    List.length orgPalette
+                    List.length fallbackPalette
             in
             List.indexedMap
                 (\i org ->
                     ( org
-                    , List.drop (modBy paletteLen i) orgPalette
-                        |> List.head
-                        |> Maybe.withDefault "bg-gray-400"
+                    , Dict.get org orgColorOverrides
+                        |> Maybe.withDefault
+                            (if paletteLen == 0 then
+                                defaultOrgColor
+
+                             else
+                                List.drop (modBy paletteLen i) fallbackPalette
+                                    |> List.head
+                                    |> Maybe.withDefault defaultOrgColor
+                            )
                     )
                 )
                 uniqueOrgs
@@ -1104,6 +1224,25 @@ viewCheckbox checked msg label =
         ]
 
 
+viewOrgCheckbox : Dict String String -> Bool -> Msg -> String -> Html Msg
+viewOrgCheckbox orgColors checked msg org =
+    Html.label [ HA.class "flex items-center gap-1.5 cursor-pointer select-none whitespace-nowrap" ]
+        [ Html.input
+            [ HA.type_ "checkbox"
+            , HA.checked checked
+            , Html.Events.onClick msg
+            , HA.class "cursor-pointer"
+            ]
+            []
+        , Html.span
+            ([ HA.class "inline-block w-3 h-3 rounded-full flex-shrink-0" ]
+                ++ orgSwatchAttrs orgColors org
+            )
+            []
+        , Html.text org
+        ]
+
+
 viewFieldset : String -> Bool -> Msg -> Int -> Int -> List (Html Msg) -> Html Msg
 viewFieldset title isOpen toggleMsg selected total children =
     Html.div [ HA.class "inline-block" ]
@@ -1127,7 +1266,7 @@ viewFieldset title isOpen toggleMsg selected total children =
                 )
             ]
         , if isOpen then
-            Html.div [ HA.class "absolute z-10 mt-1 p-2 bg-white border rounded shadow-lg flex flex-col gap-1 text-sm max-h-64 overflow-y-auto" ]
+            Html.div [ HA.class "absolute z-10 mt-1 p-2 bg-white border rounded shadow-lg flex flex-col gap-1 text-sm" ]
                 children
 
           else
@@ -1194,7 +1333,7 @@ viewFilters model lb =
             (List.length allOrgs)
             (List.map
                 (\org ->
-                    viewCheckbox (Set.member org model.orgsSelected) (ToggleOrg org) org
+                    viewOrgCheckbox lb.orgColors (Set.member org model.orgsSelected) (ToggleOrg org) org
                 )
                 allOrgs
             )
@@ -1327,26 +1466,26 @@ viewHeader model tasks =
     Html.thead [ HA.class "border-t border-b" ]
         [ Html.tr []
             (Html.th
-                [ HA.class "px-2 py-1 font-medium text-left cursor-pointer hover:bg-gray-100 transition-colors"
+                [ HA.class (sortHeaderClass model "model" "px-2 py-1 text-left")
                 , Html.Events.onClick (Sort "model")
                 ]
                 [ sortIndicator model "model"
-                , Html.text "Model"
+                , sortHeaderLabel model "model" "Model"
                 ]
                 :: Html.th
-                    [ HA.class "px-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
+                    [ HA.class (sortHeaderClass model "params" "px-2 py-1 text-right")
                     , Html.Events.onClick (Sort "params")
                     ]
                     [ sortIndicator model "params"
-                    , Html.text "Params"
+                    , sortHeaderLabel model "params" "Params"
                     ]
                 :: Html.th
-                    [ HA.class "px-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
+                    [ HA.class (sortHeaderClass model "mean" "px-2 py-1 text-right")
                     , Html.Events.onClick (Sort "mean")
                     , HA.title "Mean score across selected tasks (only tasks with a score)"
                     ]
                     [ sortIndicator model "mean"
-                    , Html.text "Mean"
+                    , sortHeaderLabel model "mean" "Mean"
                     ]
                 :: List.map (viewHeaderCell model) tasks
             )
@@ -1356,12 +1495,12 @@ viewHeader model tasks =
 viewHeaderCell : Model -> ValidTask -> Html Msg
 viewHeaderCell model task =
     Html.th
-        [ HA.class "pl-0 pr-2 py-1 font-medium text-right cursor-pointer hover:bg-gray-100 transition-colors"
+        [ HA.class (sortHeaderClass model task.id "pl-0 pr-2 py-1 text-right")
         , Html.Events.onClick (Sort task.id)
         , HA.title (task.description ++ " (" ++ task.metric ++ ")")
         ]
         [ sortIndicator model task.id
-        , Html.text task.name
+        , sortHeaderLabel model task.id task.name
         , if String.isEmpty task.url then
             Html.text ""
 
@@ -1390,6 +1529,32 @@ sortIndicator model key =
         Html.text ""
 
 
+sortHeaderClass : Model -> String -> String -> String
+sortHeaderClass model key baseClass =
+    baseClass
+        ++ " cursor-pointer hover:bg-gray-100 transition-colors"
+        ++ (if model.sortKey == key then
+                " font-semibold"
+
+            else
+                " font-medium"
+           )
+
+
+sortHeaderLabel : Model -> String -> String -> Html Msg
+sortHeaderLabel model key label =
+    Html.span
+        [ HA.class
+            (if model.sortKey == key then
+                "underline decoration-2 underline-offset-4"
+
+             else
+                ""
+            )
+        ]
+        [ Html.text label ]
+
+
 viewModelRow : Model -> Leaderboard -> ValidModel -> Html Msg
 viewModelRow appModel lb m =
     let
@@ -1399,16 +1564,13 @@ viewModelRow appModel lb m =
     Html.tr [ HA.class "hover:bg-gray-100 transition-colors" ]
         (let
             orgColorClass =
-                if String.isEmpty (String.trim m.org) then
-                    "bg-gray-400"
-
-                else
-                    Dict.get (String.trim m.org) lb.orgColors
-                        |> Maybe.withDefault "bg-gray-400"
+                orgColor lb.orgColors m.org
 
             orgDot =
                 Html.span
-                    [ HA.class ("inline-block w-2 h-2 rounded-full mr-1.5 flex-shrink-0 " ++ orgColorClass) ]
+                    ([ HA.class "inline-block w-3 h-3 rounded-full mr-1.5 flex-shrink-0" ]
+                        ++ orgSwatchAttrs lb.orgColors m.org
+                    )
                     []
 
             nameEl =
@@ -1549,28 +1711,21 @@ viewDotGrid orgColors scores =
                 |> List.sortBy (\s -> negate s.score)
                 |> List.map
                 (\s ->
-                    let
-                        colorClass =
-                            if String.isEmpty (String.trim s.reportedBy) then
-                                "bg-gray-400"
-
-                            else
-                                Dict.get (String.trim s.reportedBy) orgColors
-                                    |> Maybe.withDefault "bg-gray-400"
-                    in
                     Html.span
-                        [ HA.class ("inline-block w-2 h-2 rounded-full " ++ colorClass)
-                        , HA.title (String.trim s.reportedBy ++ ": " ++ Round.round 1 s.score)
-                        ]
+                        ([ HA.class "inline-block w-3 h-3 rounded-full"
+                         , HA.title (String.trim s.reportedBy ++ ": " ++ Round.round 1 s.score)
+                         ]
+                            ++ orgSwatchAttrs orgColors s.reportedBy
+                        )
                         []
                 )
 
-        -- Arrange in columns of up to 3
+        -- Arrange in columns of up to 2
         col1 =
-            List.take 3 dots
+            List.take 2 dots
 
         col2 =
-            List.drop 3 dots |> List.take 3
+            List.drop 2 dots |> List.take 2
     in
     Html.div [ HA.class "inline-flex gap-0.5" ]
         (Html.div [ HA.class "flex flex-col gap-0.5" ] col1
@@ -1620,12 +1775,7 @@ viewScoreTooltip orgColors modelOrg cell scoreList =
                                 String.trim s.reportedBy
 
                             colorClass =
-                                if String.isEmpty rb then
-                                    "bg-gray-400"
-
-                                else
-                                    Dict.get rb orgColors
-                                        |> Maybe.withDefault "bg-gray-400"
+                                orgColor orgColors rb
 
                             name =
                                 if String.isEmpty rb then
@@ -1640,7 +1790,9 @@ viewScoreTooltip orgColors modelOrg cell scoreList =
 
                             dot =
                                 Html.span
-                                    [ HA.class ("inline-block w-2 h-2 rounded-full mr-1.5 " ++ colorClass) ]
+                                    ([ HA.class "inline-block w-3 h-3 rounded-full mr-1.5" ]
+                                        ++ orgSwatchAttrs orgColors rb
+                                    )
                                     []
 
                             deltaCell =
