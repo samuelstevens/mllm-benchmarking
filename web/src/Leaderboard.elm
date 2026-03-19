@@ -512,6 +512,7 @@ tryFinalize state model =
                     allParamRanges
                         |> List.filter (\( _, high ) -> high <= 12000)
                         |> List.map paramRangeToString
+                        |> List.append ["unknown"]
 
                 defaultHidden =
                     Set.fromList [ "mme", "zerobench" ]

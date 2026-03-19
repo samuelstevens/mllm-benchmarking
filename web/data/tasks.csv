@@ -7,6 +7,7 @@ ocrbench
 mme,MME,accuracy & accuracy+,Shallow perception-based yes/no questions across a variety of capabilities,text & image,1,,yes/no,general,perception+cognition,0,1050,2800,https://arxiv.org/pdf/2306.13394
 blink,BLINK,accuracy,Multiple choice questions about images that can be solved "within a blink" by humans.,text & image,2,,mcq,general,perception,0,38.09,100,https://arxiv.org/pdf/2404.12390
 mmmu,MMMU,accuracy,Multiple choice interleaved visual question answering across six disciplines and 30 college subjects.,text & image,1,,mcq,general,reasoning,0,22.1,100,https://mmmu-benchmark.github.io/
+mmmu-pro,MMMU-Pro,accuracy,"Multiple choice interleaved visual question answering, filtered from MMMU.",text & image,1,,mcq,general,reasoning,0,12.8,100,https://mmmu-benchmark.github.io/
 infovqa,InfoVQA,accuracy,Infographic visual question answering,text & image,1,,open-ended,infographics,ocr,0,0,100,https://arxiv.org/pdf/2104.12756
 zerobench,ZeroBench,accuracy,100 very challenging VQA tasks,text & image,1,,short answer,general,reasoning,0,0,100,https://zerobench.github.io/
 mathvista
