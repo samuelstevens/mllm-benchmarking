@@ -45,3 +45,6 @@ penguin-vl-8b,Penguin-VL-8B,8653,text+image,Tencent AI,https://huggingface.co/te
 gpt-5-nano,GPT-5 Nano,,text+image,OpenAI,
 gpt-5.4-mini,GPT-5.4 Mini,,text+image,OpenAI,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/
 gpt-5.4-nano,GPT-5.4 Nano,,text+image,OpenAI,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/
+llava-ov-1.5-4b,LLaVA OneVision-1.5-4B,4742,text+image,LLaVA,https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-4B-Instruct
+llava-ov-1.5-8b,LLaVA OneVision-1.5-8B,8527,text+image,LLaVA,https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-8B-Instruct
+phi-4-reasoning-vision-15b,Phi-4 Reasoning Vision 15B,15120,text+image,Microsoft,https://arxiv.org/pdf/2603.03975

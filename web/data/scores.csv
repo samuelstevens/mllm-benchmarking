@@ -45,7 +45,7 @@ qwen3-vl-2b,textvqa,79.70,Perceptron,https://www.perceptron.inc/blog/introducing
 qwen3-vl-2b,ocrbench,794,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
 qwen3-vl-2b,mme,1872,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
 qwen3-vl-2b,blink,53.80,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
-qwen3-vl-2b,seedbench,.74.40,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+qwen3-vl-2b,seedbench,74.40,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
 gemma3-27b,vqav2,71.00,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
 gemma3-27b,docvqa,86.60,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
 gemma3-27b,rwqa,53.90,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
@@ -206,12 +206,12 @@ qwen3-vl-4b,mmstar,69.8,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-4b-thinking,mmstar,73.2,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-8b,mmstar,70.9,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-8b-thinking,mmstar,75.3,Qwen,https://arxiv.org/pdf/2511.21631,
-qwen3-vl-2b,chartqa,79.1,Qwen,https://arxiv.org/pdf/2511.21631,Test split
-qwen3-vl-2b-thinking,chartqa,86.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
-qwen3-vl-4b,chartqa,84.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
-qwen3-vl-4b-thinking,chartqa,88.8,Qwen,https://arxiv.org/pdf/2511.21631,Test split
-qwen3-vl-8b,chartqa,89.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
-qwen3-vl-8b-thinking,chartqa,88.6,Qwen,https://arxiv.org/pdf/2511.21631,Test split
+qwen3-vl-2b,chartqa,79.1,Qwen,https://arxiv.org/pdf/2511.21631,Test
+qwen3-vl-2b-thinking,chartqa,86.6,Qwen,https://arxiv.org/pdf/2511.21631,Test
+qwen3-vl-4b,chartqa,84.6,Qwen,https://arxiv.org/pdf/2511.21631,Test
+qwen3-vl-4b-thinking,chartqa,88.8,Qwen,https://arxiv.org/pdf/2511.21631,Test
+qwen3-vl-8b,chartqa,89.6,Qwen,https://arxiv.org/pdf/2511.21631,Test
+qwen3-vl-8b-thinking,chartqa,88.6,Qwen,https://arxiv.org/pdf/2511.21631,Test
 qwen3-vl-2b,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-2b-thinking,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-4b,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
@@ -558,3 +558,37 @@ internvl3.5-8b,blink,59.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
 internvl3.5-8b,mmvu,51.5,Tencent AI,http://arxiv.org/pdf/2603.06569,
 gpt-5.4-nano,mmmu-pro,66.1,OpenAI,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,
 gpt-5.4-mini,mmmu-pro,76.6,OpenAI,https://openai.com/index/introducing-gpt-5-4-mini-and-nano/,
+llava-ov-1.5-4b,mmstar,64.9,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,seedbench,76.6,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,realworldqa,67.8,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,mmmu,52.7,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,mmmu-pro,35.3,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,chartqa,87.1,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,docvqa,94.4,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,ocrbench,80.0,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,infovqa,76.1,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,pixmocount,52.2,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,countbench,79.8,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,mmstar,67.7,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,seedbench,77.3,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,realworldqa,68.1,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,mmmu,55.4,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,mmmu-pro,37.4,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,chartqa,86.5,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,docvqa,95.0,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,ocrbench,82.9,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,infovqa,78.4,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,pixmocount,62.2,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,countbench,88.2,LLaVA,http://arxiv.org/pdf/2509.23661,
+phi-4-reasoning-vision-15b,chartqa,83.3,Microsoft,https://arxiv.org/pdf/2603.03975,Test
+phi-4-reasoning-vision-15b,mmmu,54.3,Microsoft,https://arxiv.org/pdf/2603.03975,
+phi-4-reasoning-vision-15b,mmstar,64.5,Microsoft,https://arxiv.org/pdf/2603.03975,
+gemma3-12b,chartqa,39,Microsoft,https://arxiv.org/pdf/2603.03975,Test
+gemma3-12b,mmmu,50,Microsoft,https://arxiv.org/pdf/2603.03975,
+gemma3-12b,mmstar,59.4,Microsoft,https://arxiv.org/pdf/2603.03975,
+qwen3-vl-8b,chartqa,83.1,Microsoft,https://arxiv.org/pdf/2603.03975,Test
+qwen3-vl-8b,mmmu,60.7,Microsoft,https://arxiv.org/pdf/2603.03975,
+qwen3-vl-8b,mmstar,68.9,Microsoft,https://arxiv.org/pdf/2603.03975,
+qwen3-vl-8b-thinking,chartqa,78,Microsoft,https://arxiv.org/pdf/2603.03975,Test
+qwen3-vl-8b-thinking,mmmu,59.3,Microsoft,https://arxiv.org/pdf/2603.03975,
+qwen3-vl-8b-thinking,mmstar,69.3.4,Microsoft,https://arxiv.org/pdf/2603.03975,

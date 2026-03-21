@@ -178,7 +178,7 @@ init : () -> ( Model, Cmd Msg )
 init () =
     ( { loading = Loading { models = Nothing, tasks = Nothing, scores = Nothing }
       , sortKey = "params"
-      , sortOrder = Desc
+      , sortOrder = Asc
       , warningsExpanded = False
       , hintsExpanded = False
       , orgsOpen = False
@@ -1870,8 +1870,8 @@ sortModels key order lb =
             else if key == "params" then
                 \a b ->
                     compare
-                        (a.paramsM |> Maybe.withDefault -1)
-                        (b.paramsM |> Maybe.withDefault -1)
+                        (a.paramsM |> Maybe.withDefault 1000000000000000)  -- 1Q
+                        (b.paramsM |> Maybe.withDefault 1000000000000000)  -- 1Q
 
             else if key == "mean" then
                 \a b ->
