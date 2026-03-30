@@ -24,7 +24,7 @@ qwen3.5-0.8b-thinking,Qwen3.5-0.8B (Thinking),873,text+image,Qwen,https://huggin
 qwen3.5-9b,Qwen3.5-9B,9653,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B
 molmo2-4b,Molmo2-4B,4851,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
 molmo2-8b,Molmo2-8B,8662,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
-moondream3-preview,Moondream3 (Preview),18537,text+image,Moondream,https://huggingface.co/moondream/moondream3-preview
+moondream3-preview,Moondream3 (Preview),9269,text+image,Moondream,https://huggingface.co/moondream/moondream3-preview
 gemma3-4b,Gemma3 4B,4300,text+image,Google,https://huggingface.co/google/gemma-3-4b-it
 gemma3-12b,Gemma3 12B,12187,text+image,Google,https://huggingface.co/google/gemma-3-12b-it
 gemma3-27b,Gemma3 27B,27432,text+image,Google,https://huggingface.co/google/gemma-3-27b-it
@@ -48,3 +48,4 @@ gpt-5.4-nano,GPT-5.4 Nano,,text+image,OpenAI,https://openai.com/index/introducin
 llava-ov-1.5-4b,LLaVA OneVision-1.5-4B,4742,text+image,LLaVA,https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-4B-Instruct
 llava-ov-1.5-8b,LLaVA OneVision-1.5-8B,8527,text+image,LLaVA,https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-8B-Instruct
 phi-4-reasoning-vision-15b,Phi-4 Reasoning Vision 15B,15120,text+image,Microsoft,https://arxiv.org/pdf/2603.03975
+nemotron-nano-v2-vl-12b-reasoning,Nemotron Nano V2 VL Reasoning,13182,text+image,NVIDIA,https://arxiv.org/abs/2511.03929
