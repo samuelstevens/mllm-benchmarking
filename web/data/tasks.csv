@@ -19,3 +19,4 @@ mmstar,MMStar,accuracy,Multiple choice VQA where the image is required to answer
 rwqa,RealWorldQA,accuracy,,text & image,1,,mcq,general,reasoning,0,37.7,100,https://huggingface.co/blog/KennyUTC/realworldqa
 mmmb,MMMB,
 mm-ifeval,MM-IFEval,
+vlmsblind, VLMs are Blind,accuracy,,text & image,1,,short answer,synthetic,perception,0,24,100,https://arxiv.org/pdf/2407.06581

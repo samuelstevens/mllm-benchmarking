@@ -515,7 +515,7 @@ tryFinalize state model =
                         |> List.append ["unknown"]
 
                 defaultHidden =
-                    Set.fromList [ "mme", "zerobench" ]
+                    Set.fromList [ "mme", "zerobench", "vlmsblind" ]
 
                 tasks =
                     leaderboard.tasks
