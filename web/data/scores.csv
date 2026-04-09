@@ -68,6 +68,7 @@ lfm2-vl-450m,ocrbench,657,Liquid AI,http://arxiv.org/pdf/2511.23404,
 lfm2-vl-450m,mm-ifeval,33.09,Liquid AI,http://arxiv.org/pdf/2511.23404,
 lfm2-vl-450m,mmmb,54.29,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 lfm2-vl-450m,countbench,47.64,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+lfm2-vl-450m,mmvet,33.85,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 lfm2-vl-1.6b,mmstar,49.87,Liquid AI,http://arxiv.org/pdf/2511.23404,
 lfm2-vl-1.6b,mmbench,69.16,Liquid AI,http://arxiv.org/pdf/2511.23404,(dev)
 lfm2-vl-1.6b,rwqa,65.75,Liquid AI,http://arxiv.org/pdf/2511.23404,
@@ -150,6 +151,7 @@ smolvlm2-500m,mm-ifeval,11.56,Liquid AI,http://arxiv.org/pdf/2511.23404,
 smolvlm2-500m,mm-ifeval,11.27,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,mmmb,46.79,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,countbench,61.81,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+smolvlm2-500m,mmvet,29.90,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-2.2b,mmstar,46.00,Liquid AI,http://arxiv.org/pdf/2511.23404,
 smolvlm2-2.2b,mmbench,69.24,Liquid AI,http://arxiv.org/pdf/2511.23404,(dev)
 smolvlm2-2.2b,rwqa,57.50,Liquid AI,http://arxiv.org/pdf/2511.23404,
@@ -180,14 +182,8 @@ liquid-lfm2.5-vl-450m,ocrbench,684,Liquid AI,https://www.liquid.ai/blog/lfm2-5-v
 liquid-lfm2.5-vl-450m,mm-ifeval,45.00,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 liquid-lfm2.5-vl-450m,mmmb,68.09,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 liquid-lfm2.5-vl-450m,countbench,73.31,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
-qwen3.5-397b-a17b,mmmu-pro,79.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
-qwen3.5-397b-a17b,mmmu,85.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
-qwen3.5-397b-a17b,mmstar,78.7,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
-qwen3.5-397b-a17b,rwqa,81.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
-qwen3.5-397b-a17b,simplevqa,61.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
-qwen3.5-397b-a17b,mathvista,90.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,(mini)
-qwen3.5-397b-a17b,zerobench,4,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
-qwen3.5-397b-a17b,ocrbench,87.5,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+liquid-lfm2.5-vl-450m,mmvet,41.10,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,refcocom-bbox-acc,81.28,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 qwen3-vl-2b,mmmu,53.4,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-2b-thinking,mmmu,61.4,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-4b,mmmu,67.4,Qwen,https://arxiv.org/pdf/2511.21631,
@@ -210,11 +206,11 @@ qwen3-vl-2b,infovqa,72.4,Qwen,https://arxiv.org/pdf/2511.21631,(test)
 qwen3-vl-2b-thinking,infovqa,77.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
 qwen3-vl-4b,infovqa,80.3,Qwen,https://arxiv.org/pdf/2511.21631,(test)
 qwen3-vl-4b-thinking,infovqa,83.0,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-8b,infovqa,86.0,Qwen,https://arxiv.org/pdf/2511.21631,(test)
-qwen3-vl-8b-thinking,infovqa,83.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b,infovqa,83.1,Qwen,https://arxiv.org/pdf/2511.21631,(test)
+qwen3-vl-8b-thinking,infovqa,86.0,Qwen,https://arxiv.org/pdf/2511.21631,(test)
 qwen3-vl-2b,blink,53.8,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-2b-thinking,blink,57.2,Qwen,https://arxiv.org/pdf/2511.21631,
-qwen3-vl-4b,blink,65.,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,blink,65.8,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-4b-thinking,blink,63.4,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-8b,blink,69.1,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-8b-thinking,blink,64.7,Qwen,https://arxiv.org/pdf/2511.21631,
@@ -242,6 +238,50 @@ qwen3-vl-4b,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-4b-thinking,zerobench,0,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-8b,zerobench,1,Qwen,https://arxiv.org/pdf/2511.21631,
 qwen3-vl-8b-thinking,zerobench,2,Qwen,https://arxiv.org/pdf/2511.21631,
+molmoe-1b,ai2d,86.4,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmoe-1b,chartqa,78.0,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmoe-1b,vqav2,83.9,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestDev
+molmoe-1b,docvqa,77.7,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmoe-1b,infovqa,53.9,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmoe-1b,textvqa,78.8,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmoe-1b,rwqa,60.4,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmoe-1b,mmmu,34.9,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmoe-1b,mathvista,34.0,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestMini
+molmoe-1b,countbench,87.2,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmoe-1b,pixmo-count,79.6,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-o,ai2d,90.7,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-o,chartqa,80.4,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-o,vqav2,85.3,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestDev
+molmo-7b-o,docvqa,90.8,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-o,infovqa,70.0,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-o,textvqa,80.4,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmo-7b-o,rwqa,67.5,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmo-7b-o,mmmu,39.3,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmo-7b-o,mathvista,44.5,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestMini
+molmo-7b-o,countbench,89.0,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmo-7b-o,pixmo-count,83.3,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-d,ai2d,93.2,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-d,chartqa,84.1,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-d,vqav2,85.6,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestDev
+molmo-7b-d,docvqa,92.2,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-d,infovqa,72.6,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-7b-d,textvqa,81.7,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmo-7b-d,rwqa,70.7,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmo-7b-d,mmmu,45.3,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmo-7b-d,mathvista,51.6,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestMini
+molmo-7b-d,countbench,88.5,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmo-7b-d,pixmo-count,84.8,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-72b,ai2d,96.3,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-72b,chartqa,87.3,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-72b,vqav2,86.5,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestDev
+molmo-72b,docvqa,93.5,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-72b,infovqa,81.9,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
+molmo-72b,textvqa,83.1,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmo-72b,rwqa,75.2,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmo-72b,mmmu,54.1,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Val
+molmo-72b,mathvista,58.6,Allen Institute for AI,https://arxiv.org/abs/2409.17146,TestMini
+molmo-72b,countbench,91.2,Allen Institute for AI,https://arxiv.org/abs/2409.17146,
+molmo-72b,pixmo-count,85.2,Allen Institute for AI,https://arxiv.org/abs/2409.17146,Test
 molmo2-4b,chartqa,86.1,Allen Institute for AI,http://arxiv.org/pdf/2601.10611,
 molmo2-4b,docvqa,87.8,Allen Institute for AI,http://arxiv.org/pdf/2601.10611,
 molmo2-4b,infovqa,78.6,Allen Institute for AI,http://arxiv.org/pdf/2601.10611,
@@ -299,140 +339,6 @@ molmo2-8b,blink,50.5,Allen Institute for AI,http://arxiv.org/pdf/2601.10611,
 moondream3-preview,docvqa,88.3,Moondream,https://docs.moondream.ai/#performance-benchmarks,
 moondream3-preview,chartqa,86.6,Moondream,https://docs.moondream.ai/#performance-benchmarks,
 moondream3-preview,pope,89.0,Moondream,https://docs.moondream.ai/#performance-benchmarks,
-qwen3.5-122b-a10b,vqav2
-qwen3.5-122b-a10b,chartqa
-qwen3.5-122b-a10b,textvqa
-qwen3.5-122b-a10b,mme
-qwen3.5-122b-a10b,blink
-qwen3.5-122b-a10b,mmmu,83.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
-qwen3.5-122b-a10b,mmmu-pro,76.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
-qwen3.5-122b-a10b,infovqa
-qwen3.5-122b-a10b,zerobench,9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
-qwen3.5-122b-a10b,pope
-qwen3.5-122b-a10b,mmstar,82.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
-qwen3.5-122b-a10b,rwqa,85.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
-qwen3.5-35b-a3b,vqav2
-qwen3.5-35b-a3b,chartqa
-qwen3.5-35b-a3b,textvqa
-qwen3.5-35b-a3b,mme
-qwen3.5-35b-a3b,blink
-qwen3.5-35b-a3b,mmmu,81.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
-qwen3.5-35b-a3b,mmmu-pro,75.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
-qwen3.5-35b-a3b,infovqa
-qwen3.5-35b-a3b,zerobench,8,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
-qwen3.5-35b-a3b,pope
-qwen3.5-35b-a3b,mmstar,81.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
-qwen3.5-35b-a3b,rwqa,84.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
-qwen3.5-27b,vqav2
-qwen3.5-27b,chartqa
-qwen3.5-27b,textvqa
-qwen3.5-27b,mme
-qwen3.5-27b,blink
-qwen3.5-27b,mmmu,82.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
-qwen3.5-27b,mmmu-pro,75.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
-qwen3.5-27b,infovqa
-qwen3.5-27b,zerobench,10,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
-qwen3.5-27b,pope
-qwen3.5-27b,mmstar,81.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
-qwen3.5-27b,rwqa,83.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
-qwen3.5-2b,mmmu,64.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,mmmu-pro,47.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,mathvista,73.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,mini
-qwen3.5-2b,dynamath,69.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,zerobench,0,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,vlmsblind,74.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,rwqa,71.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,mmstar,68.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,mmbench,81.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,EN-DEV-v1.1
-qwen3.5-2b,simplevqa,39.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,hallusionbench,51.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,ocrbench,85.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,countbench,86.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,mlvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,videommmu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b,mmvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,mmmu,64.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,mmmu-pro,50.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,mathvista,76.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,mini
-qwen3.5-2b-thinking,dynamath,73.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,zerobench,1,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,vlmsblind,75.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,rwqa,74.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,mmstar,71.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,mmbench,83.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,EN-DEV-v1.1
-qwen3.5-2b-thinking,simplevqa,38.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,hallusionbench,58.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,ocrbench,84.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,countbench,91.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,mlvu,76.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,videommmu,62.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-2b-thinking,mmvu,48.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
-qwen3.5-0.8b,mmmu,47.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,mmmu-pro,31.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,mathvista,58.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,mini
-qwen3.5-0.8b,dynamath,46.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,zerobench,0,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,vlmsblind,57.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,rwqa,61.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,mmstar,55.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,mmbench,68.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,EN-DEV-v1.1
-qwen3.5-0.8b,simplevqa,30.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,hallusionbench,46.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,ocrbench,79.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,countbench,68.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,mlvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,videommmu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b,mmvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
-qwen3.5-0.8b-thinking,mmmu,49.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,mmmu-pro,31.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,mathvista,62.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,mini
-qwen3.5-0.8b-thinking,dynamath,49.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,zerobench,0,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,vlmsblind,59.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,rwqa,63.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,mmstar,58.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,mmbench,69.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,EN-DEV-v1.1
-qwen3.5-0.8b-thinking,simplevqa,31.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,hallusionbench,53.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,ocrbench,74.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,countbench,77.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,mlvu,65.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,videommmu,44.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-0.8b-thinking,mmvu,34.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
-qwen3.5-4b,mmmu,77.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,mmmu-pro,66.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,mathvista,85.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,mini
-qwen3.5-4b,dynamath,83.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,zerobench,3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,vlmsblind,92.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,babyvision,19.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,rwqa,79.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,mmstar,78.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,mmbench,89.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,EN-DEV-v1.1
-qwen3.5-4b,simplevqa,43.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,hallusionbench,65.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,ocrbench,85.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,countbench,96.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,mlvu,82.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,videommmu,74.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-4b,mmvu,64.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
-qwen3.5-9b,mmmu,78.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,mmmu-pro,70.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,mathvista,85.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,mini
-qwen3.5-9b,dynamath,83.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,zerobench,3.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,vlmsblind,93.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,babyvision,25.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,rwqa,80.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,mmstar,79.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,mmbench,90.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,EN-DEV-v1.1
-qwen3.5-9b,simplevqa,51.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,hallusionbench,69.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,ocrbench,89.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,countbench,97.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,mlvu,84.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,videommmu,78.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
-qwen3.5-9b,mmvu,67.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
 gemma3-4b,mmmu,48.8,Google,https://arxiv.org/pdf/2503.19786,
 gemma3-12b,mmmu,59.6,Google,https://arxiv.org/pdf/2503.19786,
 gemma3-27b,mmmu,64.9,Google,https://arxiv.org/pdf/2503.19786,
@@ -443,7 +349,7 @@ step3-vl-10b,mmbench,92.05,StepFun,https://arxiv.org/pdf/2601.09668,
 step3-vl-10b,simplevqa,53.08,StepFun,https://arxiv.org/pdf/2601.09668,
 step3-vl-10b,mmstar,77.48,StepFun,https://arxiv.org/pdf/2601.09668,
 step3-vl-10b,mm-ifeval,61.87,StepFun,https://arxiv.org/pdf/2601.09668,
-step3-vl-10b,ocrbench,86.75,StepFun,https://arxiv.org/pdf/2601.09668,
+step3-vl-10b,ocrbench,867.5,StepFun,https://arxiv.org/pdf/2601.09668,
 step3-vl-10b,blink,66.79,StepFun,https://arxiv.org/pdf/2601.09668,
 step3-vl-10b,rwqa,74.44,StepFun,https://arxiv.org/pdf/2601.09668,
 qwen3-vl-8b-thinking,rwqa,71.93,StepFun,https://arxiv.org/pdf/2601.09668,
@@ -589,7 +495,7 @@ llava-ov-1.5-4b,mmmu,52.7,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-4b,mmmu-pro,35.3,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-4b,chartqa,87.1,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-4b,docvqa,94.4,LLaVA,http://arxiv.org/pdf/2509.23661,
-llava-ov-1.5-4b,ocrbench,80.0,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-4b,ocrbench,800,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-4b,infovqa,76.1,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-4b,pixmocount,52.2,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-4b,countbench,79.8,LLaVA,http://arxiv.org/pdf/2509.23661,
@@ -600,7 +506,7 @@ llava-ov-1.5-8b,mmmu,55.4,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-8b,mmmu-pro,37.4,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-8b,chartqa,86.5,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-8b,docvqa,95.0,LLaVA,http://arxiv.org/pdf/2509.23661,
-llava-ov-1.5-8b,ocrbench,82.9,LLaVA,http://arxiv.org/pdf/2509.23661,
+llava-ov-1.5-8b,ocrbench,829,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-8b,infovqa,78.4,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-8b,pixmocount,62.2,LLaVA,http://arxiv.org/pdf/2509.23661,
 llava-ov-1.5-8b,countbench,88.2,LLaVA,http://arxiv.org/pdf/2509.23661,
@@ -623,7 +529,7 @@ nemotron-nano-v2-vl-12b-reasoning,pope,87.0,NVIDIA,https://arxiv.org/abs/2511.03
 nemotron-nano-v2-vl-12b-reasoning,rwqa,72.2,NVIDIA,https://arxiv.org/abs/2511.03929,
 nemotron-nano-v2-vl-12b-reasoning,mmmu,67.8,NVIDIA,https://arxiv.org/abs/2511.03929,
 nemotron-nano-v2-vl-12b-reasoning,mmmu-pro,28.0,NVIDIA,https://arxiv.org/abs/2511.03929,
-nemotron-nano-v2-vl-12b-reasoning,ocrbench,83.5,NVIDIA,https://arxiv.org/abs/2511.03929,
+nemotron-nano-v2-vl-12b-reasoning,ocrbench,835,NVIDIA,https://arxiv.org/abs/2511.03929,
 nemotron-nano-v2-vl-12b-reasoning,chartqa,84.9,NVIDIA,https://arxiv.org/abs/2511.03929,Test
 nemotron-nano-v2-vl-12b-reasoning,textvqa,76.1,NVIDIA,https://arxiv.org/abs/2511.03929,Test
 nemotron-nano-v2-vl-12b-reasoning,docvqa,93.2,NVIDIA,https://arxiv.org/abs/2511.03929,Test
@@ -652,3 +558,1542 @@ qwen3-vl-8b-thinking,chartqa,,NVIDIA,https://arxiv.org/abs/2511.03929,Test
 qwen3-vl-8b-thinking,textvqa,,NVIDIA,https://arxiv.org/abs/2511.03929,Test
 qwen3-vl-8b-thinking,docvqa,,NVIDIA,https://arxiv.org/abs/2511.03929,Test
 qwen3-vl-8b-thinking,infovqa,,NVIDIA,https://arxiv.org/abs/2511.03929,Test
+falcon-perception-600m,saco-macro-f1,68.0,TII,https://arxiv.org/abs/2603.27365,
+falcon-perception-600m,pbench-macro-f1,57.0,TII,https://arxiv.org/abs/2603.27365,
+falcon-perception-600m,refcocom-macro-f1,77.3,TII,https://arxiv.org/abs/2603.27365,Val
+falconocr-300m,olmocr,80.3,TII,https://arxiv.org/abs/2603.27365,English-only
+falconocr-300m,omnidocbench,88.64,TII,https://arxiv.org/abs/2603.27365,Overall; English-only; v1.5
+internvl3.5-30b-a3b,mmstar,72.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mmstar,77.9,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mmstar,72.9,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mmstar,70.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mmstar,75.3,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mmstar,69.0,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mmstar,75.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mmvet,85.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mmvet,81.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mmvet,66.4,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mmvet,78.1,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mmvet,75.2,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mmvet,79.4,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mmvet,77.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mmbench,84.8,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-241b-a28b,mmbench,87.4,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+glm-4.1v-9b,mmbench,85.8,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+kimi-vl-a3b-2506,mmbench,84.4,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+glm-4.5v,mmbench,88.2,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+step3-321b-a38b,mmbench,81.1,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+gpt-5,mmbench,88.6,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-30b-a3b,mtvqa,33.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mtvqa,39.3,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mtvqa,25.5,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mtvqa,27.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mtvqa,30.5,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mtvqa,30.6,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mtvqa,33.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,ocrbench,880,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,ocrbench,907,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,ocrbench,842,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,ocrbench,869,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,ocrbench,872,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,ocrbench,837,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,ocrbench,807,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,wildvision,75.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,wildvision,82.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,wildvision,74.0,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,wildvision,64.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,wildvision,79.0,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,wildvision,89.4,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,wildvision,77.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mme-realworld-en,64.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mme-realworld-en,65.1,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mme-realworld-en,61.7,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mme-realworld-en,54.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mme-realworld-en,61.7,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mme-realworld-en,54.0,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mme-realworld-en,68.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,hallusionbench,53.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,hallusionbench,57.3,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,hallusionbench,63.2,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,hallusionbench,59.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,hallusionbench,65.4,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,hallusionbench,64.2,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,hallusionbench,65.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mvbench,72.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mvbench,76.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mvbench,68.4,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mvbench,59.7,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mvbench,73.0,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mvbench,64.2,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mvbench,74.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,video-mme-wo-sub,68.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,video-mme-wo-sub,72.9,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,video-mme-wo-sub,68.2,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,video-mme-wo-sub,67.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,video-mme-wo-sub,74.6,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,video-mme-wo-sub,63.6,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,video-mme-wo-sub,81.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mlvu,73.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mlvu,78.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mlvu,71.5,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mlvu,74.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mlvu,75.3,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mlvu,62.2,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mlvu,77.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,longvideobench,63.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,longvideobench,67.1,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,longvideobench,65.7,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,longvideobench,64.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,longvideobench,68.8,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,longvideobench,57.7,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,longvideobench,72.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mmmu,75.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-241b-a28b,mmmu,77.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.1v-9b,mmmu,68.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+kimi-vl-a3b-2506,mmmu,64.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.5v,mmmu,75.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+step3-321b-a38b,mmmu,74.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gpt-5,mmmu,84.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-30b-a3b,mathvista,80.9,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-241b-a28b,mathvista,82.7,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+glm-4.1v-9b,mathvista,80.7,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+kimi-vl-a3b-2506,mathvista,80.1,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+glm-4.5v,mathvista,84.6,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+step3-321b-a38b,mathvista,79.2,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+gpt-5,mathvista,81.9,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-30b-a3b,mathvision,55.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mathvision,63.9,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mathvision,54.4,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mathvision,54.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mathvision,65.6,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mathvision,64.8,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mathvision,72.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mathverse-vision,60.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mathverse-vision,68.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mathverse-vision,68.4,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mathverse-vision,54.6,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mathverse-vision,72.1,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,mathverse-vision,62.7,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mathverse-vision,81.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,dynamath,36.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,dynamath,46.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,dynamath,42.5,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,dynamath,28.1,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,dynamath,53.9,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,dynamath,50.1,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,dynamath,60.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,wemath,48.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,wemath,62.3,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,wemath,63.8,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,wemath,42.0,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,wemath,68.8,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,wemath,59.8,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,wemath,71.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,olympiadbench,62.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,olympiadbench,68.7,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,olympiadbench,56.3,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,olympiadbench,47.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,olympiadbench,64.0,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,olympiadbench,66.8,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,olympiadbench,73.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,logicvista,55.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,logicvista,66.7,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,logicvista,60.4,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,logicvista,51.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,logicvista,62.4,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,logicvista,60.2,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,logicvista,70.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,screenspot,86.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,screenspot,89.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,screenspot-v2,87.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,screenspot-v2,92.9,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,screenspot-v2,91.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,vsi-bench,63.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,vsi-bench,69.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,vsi-bench,39.2,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,vsi-bench,37.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,vsi-bench,41.4,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,vsi-bench,34.2,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,vsi-bench,37.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,erqa,41.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,erqa,46.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,erqa,45.8,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,erqa,36.0,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,erqa,46.5,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,erqa,44.5,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,erqa,65.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,space-10,45.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,space-10,55.0,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,space-10,43.4,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,space-10,39.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,space-10,51.6,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,space-10,42.6,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,space-10,43.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,omnispatial,48.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,omnispatial,51.9,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,omnispatial,47.7,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,omnispatial,37.3,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,omnispatial,51.0,InternVL,https://arxiv.org/abs/2508.18265,
+step3-321b-a38b,omnispatial,47.0,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,omnispatial,59.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mmmu,43.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-1b,mathvista,45.8,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3-1b,mathvision,18.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mathverse-vision,18.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,dynamath,5.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,wemath,13.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,logicvista,29.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mmmu,44.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-1b,mathvista,59.3,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-1b,mathvision,27.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mathverse-vision,37.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,dynamath,17.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,wemath,21.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,logicvista,29.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mmmu,48.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-2b,mathvista,57.0,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3-2b,mathvision,21.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mathverse-vision,25.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,dynamath,14.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,wemath,22.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,logicvista,36.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mmmu,59.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-2b,mathvista,71.8,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-2b,mathvision,42.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mathverse-vision,53.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,dynamath,31.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,wemath,48.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,logicvista,47.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl2-5-4b,mmmu,51.8,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl2-5-4b,mathvista,64.1,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl2-5-4b,mathvision,18.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl2-5-4b,mathverse-vision,27.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl2-5-4b,dynamath,15.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl2-5-4b,wemath,21.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl2-5-4b,logicvista,34.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mmmu,66.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-4b,mathvista,77.1,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-4b,mathvision,54.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mathverse-vision,61.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,dynamath,35.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,wemath,50.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,logicvista,56.4,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,mmmu,66.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+mimo-vl-rl-8b,mathvista,81.5,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+mimo-vl-rl-8b,mathvision,60.4,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,mathverse-vision,71.5,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,dynamath,45.9,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,wemath,66.3,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,logicvista,61.4,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,mmmu,71.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+keye-vl-8b,mathvista,80.7,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+keye-vl-8b,mathvision,50.8,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,mathverse-vision,54.8,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,dynamath,37.3,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,wemath,60.7,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,logicvista,54.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mmmu,62.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-8b,mathvista,71.6,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3-8b,mathvision,29.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mathverse-vision,39.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,dynamath,25.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,wemath,37.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,logicvista,44.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mmmu,73.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-8b,mathvista,78.4,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-8b,mathvision,56.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mathverse-vision,61.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,dynamath,37.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,wemath,57.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,logicvista,57.3,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,mmmu,55.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-12b,mathvista,56.1,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+gemma3-12b,mathvision,30.3,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,mathverse-vision,21.1,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,dynamath,20.8,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,wemath,33.6,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,logicvista,41.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mmmu,67.1,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-14b,mathvista,75.1,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3-14b,mathvision,37.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mathverse-vision,44.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,dynamath,31.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,wemath,43.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,logicvista,51.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mmmu,73.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-14b,mathvista,80.5,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-14b,mathvision,59.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mathverse-vision,62.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,dynamath,38.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,wemath,58.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,logicvista,60.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mmmu,72.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-20b-a4b,mathvista,78.0,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-20b-a4b,mathvision,53.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mathverse-vision,57.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,dynamath,33.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,wemath,41.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,logicvista,56.8,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,mmmu,64.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-27b,mathvista,59.8,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+gemma3-27b,mathvision,39.8,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,mathverse-vision,34.0,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,dynamath,28.5,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,wemath,37.9,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,logicvista,47.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mmmu,70.1,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-38b,mathvista,75.1,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3-38b,mathvision,34.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mathverse-vision,48.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,dynamath,35.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,wemath,48.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,logicvista,58.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mmmu,76.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-38b,mathvista,81.9,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3.5-38b,mathvision,63.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mathverse-vision,67.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,dynamath,41.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,wemath,64.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,logicvista,65.3,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5-nano,mmmu,72.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gpt-5-nano,mathvista,73.1,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+gpt-5-nano,mathvision,59.7,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5-nano,mathverse-vision,66.6,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5-nano,dynamath,47.9,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5-nano,wemath,59.4,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5-nano,logicvista,57.5,InternVL,https://arxiv.org/abs/2508.18265,
+gpt-5,mmmu,81.8,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-78b,mmmu,72.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-78b,mathvista,79.0,InternVL,https://arxiv.org/abs/2508.18265,(mini)
+internvl3-78b,mathvision,43.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,mathverse-vision,51.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,dynamath,35.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,wemath,46.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,logicvista,55.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,chartqa,75.3,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3-1b,textvqa,74.1,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-1b,docvqa,81.9,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-1b,infovqa,53.7,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-1b,ocrbench,790,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,charxiv-rq,21.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,charxiv-dq,47.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,vcr-en-easy-em,89.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,vcr-en-easy-jaccard,96.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,chartqa,77.7,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-1b,textvqa,71.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-1b,docvqa,85.6,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-1b,infovqa,60.5,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-1b,ocrbench,795,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,charxiv-rq,26.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,charxiv-dq,60.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,vcr-en-easy-em,83.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,vcr-en-easy-jaccard,94.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,chartqa,80.2,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3-2b,textvqa,77.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-2b,docvqa,88.3,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-2b,infovqa,66.1,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-2b,ocrbench,835,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,charxiv-rq,28.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,charxiv-dq,54.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,vcr-en-easy-em,91.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,vcr-en-easy-jaccard,96.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,chartqa,80.7,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-2b,textvqa,76.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-2b,docvqa,89.4,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-2b,infovqa,70.8,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-2b,ocrbench,836,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,charxiv-rq,31.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,charxiv-dq,65.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,vcr-en-easy-em,90.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,vcr-en-easy-jaccard,96.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,chartqa,86.0,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-4b,textvqa,77.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-4b,docvqa,92.4,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-4b,infovqa,78.0,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-4b,ocrbench,822,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,charxiv-rq,39.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,charxiv-dq,71.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,vcr-en-easy-em,91.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,vcr-en-easy-jaccard,97.0,InternVL,https://arxiv.org/abs/2508.18265,
+molmo-7b-d,chartqa,84.1,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+molmo-7b-d,textvqa,81.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+molmo-7b-d,docvqa,92.2,InternVL,https://arxiv.org/abs/2508.18265,(test)
+molmo-7b-d,infovqa,72.6,InternVL,https://arxiv.org/abs/2508.18265,(test)
+molmo-7b-d,ocrbench,694,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,chartqa,72.5,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+keye-vl-8b,textvqa,75.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+keye-vl-8b,docvqa,87.0,InternVL,https://arxiv.org/abs/2508.18265,(test)
+keye-vl-8b,infovqa,63.0,InternVL,https://arxiv.org/abs/2508.18265,(test)
+keye-vl-8b,ocrbench,853,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,charxiv-rq,36.8,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,charxiv-dq,75.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,chartqa,70.0,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+glm-4.1v-9b,textvqa,79.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.1v-9b,docvqa,93.3,InternVL,https://arxiv.org/abs/2508.18265,(test)
+glm-4.1v-9b,infovqa,80.3,InternVL,https://arxiv.org/abs/2508.18265,(test)
+glm-4.1v-9b,ocrbench,823,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,charxiv-rq,53.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,charxiv-dq,82.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,vcr-en-easy-em,32.7,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,vcr-en-easy-jaccard,55.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,chartqa,86.6,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3-8b,textvqa,80.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-8b,docvqa,92.7,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-8b,infovqa,76.8,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-8b,ocrbench,880,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,charxiv-rq,37.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,charxiv-dq,73.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,vcr-en-easy-em,94.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,vcr-en-easy-jaccard,98.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,chartqa,86.2,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3-9b,textvqa,79.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-9b,docvqa,93.6,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-9b,infovqa,79.6,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-9b,ocrbench,877,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,charxiv-rq,38.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,charxiv-dq,72.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,vcr-en-easy-em,94.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,vcr-en-easy-jaccard,97.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,chartqa,86.7,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-8b,textvqa,78.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-8b,docvqa,92.3,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-8b,infovqa,79.1,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-8b,ocrbench,840,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,charxiv-rq,44.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,charxiv-dq,72.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,vcr-en-easy-em,92.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,vcr-en-easy-jaccard,97.3,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,chartqa,75.7,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+gemma3-12b,textvqa,67.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-12b,docvqa,87.1,InternVL,https://arxiv.org/abs/2508.18265,(test)
+gemma3-12b,infovqa,64.9,InternVL,https://arxiv.org/abs/2508.18265,(test)
+gemma3-12b,ocrbench,702,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,charxiv-rq,24.9,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,charxiv-dq,65.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,chartqa,87.3,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3-14b,textvqa,80.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-14b,docvqa,94.1,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-14b,infovqa,83.6,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-14b,ocrbench,875,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,charxiv-rq,43.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,charxiv-dq,82.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,vcr-en-easy-em,94.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,vcr-en-easy-jaccard,98.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,chartqa,86.5,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-14b,textvqa,77.8,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-14b,docvqa,93.4,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-14b,infovqa,78.3,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-14b,ocrbench,836,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,charxiv-rq,47.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,charxiv-dq,76.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,vcr-en-easy-em,93.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,vcr-en-easy-jaccard,97.7,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,chartqa,73.7,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+kimi-vl-a3b-2506,textvqa,77.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+kimi-vl-a3b-2506,docvqa,93.5,InternVL,https://arxiv.org/abs/2508.18265,(test)
+kimi-vl-a3b-2506,infovqa,74.5,InternVL,https://arxiv.org/abs/2508.18265,(test)
+kimi-vl-a3b-2506,ocrbench,869,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,charxiv-rq,46.8,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,charxiv-dq,71.5,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,vcr-en-easy-em,81.1,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,vcr-en-easy-jaccard,90.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,chartqa,86.6,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-20b-a4b,textvqa,78.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-20b-a4b,docvqa,92.9,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-20b-a4b,infovqa,78.1,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-20b-a4b,ocrbench,870,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,charxiv-rq,38.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,charxiv-dq,78.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,vcr-en-easy-em,93.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,vcr-en-easy-jaccard,97.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,chartqa,87.4,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-30b-a3b,textvqa,80.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-30b-a3b,docvqa,94.2,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-30b-a3b,infovqa,81.4,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-30b-a3b,ocrbench,880,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,charxiv-rq,48.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,charxiv-dq,81.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,vcr-en-easy-em,94.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,vcr-en-easy-jaccard,98.2,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,chartqa,78.0,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+gemma3-27b,textvqa,65.1,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-27b,docvqa,86.6,InternVL,https://arxiv.org/abs/2508.18265,(test)
+gemma3-27b,infovqa,65.1,InternVL,https://arxiv.org/abs/2508.18265,(test)
+gemma3-27b,ocrbench,717,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,charxiv-rq,25.7,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,charxiv-dq,63.8,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,chartqa,75.6,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+cambrian-34b,textvqa,76.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+cambrian-34b,docvqa,75.5,InternVL,https://arxiv.org/abs/2508.18265,(test)
+cambrian-34b,infovqa,46.0,InternVL,https://arxiv.org/abs/2508.18265,(test)
+cambrian-34b,ocrbench,600,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,charxiv-rq,27.3,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,charxiv-dq,59.7,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,vcr-en-easy-em,79.7,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,vcr-en-easy-jaccard,89.3,InternVL,https://arxiv.org/abs/2508.18265,
+vila-1-5-40b,chartqa,67.2,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+vila-1-5-40b,textvqa,73.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+vila-1-5-40b,ocrbench,460,InternVL,https://arxiv.org/abs/2508.18265,
+vila-1-5-40b,charxiv-rq,24.0,InternVL,https://arxiv.org/abs/2508.18265,
+vila-1-5-40b,charxiv-dq,38.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,chartqa,89.2,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3-38b,textvqa,83.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-38b,docvqa,95.4,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-38b,infovqa,85.0,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-38b,ocrbench,886,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,charxiv-rq,46.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,charxiv-dq,87.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,vcr-en-easy-em,96.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,vcr-en-easy-jaccard,98.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,chartqa,88.8,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-38b,textvqa,82.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-38b,docvqa,94.0,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-38b,infovqa,83.8,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-38b,ocrbench,870,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,charxiv-rq,48.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,charxiv-dq,83.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,vcr-en-easy-em,95.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,vcr-en-easy-jaccard,98.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,chartqa,86.6,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+glm-4.5v,textvqa,72.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.5v,docvqa,94.5,InternVL,https://arxiv.org/abs/2508.18265,(test)
+glm-4.5v,infovqa,84.1,InternVL,https://arxiv.org/abs/2508.18265,(test)
+glm-4.5v,ocrbench,872,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,charxiv-rq,59.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,charxiv-dq,88.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,vcr-en-easy-em,36.5,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,vcr-en-easy-jaccard,44.9,InternVL,https://arxiv.org/abs/2508.18265,
+molmo-72b,chartqa,87.3,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+molmo-72b,textvqa,83.1,InternVL,https://arxiv.org/abs/2508.18265,(val)
+molmo-72b,docvqa,93.5,InternVL,https://arxiv.org/abs/2508.18265,(test)
+molmo-72b,infovqa,81.9,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-78b,chartqa,89.7,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3-78b,textvqa,84.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-78b,docvqa,95.4,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-78b,infovqa,86.5,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3-78b,ocrbench,906,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,charxiv-rq,46.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,charxiv-dq,85.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,vcr-en-easy-em,96.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,vcr-en-easy-jaccard,98.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,chartqa,88.0,InternVL,https://arxiv.org/abs/2508.18265,(test avg)
+internvl3.5-241b-a28b,textvqa,84.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-241b-a28b,docvqa,94.9,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-241b-a28b,infovqa,82.0,InternVL,https://arxiv.org/abs/2508.18265,(test)
+internvl3.5-241b-a28b,ocrbench,907,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,charxiv-rq,48.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,charxiv-dq,83.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,vcr-en-easy-em,97.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,vcr-en-easy-jaccard,99.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,blink,42.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-1b,mmiu,39.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,muirbench,31.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mmt-bench,52.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-1b,mirb,36.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,rwqa,58.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mme-realworld-en,46.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,wildvision,43.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,r-bench-dis,60.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,blink,44.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-1b,mmiu,45.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,muirbench,41.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mmt-bench,54.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-1b,mirb,44.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,rwqa,57.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mme-realworld-en,46.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,wildvision,49.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,r-bench-dis,57.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,blink,50.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-2b,mmiu,43.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,muirbench,38.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mmt-bench,59.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-2b,mirb,42.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,rwqa,64.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mme-realworld-en,53.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,wildvision,48.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,r-bench-dis,67.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,blink,51.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-2b,mmiu,44.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,muirbench,44.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mmt-bench,58.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-2b,mirb,45.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,rwqa,62.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mme-realworld-en,49.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,wildvision,66.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,r-bench-dis,62.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,blink,58.1,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-4b,mmiu,49.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,muirbench,53.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mmt-bench,64.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-4b,mirb,55.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,rwqa,66.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mme-realworld-en,59.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,wildvision,69.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,r-bench-dis,68.7,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,blink,53.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+keye-vl-8b,muirbench,50.4,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,mmt-bench,65.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+keye-vl-8b,rwqa,65.9,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,mme-realworld-en,48.8,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,wildvision,66.6,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,r-bench-dis,65.7,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,blink,65.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.1v-9b,muirbench,74.7,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mmt-bench,68.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.1v-9b,rwqa,70.6,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,r-bench-dis,69.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,blink,55.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-8b,mmiu,46.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,muirbench,55.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mmt-bench,65.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-8b,mirb,56.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,rwqa,70.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mme-realworld-en,62.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,wildvision,69.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,r-bench-dis,74.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,blink,58.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-9b,mmiu,50.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,muirbench,51.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,mmt-bench,65.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-9b,mirb,58.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,rwqa,70.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,mme-realworld-en,61.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,wildvision,63.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,r-bench-dis,70.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,blink,59.5,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-8b,mmiu,49.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,muirbench,55.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mmt-bench,66.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-8b,mirb,57.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,rwqa,67.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mme-realworld-en,62.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,wildvision,76.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,r-bench-dis,69.7,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,blink,52.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-12b,muirbench,49.7,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,mmt-bench,58.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-12b,rwqa,59.8,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,mme-realworld-en,48.9,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,wildvision,72.8,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,r-bench-dis,60.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,blink,60.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-14b,mmiu,50.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,muirbench,56.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mmt-bench,70.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-14b,mirb,59.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,rwqa,70.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mme-realworld-en,64.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,wildvision,69.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,r-bench-dis,69.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,blink,57.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-14b,mmiu,51.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,muirbench,58.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mmt-bench,68.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-14b,mirb,59.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,rwqa,70.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mme-realworld-en,63.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,wildvision,73.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,r-bench-dis,70.9,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,blink,56.8,InternVL,https://arxiv.org/abs/2508.18265,(val)
+kimi-vl-a3b-2506,muirbench,64.6,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mmt-bench,63.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+kimi-vl-a3b-2506,rwqa,72.4,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,r-bench-dis,69.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,blink,59.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-20b-a4b,mmiu,50.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,muirbench,58.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mmt-bench,66.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-20b-a4b,mirb,54.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,rwqa,71.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mme-realworld-en,60.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,wildvision,69.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,r-bench-dis,71.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,blink,60.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-30b-a3b,mmiu,55.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,muirbench,53.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mmt-bench,66.6,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-30b-a3b,mirb,59.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,rwqa,72.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,r-bench-dis,70.7,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,blink,54.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-27b,muirbench,55.2,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,mmt-bench,61.8,InternVL,https://arxiv.org/abs/2508.18265,(val)
+gemma3-27b,rwqa,65.1,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,mme-realworld-en,51.6,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,wildvision,79.8,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,r-bench-dis,61.6,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,rwqa,67.8,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,mme-realworld-en,44.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,blink,64.0,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-38b,mmiu,57.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,muirbench,63.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mmt-bench,71.8,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-38b,mirb,62.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,rwqa,75.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mme-realworld-en,67.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,wildvision,71.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,r-bench-dis,73.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,blink,60.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-38b,mmiu,58.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,muirbench,63.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mmt-bench,71.8,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-38b,mirb,71.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,rwqa,75.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mme-realworld-en,66.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,wildvision,80.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,r-bench-dis,73.1,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,blink,65.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.5v,muirbench,75.3,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mmt-bench,70.9,InternVL,https://arxiv.org/abs/2508.18265,(val)
+glm-4.5v,rwqa,75.2,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,r-bench-dis,72.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,blink,66.3,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-78b,mmiu,60.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,muirbench,64.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,mmt-bench,73.2,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-78b,mirb,64.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,rwqa,78.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,mme-realworld-en,65.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,wildvision,73.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,r-bench-dis,77.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,blink,61.4,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-241b-a28b,mmiu,61.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,muirbench,47.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mmt-bench,72.7,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-241b-a28b,mirb,73.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,rwqa,75.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,r-bench-dis,75.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mme,1934.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mmbench,69.9,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3-1b,mmvet,59.5,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3-1b,mmstar,51.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,hallusionbench,41.4,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-1b,crpe-relation,64.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,pope,90.7,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-1b,mme,1910.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mmbench,69.9,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-1b,mmvet,56.5,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-1b,mmstar,51.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,hallusionbench,41.0,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-1b,crpe-relation,68.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,pope,86.8,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-2b,mme,2221.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mmbench,78.6,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3-2b,mmvet,62.2,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3-2b,mmstar,60.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,hallusionbench,42.5,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-2b,crpe-relation,71.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,pope,89.6,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-2b,mme,2123.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mmbench,76.6,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-2b,mmvet,71.7,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-2b,mmstar,62.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,hallusionbench,48.6,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-2b,crpe-relation,75.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,pope,87.2,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-4b,mme,2272.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mmbench,80.3,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-4b,mmvet,76.6,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-4b,mmstar,65.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,hallusionbench,44.8,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-4b,crpe-relation,75.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,pope,88.9,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+keye-vl-8b,mme,2214.7,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,mmbench,76.3,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+keye-vl-8b,mmvet,70.0,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+keye-vl-8b,mmstar,72.8,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,hallusionbench,57.7,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+keye-vl-8b,crpe-relation,76.5,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,pope,87.0,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+glm-4.1v-9b,mme,2445.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mmvet,66.4,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+glm-4.1v-9b,hallusionbench,63.2,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+glm-4.1v-9b,crpe-relation,78.9,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,pope,87.1,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-8b,mme,2415.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mmbench,81.7,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3-8b,mmvet,81.3,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3-8b,mmstar,68.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,hallusionbench,49.9,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-8b,crpe-relation,76.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,pope,91.1,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-9b,mme,2372.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,mmbench,81.7,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3-9b,mmvet,76.2,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3-9b,mmstar,66.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,hallusionbench,51.2,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-9b,crpe-relation,75.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,pope,90.4,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-8b,mme,2380.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mmbench,79.5,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-8b,mmvet,83.1,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-8b,mmstar,69.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,hallusionbench,54.5,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-8b,crpe-relation,75.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,pope,88.7,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+gemma3-12b,mme,2044.7,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,mmbench,71.8,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+gemma3-12b,mmvet,64.9,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+gemma3-12b,mmstar,56.1,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,hallusionbench,47.2,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+gemma3-12b,crpe-relation,69.1,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,pope,85.2,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-14b,mme,2478.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mmbench,83.5,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3-14b,mmvet,80.2,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3-14b,mmstar,68.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,hallusionbench,55.1,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-14b,crpe-relation,77.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,pope,90.2,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-14b,mme,2398.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mmbench,81.5,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-14b,mmvet,81.7,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-14b,mmstar,70.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,hallusionbench,54.0,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-14b,crpe-relation,76.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,pope,87.7,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+kimi-vl-a3b-2506,mme,2352.7,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,mmvet,78.1,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+kimi-vl-a3b-2506,hallusionbench,59.8,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+kimi-vl-a3b-2506,crpe-relation,60.9,InternVL,https://arxiv.org/abs/2508.18265,
+kimi-vl-a3b-2506,pope,86.5,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-20b-a4b,mme,2318.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mmbench,85.2,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-20b-a4b,mmvet,80.3,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-20b-a4b,mmstar,70.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,hallusionbench,52.0,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-20b-a4b,crpe-relation,76.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,pope,89.4,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-30b-a3b,mme,2461.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mmvet,85.5,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-30b-a3b,hallusionbench,53.8,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-30b-a3b,crpe-relation,77.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,pope,89.6,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+gemma3-27b,mme,1816.9,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,mmbench,77.2,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+gemma3-27b,mmvet,68.3,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+gemma3-27b,mmstar,61.7,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,hallusionbench,47.9,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+gemma3-27b,crpe-relation,71.64,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,pope,85.8,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+cambrian-34b,mmbench,78.3,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+cambrian-34b,mmvet,53.2,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+cambrian-34b,mmstar,54.2,InternVL,https://arxiv.org/abs/2508.18265,
+cambrian-34b,hallusionbench,41.6,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-38b,mme,2523.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mmbench,86.9,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3-38b,mmvet,83.9,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3-38b,mmstar,71.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,hallusionbench,57.1,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-38b,crpe-relation,77.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,pope,90.6,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-38b,mme,2492.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mmbench,87.3,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3.5-38b,mmvet,82.2,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-38b,mmstar,75.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,hallusionbench,59.7,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-38b,crpe-relation,77.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,pope,90.4,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+glm-4.5v,mme,2423.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mmvet,75.2,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+glm-4.5v,hallusionbench,64.5,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+glm-4.5v,crpe-relation,55.4,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,pope,85.9,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-78b,mme,2549.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,mmbench,87.7,InternVL,https://arxiv.org/abs/2508.18265,(v1.1 en)
+internvl3-78b,mmvet,81.3,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3-78b,mmstar,72.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,hallusionbench,59.1,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-78b,crpe-relation,79.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,pope,90.3,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-241b-a28b,mme,2525.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mmvet,81.2,InternVL,https://arxiv.org/abs/2508.18265,(turbo)
+internvl3.5-241b-a28b,hallusionbench,57.3,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3.5-241b-a28b,crpe-relation,78.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,pope,90.7,InternVL,https://arxiv.org/abs/2508.18265,(avg)
+internvl3-1b,refcoco-val,85.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,refcocop-val,76.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,refcocog-val,82.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,refcoco-val,85.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,refcocop-val,77.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,refcocog-val,81.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,refcoco-val,89.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,refcocop-val,84.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,refcocog-val,87.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,refcoco-val,88.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,refcocop-val,82.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,refcocog-val,85.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,refcoco-val,92.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,refcocop-val,87.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,refcocog-val,89.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,refcoco-val,92.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,refcocop-val,88.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,refcocog-val,89.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,refcoco-val,91.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,refcocop-val,86.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,refcocog-val,88.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,refcoco-val,92.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,refcocop-val,87.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,refcocog-val,89.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,refcoco-val,92.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,refcocop-val,87.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,refcocog-val,88.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,refcoco-val,92.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,refcocop-val,88.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,refcocog-val,90.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,refcoco-val,91.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,refcocop-val,87.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,refcocog-val,89.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,refcoco-val,93.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,refcocop-val,89.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,refcocog-val,90.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,refcoco-val,93.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,refcocop-val,89.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,refcocog-val,91.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,refcoco-val,90.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,refcocop-val,87.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,refcocog-val,89.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,refcoco-val,93.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,refcocop-val,90.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,refcocog-val,91.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,refcoco-val,94.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,refcocop-val,91.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,refcocog-val,92.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mtvqa,22.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mtvqa,22.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mtvqa,26.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mtvqa,28.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mtvqa,29.6,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,mtvqa,22.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mtvqa,30.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,mtvqa,27.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mtvqa,35.2,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,mtvqa,24.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mtvqa,31.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mtvqa,34.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mtvqa,28.2,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,mtvqa,27.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mtvqa,32.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mtvqa,36.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,mtvqa,32.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,video-mme-wo-sub,51.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mvbench,63.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,mmbench-video,1.30,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-1b,mlvu,53.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,longvideobench,48.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,video-mme-wo-sub,52.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mvbench,61.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,mmbench-video,1.39,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-1b,mlvu,56.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,longvideobench,53.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,video-mme-wo-sub,58.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mvbench,70.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,mmbench-video,1.42,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-2b,mlvu,64.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,longvideobench,55.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,video-mme-wo-sub,58.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mvbench,65.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,mmbench-video,1.56,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-2b,mlvu,64.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,longvideobench,57.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,video-mme-wo-sub,65.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mvbench,71.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,mmbench-video,1.59,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-4b,mlvu,70.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,longvideobench,60.8,InternVL,https://arxiv.org/abs/2508.18265,
+llava-onevision-7b,video-mme-wo-sub,58.2,InternVL,https://arxiv.org/abs/2508.18265,
+llava-onevision-7b,mvbench,56.7,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,video-mme-wo-sub,67.7,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,longvideobench,64.8,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.1v-9b,mmbench-video,1.63,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-8b,video-mme-wo-sub,66.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mvbench,75.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,mmbench-video,1.69,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-8b,mlvu,71.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,longvideobench,58.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,video-mme-wo-sub,66.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,mvbench,74.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,mmbench-video,1.69,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-9b,mlvu,70.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-9b,longvideobench,62.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,video-mme-wo-sub,66.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mvbench,72.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,mmbench-video,1.67,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-8b,mlvu,70.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,longvideobench,62.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,video-mme-wo-sub,70.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mvbench,76.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,mmbench-video,1.73,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-14b,mlvu,73.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,longvideobench,63.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,video-mme-wo-sub,67.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mvbench,72.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,mmbench-video,1.73,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-14b,mlvu,72.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,longvideobench,62.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,video-mme-wo-sub,62.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mvbench,73.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,mmbench-video,1.54,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-20b-a4b,mlvu,65.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,longvideobench,58.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,mmbench-video,1.69,InternVL,https://arxiv.org/abs/2508.18265,(val)
+vila-1-5-40b,video-mme-wo-sub,60.1,InternVL,https://arxiv.org/abs/2508.18265,
+vila-1-5-40b,mmbench-video,1.61,InternVL,https://arxiv.org/abs/2508.18265,(val)
+vila-1-5-40b,mlvu,56.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,video-mme-wo-sub,72.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mvbench,76.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,mmbench-video,1.81,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-38b,mlvu,77.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,longvideobench,67.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,video-mme-wo-sub,70.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mvbench,75.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,mmbench-video,1.90,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-38b,mlvu,77.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,longvideobench,65.7,InternVL,https://arxiv.org/abs/2508.18265,
+glm-4.5v,mmbench-video,2.05,InternVL,https://arxiv.org/abs/2508.18265,(val)
+llava-onevision-72b,video-mme-wo-sub,66.2,InternVL,https://arxiv.org/abs/2508.18265,
+llava-onevision-72b,mvbench,59.4,InternVL,https://arxiv.org/abs/2508.18265,
+llava-onevision-72b,mlvu,66.4,InternVL,https://arxiv.org/abs/2508.18265,
+llava-onevision-72b,longvideobench,61.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,video-mme-wo-sub,72.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,mvbench,78.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,mmbench-video,1.81,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3-78b,mlvu,79.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,longvideobench,65.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-241b-a28b,mmbench-video,1.74,InternVL,https://arxiv.org/abs/2508.18265,(val)
+internvl3.5-4b,screenspot,83.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-4b,screenspot-v2,85.1,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-7b-rl,screenspot,87.2,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-7b-rl,screenspot-v2,90.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,screenspot,79.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,screenspot-v2,81.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,screenspot,87.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,screenspot-v2,86.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,screenspot,87.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,screenspot-v2,88.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,screenspot,85.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,screenspot-v2,88.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,screenspot,85.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,screenspot-v2,87.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,screenspot,81.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,screenspot-v2,83.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,screenspot,88.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,screenspot-v2,90.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,vsi-bench,29.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,erqa,30.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,space-10,41.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-1b,omnispatial,35.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,vsi-bench,49.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,erqa,35.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,space-10,33.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-1b,omnispatial,40.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,vsi-bench,31.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,erqa,31.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,space-10,44.2,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-2b,omnispatial,38.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,vsi-bench,53.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,erqa,37.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,space-10,34.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-2b,omnispatial,42.3,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,vsi-bench,36.4,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,erqa,37.8,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,space-10,36.1,InternVL,https://arxiv.org/abs/2508.18265,
+mimo-vl-rl-8b,omnispatial,46.5,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,vsi-bench,28.6,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,erqa,35.3,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,space-10,38.6,InternVL,https://arxiv.org/abs/2508.18265,
+keye-vl-8b,omnispatial,46.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,vsi-bench,42.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,erqa,35.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,space-10,40.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-8b,omnispatial,41.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,vsi-bench,56.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,erqa,41.0,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,space-10,39.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-8b,omnispatial,47.8,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,vsi-bench,21.9,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,erqa,36.1,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,space-10,41.5,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,omnispatial,43.7,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,vsi-bench,48.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,erqa,39.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,space-10,47.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-14b,omnispatial,45.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,vsi-bench,60.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,erqa,41.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,space-10,48.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-14b,omnispatial,47.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,vsi-bench,60.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,erqa,41.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,space-10,51.6,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-20b-a4b,omnispatial,45.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-30b-a3b,space-10,49.7,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,vsi-bench,22.0,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,erqa,37.5,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,space-10,41.5,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-27b,omnispatial,44.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,vsi-bench,48.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,erqa,42.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,space-10,53.1,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-38b,omnispatial,48.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,vsi-bench,66.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,erqa,43.3,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,space-10,43.8,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3.5-38b,omnispatial,51.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,vsi-bench,48.4,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,erqa,45.9,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,space-10,52.5,InternVL,https://arxiv.org/abs/2508.18265,
+internvl3-78b,omnispatial,49.3,InternVL,https://arxiv.org/abs/2508.18265,
+gemma3-12b,mmmb,75.90,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+gemma3-27b,mmmb,77.15,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+glm-4.1v-9b,mmmb,81.55,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+glm-4.5v,mmmb,85.37,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-14b,mmmb,83.35,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-1b,mmmb,63.22,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-2b,mmmb,73.62,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-38b,mmmb,84.88,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-78b,mmmb,86.08,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-8b,mmmb,81.98,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-9b,mmmb,78.05,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-14b,mmmb,82.52,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-1b,mmmb,66.02,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-20b-a4b,mmmb,82.97,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-241b-a28b,mmmb,85.77,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-2b,mmmb,74.62,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-30b-a3b,mmmb,84.25,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-38b,mmmb,85.17,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-4b,mmmb,80.15,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-8b,mmmb,81.40,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+keye-vl-8b,mmmb,74.42,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+kimi-vl-a3b-2506,mmmb,76.25,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+qwen3.5-397b-a17b,mmmu-pro,79.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,mmmu,85.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,mmstar,78.7,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,rwqa,81.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,simplevqa,61.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,mathvista,90.3,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,(mini)
+qwen3.5-397b-a17b,zerobench,4,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-397b-a17b,ocrbench,875,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
+qwen3.5-122b-a10b,vqav2,,,,
+qwen3.5-122b-a10b,chartqa,,,,
+qwen3.5-122b-a10b,textvqa,,,,
+qwen3.5-122b-a10b,mme,,,,
+qwen3.5-122b-a10b,blink,,,,
+qwen3.5-122b-a10b,mmmu,83.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
+qwen3.5-122b-a10b,mmmu-pro,76.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
+qwen3.5-122b-a10b,infovqa,,,,
+qwen3.5-122b-a10b,zerobench,9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
+qwen3.5-122b-a10b,pope,,,,
+qwen3.5-122b-a10b,mmstar,82.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
+qwen3.5-122b-a10b,rwqa,85.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B#vision-language,
+qwen3.5-35b-a3b,vqav2,,,,
+qwen3.5-35b-a3b,chartqa,,,,
+qwen3.5-35b-a3b,textvqa,,,,
+qwen3.5-35b-a3b,mme,,,,
+qwen3.5-35b-a3b,blink,,,,
+qwen3.5-35b-a3b,mmmu,81.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
+qwen3.5-35b-a3b,mmmu-pro,75.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
+qwen3.5-35b-a3b,infovqa,,,,
+qwen3.5-35b-a3b,zerobench,8,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
+qwen3.5-35b-a3b,pope,,,,
+qwen3.5-35b-a3b,mmstar,81.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
+qwen3.5-35b-a3b,rwqa,84.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B#vision-language,
+qwen3.5-27b,vqav2,,,,
+qwen3.5-27b,chartqa,,,,
+qwen3.5-27b,textvqa,,,,
+qwen3.5-27b,mme,,,,
+qwen3.5-27b,blink,,,,
+qwen3.5-27b,mmmu,82.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
+qwen3.5-27b,mmmu-pro,75.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
+qwen3.5-27b,infovqa,,,,
+qwen3.5-27b,zerobench,10,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
+qwen3.5-27b,pope,,,,
+qwen3.5-27b,mmstar,81.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
+qwen3.5-27b,rwqa,83.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B#vision-language,
+qwen3.5-2b,mmmu,64.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,mmmu-pro,47.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,mathvista,73.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,mini
+qwen3.5-2b,dynamath,69.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,zerobench,0,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,vlmsblind,74.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,rwqa,71.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,mmstar,68.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,mmbench,81.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,EN-DEV-v1.1
+qwen3.5-2b,simplevqa,39.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,hallusionbench,51.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,ocrbench,854,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,countbench,86.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,mlvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,videommmu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b,mmvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,mmmu,64.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,mmmu-pro,50.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,mathvista,76.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,mini
+qwen3.5-2b-thinking,dynamath,73.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,zerobench,1,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,vlmsblind,75.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,rwqa,74.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,mmstar,71.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,mmbench,83.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,EN-DEV-v1.1
+qwen3.5-2b-thinking,simplevqa,38.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,hallusionbench,58.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,ocrbench,845,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,countbench,91.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,mlvu,76.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,videommmu,62.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-2b-thinking,mmvu,48.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B#vision-language,
+qwen3.5-0.8b,mmmu,47.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,mmmu-pro,31.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,mathvista,58.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,mini
+qwen3.5-0.8b,dynamath,46.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,zerobench,0,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,vlmsblind,57.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,rwqa,61.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,mmstar,55.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,mmbench,68.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,EN-DEV-v1.1
+qwen3.5-0.8b,simplevqa,30.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,hallusionbench,46.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,ocrbench,791,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,countbench,68.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,mlvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,videommmu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b,mmvu,,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B#vision-language,
+qwen3.5-0.8b-thinking,mmmu,49.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,mmmu-pro,31.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,mathvista,62.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,mini
+qwen3.5-0.8b-thinking,dynamath,49.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,zerobench,0,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,vlmsblind,59.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,rwqa,63.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,mmstar,58.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,mmbench,69.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,EN-DEV-v1.1
+qwen3.5-0.8b-thinking,simplevqa,31.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,hallusionbench,53.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,ocrbench,745,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,countbench,77.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,mlvu,65.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,videommmu,44.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-0.8b-thinking,mmvu,34.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-08B#vision-language,
+qwen3.5-4b,mmmu,77.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,mmmu-pro,66.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,mathvista,85.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,mini
+qwen3.5-4b,dynamath,83.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,zerobench,3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,vlmsblind,92.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,babyvision,19.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,rwqa,79.5,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,mmstar,78.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,mmbench,89.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,EN-DEV-v1.1
+qwen3.5-4b,simplevqa,43.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,hallusionbench,65.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,ocrbench,850,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,countbench,96.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,mlvu,82.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,videommmu,74.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-4b,mmvu,64.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B#vision-language,
+qwen3.5-9b,mmmu,78.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,mmmu-pro,70.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,mathvista,85.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,mini
+qwen3.5-9b,dynamath,83.6,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,zerobench,3.0,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,vlmsblind,93.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,babyvision,25.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,rwqa,80.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,mmstar,79.7,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,mmbench,90.1,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,EN-DEV-v1.1
+qwen3.5-9b,simplevqa,51.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,hallusionbench,69.3,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,ocrbench,892,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,countbench,97.2,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,mlvu,84.4,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,videommmu,78.9,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+qwen3.5-9b,mmvu,67.8,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B#vision-language,
+gemma3-12b,multilingual-mmbench,64.60,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+gemma3-27b,multilingual-mmbench,75.10,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+glm-4.1v-9b,multilingual-mmbench,81.35,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+glm-4.5v,multilingual-mmbench,86.70,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-14b,multilingual-mmbench,83.55,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-1b,multilingual-mmbench,58.15,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-2b,multilingual-mmbench,71.93,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-38b,multilingual-mmbench,86.95,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-78b,multilingual-mmbench,88.20,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-8b,multilingual-mmbench,82.00,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3-9b,multilingual-mmbench,77.08,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-14b,multilingual-mmbench,79.92,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-1b,multilingual-mmbench,58.48,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-20b-a4b,multilingual-mmbench,82.08,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-241b-a28b,multilingual-mmbench,87.40,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-2b,multilingual-mmbench,70.85,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-30b-a3b,multilingual-mmbench,83.80,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-38b,multilingual-mmbench,84.92,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-4b,multilingual-mmbench,76.40,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+internvl3.5-8b,multilingual-mmbench,78.42,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+keye-vl-8b,multilingual-mmbench,67.02,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+kimi-vl-a3b-2506,multilingual-mmbench,73.73,InternVL,https://arxiv.org/abs/2508.18265,Average of EN/ZH/PT/AR/TR/RU splits
+gpt-5-nano,mmmu,75.8,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,mmmu,57.6,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,mmmu-pro,42.5,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,mmmu-pro,36.5,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,mmmu-pro,57.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,mmmu-pro,53.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,mmmu-pro,60.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,mmmu-pro,55.9,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,mmmu-pro,57.2,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,mmmu-pro,36.5,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,mathvision,45.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,mathvision,31.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,mathvision,60.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,mathvision,51.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,mathvision,62.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,mathvision,53.9,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,mathvision,62.2,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,mathvision,33.2,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,mathverse-vision,66.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,mathverse-vision,52.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,mathverse-vision,75.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,mathverse-vision,46.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,mathverse-vision,77.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,mathverse-vision,62.1,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,mathverse-vision,74.2,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,mathverse-vision,27.0,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,dynamath,66.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,dynamath,54.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,dynamath,74.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,dynamath,65.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,dynamath,73.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,dynamath,67.7,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,dynamath,78.0,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,dynamath,62.0,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5-nano,zerobench,1,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,zerobench,1,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,vlmsblind,50.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,vlmsblind,56.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,vlmsblind,68.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,vlmsblind,71.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,vlmsblind,69.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,vlmsblind,74.0,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,vlmsblind,66.7,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,vlmsblind,40.2,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,logicvista,50.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,logicvista,35.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,logicvista,61.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,logicvista,53.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,logicvista,65.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,logicvista,55.3,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,logicvista,59.7,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,logicvista,40.5,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,mmbench,79.9,Qwen,https://arxiv.org/pdf/2511.21631,(EN)
+qwen3-vl-2b,mmbench,78.4,Qwen,https://arxiv.org/pdf/2511.21631,(EN)
+qwen3-vl-4b-thinking,mmbench,84.6,Qwen,https://arxiv.org/pdf/2511.21631,(EN)
+qwen3-vl-4b,mmbench,83.9,Qwen,https://arxiv.org/pdf/2511.21631,(EN)
+qwen3-vl-8b-thinking,mmbench,85.3,Qwen,https://arxiv.org/pdf/2511.21631,(EN)
+qwen3-vl-8b,mmbench,84.5,Qwen,https://arxiv.org/pdf/2511.21631,(EN)
+gpt-5-nano,mmbench,78.4,Qwen,https://arxiv.org/pdf/2511.21631,"(EN, high)"
+gpt-5-nano,mmbench,50.8,Qwen,https://arxiv.org/pdf/2511.21631,"(EN, minimal)"
+gpt-5-nano,rwqa,71.8,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,rwqa,60.7,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5-nano,mmstar,68.6,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,mmstar,41.3,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,simplevqa,43.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,simplevqa,40.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,simplevqa,48.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,simplevqa,48.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,simplevqa,49.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,simplevqa,50.2,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,simplevqa,46.0,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,simplevqa,39.0,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,hallusionbench,54.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,hallusionbench,51.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,hallusionbench,64.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,hallusionbench,57.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,hallusionbench,65.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,hallusionbench,61.1,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,hallusionbench,58.4,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,hallusionbench,39.3,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5-nano,docvqa,88.2,Qwen,https://arxiv.org/pdf/2511.21631,"(test, high)"
+gpt-5-nano,docvqa,78.3,Qwen,https://arxiv.org/pdf/2511.21631,"(test, minimal)"
+gpt-5-nano,infovqa,68.6,Qwen,https://arxiv.org/pdf/2511.21631,"(test, high)"
+gpt-5-nano,infovqa,49.2,Qwen,https://arxiv.org/pdf/2511.21631,"(test, minimal)"
+gpt-5-nano,chartqa,52.1,Qwen,https://arxiv.org/pdf/2511.21631,Test (high)
+gpt-5-nano,chartqa,48.6,Qwen,https://arxiv.org/pdf/2511.21631,Test (minimal)
+qwen3-vl-2b-thinking,ocrbench,792,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,ocrbench,858,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,ocrbench,808,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,ocrbench,881,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,ocrbench,819,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,ocrbench,896,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,ocrbench,753,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,ocrbench,701,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,charxiv-dq,70.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,charxiv-dq,62.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,charxiv-dq,83.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,charxiv-dq,76.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,charxiv-dq,85.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,charxiv-dq,83.0,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,charxiv-dq,82.0,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,charxiv-dq,64.4,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,charxiv-rq,37.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,charxiv-rq,26.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,charxiv-rq,50.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,charxiv-rq,39.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,charxiv-rq,53.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,charxiv-rq,46.4,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,charxiv-rq,50.1,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,charxiv-rq,31.7,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,countbench,84.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,countbench,88.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,countbench,89.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,countbench,84.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,countbench,91.5,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,countbench,80.5,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,countbench,80.0,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,countbench,62.9,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,erqa,41.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,erqa,28.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,erqa,47.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,erqa,41.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,erqa,46.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,erqa,45.8,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,erqa,45.8,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,erqa,37.8,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,vsi-bench,48.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,vsi-bench,53.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,vsi-bench,55.2,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,vsi-bench,59.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,vsi-bench,56.6,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,vsi-bench,59.4,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,vsi-bench,15.4,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,vsi-bench,27.0,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5-nano,blink,58.3,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,blink,42.2,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,muirbench,68.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,muirbench,47.4,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,muirbench,75.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,muirbench,63.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,muirbench,76.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,muirbench,64.4,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,muirbench,65.7,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,muirbench,45.7,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+qwen3-vl-2b-thinking,mvbench,64.5,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,mvbench,61.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,mvbench,69.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,mvbench,68.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,mvbench,69.0,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,mvbench,68.7,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b-thinking,video-mme-wo-sub,62.1,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-2b,video-mme-wo-sub,61.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b-thinking,video-mme-wo-sub,68.9,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-4b,video-mme-wo-sub,69.3,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b-thinking,video-mme-wo-sub,71.8,Qwen,https://arxiv.org/pdf/2511.21631,
+qwen3-vl-8b,video-mme-wo-sub,71.4,Qwen,https://arxiv.org/pdf/2511.21631,
+gpt-5-nano,video-mme-wo-sub,66.2,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5-nano,video-mme-wo-sub,49.4,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,mmmu,84.2,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,mmmu,74.4,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,mmmu-pro,78.4,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,mmmu-pro,62.7,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,mathvista,81.3,Qwen,https://arxiv.org/pdf/2511.21631,"(mini, high)"
+gpt-5,mathvista,50.9,Qwen,https://arxiv.org/pdf/2511.21631,"(mini, minimal)"
+gpt-5,mathvision,70.9,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,mathvision,45.8,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,wemath,73.8,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,wemath,51.8,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,mathverse-vision,84.1,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,mathverse-vision,43.0,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,dynamath,85.4,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,dynamath,74.0,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,zerobench,2,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,zerobench,2,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,vlmsblind,80.5,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,vlmsblind,53.4,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,logicvista,71.8,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,logicvista,46.3,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,mmbench,83.8,Qwen,https://arxiv.org/pdf/2511.21631,"(EN, high)"
+gpt-5,mmbench,81.3,Qwen,https://arxiv.org/pdf/2511.21631,"(EN, minimal)"
+gpt-5,rwqa,82.8,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,rwqa,77.3,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,mmstar,76.4,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,mmstar,65.2,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,simplevqa,61.8,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,simplevqa,56.7,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,hallusionbench,65.7,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,hallusionbench,53.7,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,docvqa,91.5,Qwen,https://arxiv.org/pdf/2511.21631,"(test, high)"
+gpt-5,docvqa,89.6,Qwen,https://arxiv.org/pdf/2511.21631,"(test, minimal)"
+gpt-5,infovqa,79.0,Qwen,https://arxiv.org/pdf/2511.21631,"(test, high)"
+gpt-5,infovqa,69.9,Qwen,https://arxiv.org/pdf/2511.21631,"(test, minimal)"
+gpt-5,chartqa,59.7,Qwen,https://arxiv.org/pdf/2511.21631,Test (high)
+gpt-5,chartqa,59.1,Qwen,https://arxiv.org/pdf/2511.21631,Test (minimal)
+gpt-5,ocrbench,810,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,ocrbench,787,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,charxiv-dq,89.2,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,charxiv-dq,79.5,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,charxiv-rq,81.1,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,charxiv-rq,57.8,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,countbench,91.7,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,countbench,87.8,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,erqa,65.7,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,erqa,42.0,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,blink,71.0,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,blink,62.8,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,muirbench,77.5,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,muirbench,66.5,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,mvbench,75.3,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,mvbench,64.6,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+gpt-5,video-mme-wo-sub,84.7,Qwen,https://arxiv.org/pdf/2511.21631,(high)
+gpt-5,video-mme-wo-sub,77.3,Qwen,https://arxiv.org/pdf/2511.21631,(minimal)
+smolvlm2-2.2b,mathvista,51.5,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,(mini)
+smolvlm2-2.2b,ocrbench,729,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,
+smolvlm2-2.2b,ai2d,70,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#vision-evaluation,
+smolvlm2-2.2b,mlvu,55.2,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#video-evaluation,
+smolvlm2-2.2b,mvbench,46.27,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct#video-evaluation,
+isaac0.1,vqav2,82.12,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,docvqa,91.22,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,rwqa,74.87,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,textvqa,79.39,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,ocrbench,562,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,mme,1293,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,seedbench,74.60,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,blink,38.50,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,pixmo-count,62.95,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,countbench,86.68,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,refcocog-val,74.06,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,refcoco-val,77.15,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,refcocop-val,70.73,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.1,muirbench,37.00,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,pixmo-count,61.40,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,countbench,81.80,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,refcocog-val,82.00,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,refcoco-val,86.40,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,refcocop-val,77.20,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-1b,muirbench,37.60,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,pixmo-count,66.70,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,countbench,89.70,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,refcocog-val,85.80,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,refcoco-val,89.20,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,refcocop-val,82.60,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+isaac0.2-2b,muirbench,44.30,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+gemma3-27b,pixmo-count,51.24,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+gemma3-27b,countbench,68.00,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+gemma3-27b,refcocog-val,54.81,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+gemma3-27b,refcoco-val,55.26,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+gemma3-27b,refcocop-val,57.53,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+gemma3-27b,muirbench,31.20,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+lfm2-vl-1.6b,pixmo-count,55.89,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+lfm2-vl-1.6b,countbench,75.17,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+lfm2-vl-1.6b,refcocog-val,64.71,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+lfm2-vl-1.6b,refcoco-val,67.28,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+lfm2-vl-1.6b,refcocop-val,62.30,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+lfm2-vl-1.6b,muirbench,37.12,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+smolvlm2-2.2b,pixmo-count,54.10,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+smolvlm2-2.2b,countbench,72.76,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+smolvlm2-2.2b,refcocog-val,62.64,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+smolvlm2-2.2b,refcoco-val,65.12,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+smolvlm2-2.2b,refcocop-val,60.30,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+smolvlm2-2.2b,muirbench,35.93,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+qwen3-vl-2b,pixmo-count,59.80,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+qwen3-vl-2b,countbench,88.40,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+qwen3-vl-2b,refcocog-val,81.20,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+qwen3-vl-2b,refcoco-val,87.60,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+qwen3-vl-2b,refcocop-val,79.00,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,
+qwen3-vl-2b,muirbench,47.40,Perceptron,https://www.perceptron.inc/blog/introducing-isaac-0-2,

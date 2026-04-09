@@ -13,16 +13,10 @@ qwen3-vl-4b,Qwen3-VL-4B,4438,text+image,Qwen,https://arxiv.org/pdf/2511.21631
 qwen3-vl-4b-thinking,Qwen3-VL-4B (Thinking),4438,text+image,Qwen,https://arxiv.org/pdf/2511.21631
 qwen3-vl-8b,Qwen3-VL-8B,8767,text+image,Qwen,https://arxiv.org/pdf/2511.21631
 qwen3-vl-8b-thinking,Qwen3-VL-8B (Thinking),8767,text+image,Qwen,https://arxiv.org/pdf/2511.21631
-qwen3.5-397b-a17b,Qwen3.5-397B-A17B,403398,text+image,Qwen,https://qwen.ai/blog?id=qwen3.5
-qwen3.5-122b-a10b,Qwen3.5-122B-A10B,125086,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B
-qwen3.5-35b-a3b,Qwen3.5-35B-A3B,35952,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B
-qwen3.5-27b,Qwen3.5-27B,27781,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B
-qwen3.5-2b,Qwen3.5-2B,2274,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B
-qwen3.5-2b-thinking,Qwen3.5-2B (Thinking),2274,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B
-qwen3.5-4b,Qwen3.5-4B,4660,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B
-qwen3.5-0.8b,Qwen3.5-0.8B,873,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B
-qwen3.5-0.8b-thinking,Qwen3.5-0.8B (Thinking),873,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B
-qwen3.5-9b,Qwen3.5-9B,9653,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B
+molmoe-1b,MolmoE-1B,1200,text+image,Allen Institute for AI,https://arxiv.org/abs/2409.17146
+molmo-7b-o,Molmo-7B-O,7300,text+image,Allen Institute for AI,https://arxiv.org/abs/2409.17146
+molmo-7b-d,Molmo-7B-D,7600,text+image,Allen Institute for AI,https://arxiv.org/abs/2409.17146
+molmo-72b,Molmo-72B,72000,text+image,Allen Institute for AI,https://arxiv.org/abs/2409.17146
 molmo2-4b,Molmo2-4B,4851,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
 molmo2-8b,Molmo2-8B,8662,text+image,Allen Institute for AI,http://arxiv.org/abs/2601.10611
 moondream3-preview,Moondream3 (Preview),9269,text+image,Moondream,https://huggingface.co/moondream/moondream3-preview
@@ -39,7 +33,7 @@ internvl3.5-38b,InternVL3.5 38B,38390,text+image,InternVL,https://arxiv.org/pdf/
 internvl3.5-20b-a4b,InternVL3.5 20B-A4B,21233,text+image,InternVL,https://arxiv.org/pdf/2508.18265
 internvl3.5-30b-a3b,InternVL3.5 30B-A3B,30849,text+image,InternVL,https://arxiv.org/pdf/2508.18265
 internvl3.5-241b-a28b,InternVL3.5 241B-A28B,240699,text+image,InternVL,https://arxiv.org/pdf/2508.18265
-smolvlm2-2.2b,SmolVLM2 2.2B,2247,text+image,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct
+smolvlm2-2.2b,SmolVLM2 2.2B,2247,text+image+video,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct
 smolvlm2-500m,SmolVLM2 500M,507,text+image+video,HuggingFace,https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct
 penguin-vl-2b,Penguin-VL-2B,2168,text+image,Tencent AI,https://huggingface.co/tencent/Penguin-VL-2B
 penguin-vl-8b,Penguin-VL-8B,8653,text+image,Tencent AI,https://huggingface.co/tencent/Penguin-VL-8B
@@ -50,3 +44,35 @@ llava-ov-1.5-4b,LLaVA OneVision-1.5-4B,4742,text+image,LLaVA,https://huggingface
 llava-ov-1.5-8b,LLaVA OneVision-1.5-8B,8527,text+image,LLaVA,https://huggingface.co/lmms-lab/LLaVA-OneVision-1.5-8B-Instruct
 phi-4-reasoning-vision-15b,Phi-4 Reasoning Vision 15B,15120,text+image,Microsoft,https://arxiv.org/pdf/2603.03975
 nemotron-nano-v2-vl-12b-reasoning,Nemotron Nano V2 VL Reasoning,13182,text+image,NVIDIA,https://arxiv.org/abs/2511.03929
+falcon-perception-600m,Falcon Perception 600M,600,text+image,TII,https://github.com/tiiuae/Falcon-Perception
+falconocr-300m,FalconOCR 300M,300,text+image,TII,https://arxiv.org/abs/2603.27365
+glm-4.1v-9b,GLM-4.1V-9B,9000,text+image,Zhipu AI,https://arxiv.org/abs/2508.18265
+kimi-vl-a3b-2506,Kimi-VL-A3B-2506,16000,text+image,Moonshot AI,https://arxiv.org/abs/2508.18265
+glm-4.5v,GLM-4.5V,106000,text+image,Zhipu AI,https://arxiv.org/abs/2508.18265
+step3-321b-a38b,Step3-321B-A38B,321000,text+image,StepFun,https://arxiv.org/abs/2508.18265
+gpt-5,GPT-5,,text+image,OpenAI,https://arxiv.org/abs/2508.18265
+internvl3-1b,InternVL3-1B,1000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+internvl3-2b,InternVL3-2B,2000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+internvl2-5-4b,InternVL2.5-4B,4000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+mimo-vl-rl-8b,MiMo-VL-RL-8B,8000,text+image,Xiaomi,https://arxiv.org/abs/2508.18265
+keye-vl-8b,Keye-VL-8B,8000,text+image,Keye,https://arxiv.org/abs/2508.18265
+internvl3-8b,InternVL3-8B,8000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+internvl3-14b,InternVL3-14B,14000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+internvl3-38b,InternVL3-38B,38000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+internvl3-78b,InternVL3-78B,78000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+internvl3-9b,InternVL3-9B,9000,text+image,InternVL,https://arxiv.org/abs/2508.18265
+cambrian-34b,Cambrian-34B,34000,text+image,Cambrian,https://arxiv.org/abs/2508.18265
+vila-1-5-40b,VILA-1.5-40B,40000,text+image,NVIDIA,https://arxiv.org/abs/2508.18265
+llava-onevision-7b,LLaVA-OneVision-7B,7000,text+image,LLaVA,https://arxiv.org/abs/2508.18265
+llava-onevision-72b,LLaVA-OneVision-72B,72000,text+image,LLaVA,https://arxiv.org/abs/2508.18265
+mimo-vl-7b-rl,MiMo-VL-7B-RL,7000,text+image,Xiaomi,https://huggingface.co/XiaomiMiMo/MiMo-VL-7B-RL
+qwen3.5-397b-a17b,Qwen3.5-397B-A17B,403398,text+image,Qwen,https://qwen.ai/blog?id=qwen3.5
+qwen3.5-122b-a10b,Qwen3.5-122B-A10B,125086,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-122B-A10B
+qwen3.5-35b-a3b,Qwen3.5-35B-A3B,35952,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-35B-A3B
+qwen3.5-27b,Qwen3.5-27B,27781,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-27B
+qwen3.5-2b,Qwen3.5-2B,2274,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B
+qwen3.5-2b-thinking,Qwen3.5-2B (Thinking),2274,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-2B
+qwen3.5-4b,Qwen3.5-4B,4660,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-4B
+qwen3.5-0.8b,Qwen3.5-0.8B,873,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B
+qwen3.5-0.8b-thinking,Qwen3.5-0.8B (Thinking),873,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-0.8B
+qwen3.5-9b,Qwen3.5-9B,9653,text+image,Qwen,https://huggingface.co/Qwen/Qwen3.5-9B

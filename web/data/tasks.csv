@@ -1,22 +1,67 @@
 task_id,name,metric,description,modality,n_images,mean_output_tokens,question_style,domain,capability,min_score,random_score,max_score,url
-vqav2, VQAv2,accuracy,Short visual question-answer pairs.,text & image,1,,open-ended,general,,0,0,100,https://openaccess.thecvf.com/content_cvpr_2017/papers/Goyal_Making_the_v_CVPR_2017_paper.pdf
-docvqa,
+vqav2, VQAv2,accuracy,Short visual question-answer pairs.,text & image,1,,open-ended,general,perception+reasoning,0,0,100,https://openaccess.thecvf.com/content_cvpr_2017/papers/Goyal_Making_the_v_CVPR_2017_paper.pdf
+docvqa,DocVQA,anls,Visual question answering on document images requiring text reading and layout understanding.,text & image,1,,open-ended,documents,ocr,0,,100,https://openaccess.thecvf.com/content/WACV2021/papers/Mathew_DocVQA_A_Dataset_for_VQA_on_Document_Images_WACV_2021_paper.pdf
 chartqa,ChartQA,relaxed accuracy,"Short-answer questions about bar charts, line chart, pie charts, etc.",text & image,1,,short answer,charts,perception+reasoning,0,100,0,https://arxiv.org/pdf/2203.10244
+ai2d,AI2D,accuracy,Diagram question answering over annotated scientific and instructional figures.,text & image,1,,short answer,diagrams,perception+reasoning,0,0,100,https://ai2-website.s3.amazonaws.com/publications/Diagrams_ECCV2016.pdf
 textvqa,TextVQA,accuracy,Short visual questions that require reading from an image,text & image,1,,open-ended,general,ocr,0,0,100,https://arxiv.org/abs/1904.08920
-ocrbench
+ocrbench,OCRBench,score,Comprehensive OCR benchmark across text-related visual tasks for multimodal models.,text & image,1,,short answer,general,ocr,0,,1000,https://arxiv.org/abs/2305.07895
 mme,MME,accuracy & accuracy+,Shallow perception-based yes/no questions across a variety of capabilities,text & image,1,,yes/no,general,perception+cognition,0,1050,2800,https://arxiv.org/pdf/2306.13394
-blink,BLINK,accuracy,Multiple choice questions about images that can be solved "within a blink" by humans.,text & image,2,,mcq,general,perception,0,38.09,100,https://arxiv.org/pdf/2404.12390
+blink,BLINK,accuracy,"Multiple choice questions about images that can be solved ""within a blink"" by humans.",text & image,2,,mcq,general,perception,0,38.09,100,https://arxiv.org/pdf/2404.12390
 mmmu,MMMU,accuracy,Multiple choice interleaved visual question answering across six disciplines and 30 college subjects.,text & image,1,,mcq,general,reasoning,0,22.1,100,https://mmmu-benchmark.github.io/
 mmmu-pro,MMMU-Pro,accuracy,"Multiple choice interleaved visual question answering, filtered from MMMU.",text & image,1,,mcq,general,reasoning,0,12.8,100,https://mmmu-benchmark.github.io/
 infovqa,InfoVQA,accuracy,Infographic visual question answering,text & image,1,,open-ended,infographics,ocr,0,0,100,https://arxiv.org/pdf/2104.12756
 zerobench,ZeroBench,accuracy,100 very challenging VQA tasks,text & image,1,,short answer,general,reasoning,0,0,100,https://zerobench.github.io/
-mathvista
-simplevqa
-mmbench,MMBench
-seedbench,SEEDBench,accuracy,,text & image,1,,mcq,general,,0,25,100,https://arxiv.org/abs/2307.16125
+mathvista,MathVista,accuracy,Benchmark for mathematical reasoning in visual contexts.,text & image,1,,mixed,math,reasoning,0,0,100,https://mathvista.github.io/
+simplevqa,SimpleVQA,F-score,Multimodal factuality benchmark for short visual question answering.,text & image,1,,short answer,general,factuality,0,,100,https://arxiv.org/abs/2502.13059
+mmbench,MMBench,accuracy,Systematic bilingual multiple-choice benchmark for holistic evaluation of vision-language models.,text & image,1,,mcq,general,perception+reasoning,0,25,100,https://arxiv.org/abs/2307.06281
+seedbench,SEEDBench,accuracy,Multiple-choice benchmark for multimodal generative comprehension across spatial and temporal dimensions.,text & image,1,,mcq,general,perception+reasoning,0,25,100,https://arxiv.org/abs/2307.16125
 pope,POPE,f1,,text & image,1,,yes/no,general,visual hallucination,0,50,100,https://arxiv.org/abs/2305.10355
 mmstar,MMStar,accuracy,Multiple choice VQA where the image is required to answer the question,text & image,1,,mcq,,perception+reasoning,0,25,100,https://mmstar-benchmark.github.io/
 rwqa,RealWorldQA,accuracy,,text & image,1,,mcq,general,reasoning,0,37.7,100,https://huggingface.co/blog/KennyUTC/realworldqa
-mmmb,MMMB,
-mm-ifeval,MM-IFEval,
+countbench,CountBenchQA,accuracy,Natural-image counting question answering benchmark used to evaluate counting accuracy.,text & image,1,,short answer,general,counting,0,0,100,https://arxiv.org/abs/2407.07726
+pixmo-count,PixMo-Count,accuracy,Counting question answering benchmark on natural web images introduced with PixMo.,text & image,1,,short answer,general,counting,0,0,100,https://arxiv.org/abs/2409.17146
+mmmb,MMMB,accuracy,Massive multilingual multimodal benchmark spanning 6 languages and 15 categories.,text & image,1,,mcq,general,multilingual,0,25,100,https://arxiv.org/abs/2406.02539
+mm-ifeval,MM-IFEval,score,Multimodal instruction-following benchmark with textual and perception-level constraints.,text & image,1,,instruction following,general,instruction following,0,,100,https://arxiv.org/abs/2504.07957
+mmvet,MMVet,score,"Open-ended multimodal benchmark that evaluates integrated vision-language capabilities across recognition, OCR, knowledge, spatial, and reasoning tasks.",text & image,1,,open-ended,general,reasoning+perception,0,,100,https://arxiv.org/abs/2308.02490
+saco-macro-f1,SA-Co/Gold,macro F1,High-quality promptable concept segmentation benchmark with triple annotations across 7 image domains.,text & image,1,,segmentation,general,segmentation,0,0,100,https://huggingface.co/datasets/facebook/SACo-Gold
+pbench-macro-f1,PBench,macro F1,"Perception benchmark for compositional prompts, OCR, spatial constraints, relations, and dense scenes.",text & image,1,,segmentation,general,segmentation+reasoning,0,0,100,https://arxiv.org/abs/2603.27365
+refcocom-macro-f1,RefCOCO-M,macro F1,Refined referring expression segmentation benchmark based on the RefCOCO validation split with pixel-accurate masks.,text & image,1,,segmentation,general,grounding,0,0,100,https://huggingface.co/datasets/moondream/refcoco-m
+refcocom-bbox-acc,RefCOCO-M (bbox),accuracy,Referring expression grounding benchmark on RefCOCO-M that measures correct object localization with bounding boxes.,text & image,1,,grounding,general,grounding,0,0,100,https://huggingface.co/datasets/Voxel51/RefCOCO-M
+olmocr,olmOCR,accuracy,Document OCR benchmark with diverse input conditions and binary correctness checks.,text & image,1,,ocr,documents,ocr,0,0,100,https://arxiv.org/abs/2502.18443
+omnidocbench,OmniDocBench,overall,"Full-page document parsing benchmark with text, formula, and table evaluation.",text & image,1,,ocr,documents,ocr,0,0,100,https://arxiv.org/abs/2412.07626
+mtvqa,MTVQA,accuracy,Multilingual visual question answering benchmark.,text & image,1,,open-ended,general,multilingual,0,,100,https://arxiv.org/abs/2405.11985
+wildvision,WildVision,win rate,Preference-based benchmark for real-world visual assistant quality.,text & image,1,,open-ended,general,reasoning,0,,100,https://arxiv.org/abs/2406.11069
+mme-realworld-en,MME-RealWorld (EN),accuracy,Real-world multimodal evaluation subset from MME in English.,text & image,1,,yes/no,general,reasoning,0,,100,https://arxiv.org/abs/2408.13257
+hallusionbench,HallusionBench,accuracy,Hallucination benchmark for visual reasoning and consistency.,text & image,1,,open-ended,general,visual hallucination,0,,100,https://arxiv.org/abs/2310.14566
+mvbench,MVBench,accuracy,Video understanding benchmark covering diverse temporal reasoning skills.,text & video,video,,mcq,general,perception+reasoning,0,,100,https://arxiv.org/abs/2311.17005
+video-mme-wo-sub,Video-MME (w/o subtitles),accuracy,Video understanding benchmark evaluated without subtitles.,text & video,video,,mcq,general,perception+reasoning,0,,100,https://arxiv.org/abs/2405.21075
+mlvu,MLVU,score,Multi-level video understanding benchmark.,text & video,video,,mcq,general,perception+reasoning,0,,100,https://arxiv.org/abs/2406.04264
+longvideobench,LongVideoBench,accuracy,Long-form video understanding benchmark.,text & video,video,,mcq,general,perception+reasoning,0,,100,https://arxiv.org/abs/2407.15754
+mathvision,MathVision,accuracy,Mathematical visual reasoning benchmark.,text & image,1,,mixed,math,reasoning,0,,100,https://arxiv.org/abs/2402.14804
+mathverse-vision,MathVerse (vision-only),accuracy,Vision-only split of the MathVerse benchmark.,text & image,1,,mixed,math,reasoning,0,,100,https://arxiv.org/abs/2403.14624
+dynamath,DynaMath (worst case),accuracy,Dynamic mathematical reasoning benchmark with worst-case evaluation.,text & image,1,,mixed,math,reasoning,0,,100,https://arxiv.org/abs/2411.00836
+wemath,WeMath,accuracy,Mathematical reasoning benchmark for multimodal models.,text & image,1,,mixed,math,reasoning,0,,100,https://huggingface.co/datasets/UWNSL/wemath
+olympiadbench,OlympiadBench,accuracy,Olympiad-style science and math reasoning benchmark.,text & image,1,,mixed,math,reasoning,0,,100,https://arxiv.org/abs/2402.14008
+logicvista,LogicVista,accuracy,Visual logical reasoning benchmark.,text & image,1,,mixed,general,reasoning,0,,100,https://arxiv.org/abs/2407.04973
+screenspot,ScreenSpot,accuracy,GUI grounding benchmark on screenshots.,text & image,1,,grounding,general,grounding,0,,100,https://huggingface.co/datasets/rootsautomation/ScreenSpot
+screenspot-v2,ScreenSpot-v2,accuracy,Second version of the ScreenSpot GUI grounding benchmark.,text & image,1,,grounding,general,grounding,0,,100,https://huggingface.co/datasets/OS-Copilot/ScreenSpot-v2
+vsi-bench,VSI-Bench,accuracy,Spatial reasoning benchmark for embodied multimodal models.,text & image,1,,mcq,general,reasoning,0,,100,https://arxiv.org/abs/2412.14171
+erqa,ERQA,accuracy,Embodied question answering benchmark.,text & image,1,,mcq,general,reasoning,0,,100,https://huggingface.co/datasets/FlagEval/ERQA
+space-10,SpaCE-10,accuracy,Embodied spatial reasoning benchmark.,text & image,1,,mcq,general,reasoning,0,,100,https://arxiv.org/abs/2506.07966
+omnispatial,OmniSpatial,accuracy,Omnidirectional spatial understanding benchmark.,text & image,1,,mcq,general,reasoning,0,,100,https://arxiv.org/abs/2506.03135
+charxiv-rq,CharXiv (RQ),accuracy,Chart understanding benchmark on research questions.,text & image,1,,open-ended,charts,ocr+reasoning,0,,100,https://arxiv.org/abs/2406.18380
+charxiv-dq,CharXiv (DQ),accuracy,Chart understanding benchmark on data questions.,text & image,1,,open-ended,charts,ocr+reasoning,0,,100,https://arxiv.org/abs/2406.18380
+vcr-en-easy-em,VCR-EN-Easy (EM),exact match,Easy English VCR benchmark scored by exact match.,text & image,1,,open-ended,general,reasoning,0,,100,https://arxiv.org/abs/1811.10830
+vcr-en-easy-jaccard,VCR-EN-Easy (Jaccard),jaccard,Easy English VCR benchmark scored by Jaccard overlap.,text & image,1,,open-ended,general,reasoning,0,,100,https://arxiv.org/abs/1811.10830
+mmiu,MMIU,accuracy,Multi-image understanding benchmark.,text & image,2+,,mcq,general,perception+reasoning,0,,100,https://arxiv.org/abs/2408.02718
+muirbench,MuirBench,accuracy,Multi-image reasoning benchmark with compositional questions.,text & image,2+,,mixed,general,perception+reasoning,0,,100,https://arxiv.org/abs/2406.09411
+mmt-bench,MMT-Bench,accuracy,Multi-image multimodal benchmark.,text & image,2+,,mcq,general,perception+reasoning,0,,100,https://arxiv.org/abs/2404.16006
+mirb,MIRB,score,Multi-image reasoning benchmark average score.,text & image,2+,,mixed,general,perception+reasoning,0,,100,https://arxiv.org/abs/2406.12742
+r-bench-dis,R-Bench (dis),accuracy,Real-world benchmark for distributed scenario understanding.,text & image,1,,mixed,general,reasoning,0,,100,https://arxiv.org/abs/2410.05474
+refcoco-val,RefCOCO (val),accuracy,RefCOCO visual grounding validation split.,text & image,1,,grounding,general,grounding,0,,100,https://huggingface.co/datasets/PaDT-MLLM/RefCOCO
+refcocop-val,RefCOCO+ (val),accuracy,RefCOCO+ visual grounding validation split.,text & image,1,,grounding,general,grounding,0,,100,https://huggingface.co/datasets/PaDT-MLLM/RefCOCO
+refcocog-val,RefCOCOg (val),accuracy,RefCOCOg visual grounding validation split.,text & image,1,,grounding,general,grounding,0,,100,https://huggingface.co/datasets/PaDT-MLLM/RefCOCO
+mmbench-video,MMBench-Video,score,Video benchmark based on MMBench.,text & video,video,,mcq,general,perception+reasoning,0,,3,https://arxiv.org/abs/2406.14515
+crpe-relation,CRPE (relation),accuracy,Relation-focused hallucination benchmark.,text & image,1,,mcq,general,visual hallucination,0,,100,https://huggingface.co/datasets/OpenGVLab/CRPE
 vlmsblind, VLMs are Blind,accuracy,,text & image,1,,short answer,synthetic,perception,0,24,100,https://arxiv.org/pdf/2407.06581
+multilingual-mmbench,Multilingual MMBench,accuracy,"Average score across the EN, ZH, PT, AR, TR, and RU splits of multilingual MMBench.",text & image,1,,mcq,general,multilingual,0,,100,https://arxiv.org/abs/2307.06281

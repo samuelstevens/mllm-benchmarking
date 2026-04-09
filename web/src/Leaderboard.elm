@@ -375,6 +375,90 @@ getTaskMetadataValues field task =
         |> List.filter (\v -> not (String.isEmpty v))
 
 
+primaryCapability : ValidTask -> String
+primaryCapability task =
+    getTaskMetadataValues "capability" task
+        |> List.head
+        |> Maybe.withDefault "zzz"
+        |> String.toLower
+
+
+taskSortName : ValidTask -> String
+taskSortName task =
+    let
+        trimmedName =
+            String.trim task.name
+    in
+    if String.isEmpty trimmedName then
+        String.toLower task.id
+
+    else
+        String.toLower trimmedName
+
+
+sortTasksByCapability : List ValidTask -> List ValidTask
+sortTasksByCapability tasks =
+    List.sortWith
+        (\a b ->
+            compare
+                ( primaryCapability a, taskSortName a )
+                ( primaryCapability b, taskSortName b )
+        )
+        tasks
+
+
+type alias CapabilityTheme =
+    { bg : String
+    , text : String
+    , dot : String
+    }
+
+
+capabilityThemeForKey : String -> CapabilityTheme
+capabilityThemeForKey key =
+    case String.toLower key of
+        "counting" ->
+            { bg = "#FFF1E6", text = "#C05621", dot = "#DD6B20" }
+
+        "factuality" ->
+            { bg = "#E6FFFA", text = "#0F766E", dot = "#14B8A6" }
+
+        "grounding" ->
+            { bg = "#FFF1F2", text = "#BE123C", dot = "#F43F5E" }
+
+        "instruction following" ->
+            { bg = "#EEF2FF", text = "#4338CA", dot = "#6366F1" }
+
+        "multilingual" ->
+            { bg = "#F5F3FF", text = "#7C3AED", dot = "#8B5CF6" }
+
+        "ocr" ->
+            { bg = "#ECFDF5", text = "#047857", dot = "#10B981" }
+
+        "perception" ->
+            { bg = "#EFF6FF", text = "#1D4ED8", dot = "#3B82F6" }
+
+        "reasoning" ->
+            { bg = "#FEF3C7", text = "#B45309", dot = "#F59E0B" }
+
+        "segmentation" ->
+            { bg = "#F0FDF4", text = "#15803D", dot = "#22C55E" }
+
+        "visual hallucination" ->
+            { bg = "#FEF2F2", text = "#B91C1C", dot = "#EF4444" }
+
+        "cognition" ->
+            { bg = "#F9FAFB", text = "#4B5563", dot = "#6B7280" }
+
+        _ ->
+            { bg = "#F9FAFB", text = "#4B5563", dot = "#9CA3AF" }
+
+
+capabilityTheme : ValidTask -> CapabilityTheme
+capabilityTheme task =
+    capabilityThemeForKey (primaryCapability task)
+
+
 orgPalette : List String
 orgPalette =
     [ "#332288"
@@ -510,17 +594,12 @@ tryFinalize state model =
 
                 ranges =
                     allParamRanges
-                        |> List.filter (\( _, high ) -> high <= 12000)
                         |> List.map paramRangeToString
                         |> List.append ["unknown"]
-
-                defaultHidden =
-                    Set.fromList [ "mme", "zerobench", "vlmsblind" ]
 
                 tasks =
                     leaderboard.tasks
                         |> List.map .id
-                        |> List.filter (\id -> not (Set.member id defaultHidden))
                         |> Set.fromList
             in
             ( { model
@@ -581,11 +660,14 @@ parseAndValidate rawModels rawTasks rawScores =
         ( scores, scoreWarnings ) =
             parseScores rawScores
 
+        sortedTasks =
+            sortTasksByCapability tasks
+
         modelIds =
             Set.fromList (List.map .id models)
 
         taskIds =
-            Set.fromList (List.map .id tasks)
+            Set.fromList (List.map .id sortedTasks)
 
         -- Check for dangling references
         danglingModelWarnings =
@@ -635,7 +717,7 @@ parseAndValidate rawModels rawTasks rawScores =
                     )
 
         noScoreTaskWarnings =
-            tasks
+            sortedTasks
                 |> List.filterMap
                     (\t ->
                         if Set.member t.id scoredTaskIds then
@@ -739,7 +821,7 @@ parseAndValidate rawModels rawTasks rawScores =
             Dict.fromList (List.map (\m -> ( m.id, m.name )) models)
 
         taskNameDict =
-            Dict.fromList (List.map (\t -> ( t.id, t.name )) tasks)
+            Dict.fromList (List.map (\t -> ( t.id, t.name )) sortedTasks)
 
         providerWarnings =
             Dict.toList scoresByModel
@@ -798,7 +880,7 @@ parseAndValidate rawModels rawTasks rawScores =
             models |> List.concatMap checkModelFields
 
         taskHints =
-            tasks |> List.concatMap checkTaskFields
+            sortedTasks |> List.concatMap checkTaskFields
 
         scoreHints =
             validScores |> List.concatMap checkScoreFields
@@ -806,7 +888,7 @@ parseAndValidate rawModels rawTasks rawScores =
         allHints =
             modelHints ++ taskHints ++ scoreHints
     in
-    ( { models = models, tasks = tasks, scoresByModel = scoresByModel, orgColors = orgColors }
+    ( { models = models, tasks = sortedTasks, scoresByModel = scoresByModel, orgColors = orgColors }
     , allWarnings
     , allHints
     )
@@ -1225,6 +1307,31 @@ viewCheckbox checked msg label =
         ]
 
 
+viewTaskCheckbox : Bool -> Msg -> ValidTask -> Html Msg
+viewTaskCheckbox checked msg task =
+    let
+        theme =
+            capabilityTheme task
+    in
+    Html.label [ HA.class "flex items-center gap-1.5 cursor-pointer select-none whitespace-nowrap" ]
+        [ Html.input
+            [ HA.type_ "checkbox"
+            , HA.checked checked
+            , Html.Events.onClick msg
+            , HA.class "cursor-pointer"
+            ]
+            []
+        , Html.span
+            [ HA.class "inline-block w-3 h-3 rounded-full flex-shrink-0"
+            , HA.style "background-color" theme.dot
+            ]
+            []
+        , Html.span
+            [ HA.style "color" theme.text ]
+            [ Html.text task.name ]
+        ]
+
+
 viewOrgCheckbox : Dict String String -> Bool -> Msg -> String -> Html Msg
 viewOrgCheckbox orgColors checked msg org =
     Html.label [ HA.class "flex items-center gap-1.5 cursor-pointer select-none whitespace-nowrap" ]
@@ -1246,7 +1353,10 @@ viewOrgCheckbox orgColors checked msg org =
 
 viewFieldset : String -> Bool -> Msg -> Int -> Int -> List (Html Msg) -> Html Msg
 viewFieldset title isOpen toggleMsg selected total children =
-    Html.div [ HA.class "inline-block" ]
+    Html.div
+        [ HA.class "inline-block relative"
+        , HA.style "z-index" (if isOpen then "70" else "1")
+        ]
         [ Html.button
             [ HA.class "px-3 py-1.5 text-sm border rounded cursor-pointer select-none hover:bg-gray-50 flex items-center gap-1"
             , Html.Events.onClick toggleMsg
@@ -1267,7 +1377,10 @@ viewFieldset title isOpen toggleMsg selected total children =
                 )
             ]
         , if isOpen then
-            Html.div [ HA.class "absolute z-10 mt-1 p-2 bg-white border rounded shadow-lg flex flex-col gap-1 text-sm" ]
+            Html.div
+                [ HA.class "absolute mt-1 p-2 bg-white border rounded shadow-lg flex flex-col gap-1 text-sm"
+                , HA.style "z-index" "80"
+                ]
                 children
 
           else
@@ -1315,7 +1428,10 @@ viewFilters model lb =
             Set.size model.paramRangesSelected
 
     in
-    Html.div [ HA.class "mx-4 mb-3 flex flex-wrap gap-2 items-start" ]
+    Html.div
+        [ HA.class "mx-4 mb-3 flex flex-wrap gap-2 items-start relative"
+        , HA.style "z-index" "60"
+        ]
         [ viewFieldset "Orgs"
             model.orgsOpen
             (ToggleFieldset OrgsFieldset)
@@ -1358,7 +1474,7 @@ viewFilters model lb =
             (List.length lb.tasks)
             (List.map
                 (\task ->
-                    viewCheckbox (Set.member task.id model.tasksSelected) (ToggleTask task.id) task.name
+                    viewTaskCheckbox (Set.member task.id model.tasksSelected) (ToggleTask task.id) task
                 )
                 lb.tasks
             )
@@ -1385,8 +1501,11 @@ viewLeaderboard model lb =
     in
     Html.div []
         [ viewFilters model lb
-        , Html.div [ HA.class "overflow-x-auto" ]
-            [ Html.table [ HA.class "w-full text-sm" ]
+        , Html.div
+            [ HA.class "overflow-x-auto overflow-y-auto"
+            , HA.style "max-height" "calc(100dvh - 12rem)"
+            ]
+            [ Html.table [ HA.class "w-max min-w-full text-sm border-separate border-spacing-0" ]
                 [ viewHeader model filteredTasks
                 , Html.tbody [ HA.class "border-b" ]
                     (List.map (viewModelRow model filteredLb) sorted)
@@ -1395,29 +1514,74 @@ viewLeaderboard model lb =
         ]
 
 
+stickyModelWidth : String
+stickyModelWidth =
+    "14rem"
+
+
+stickyParamsWidth : String
+stickyParamsWidth =
+    "5rem"
+
+
+stickyColumnAttrs : String -> String -> Int -> List (Html.Attribute msg)
+stickyColumnAttrs leftOffset widthRem zIndex =
+    [ HA.style "position" "sticky"
+    , HA.style "left" leftOffset
+    , HA.style "min-width" widthRem
+    , HA.style "width" widthRem
+    , HA.style "max-width" widthRem
+    , HA.style "z-index" (String.fromInt zIndex)
+    ]
+
+
+stickyDividerAttr : Html.Attribute msg
+stickyDividerAttr =
+    HA.style "box-shadow" "1px 0 0 0 rgb(229 231 235)"
+
+
+stickyHeaderAttrs : Int -> List (Html.Attribute msg)
+stickyHeaderAttrs zIndex =
+    [ HA.style "position" "sticky"
+    , HA.style "top" "0"
+    , HA.style "z-index" (String.fromInt zIndex)
+    ]
+
+
 viewHeader : Model -> List ValidTask -> Html Msg
 viewHeader model tasks =
     Html.thead [ HA.class "border-t border-b" ]
         [ Html.tr []
             (Html.th
-                [ HA.class (sortHeaderClass model "model" "px-2 py-1 text-left")
-                , Html.Events.onClick (Sort "model")
-                ]
+                (([ HA.class (sortHeaderClass model "model" "px-2 py-1 text-left whitespace-nowrap bg-white")
+                  , Html.Events.onClick (Sort "model")
+                  ]
+                    ++ stickyHeaderAttrs 50
+                    ++ stickyColumnAttrs "0" stickyModelWidth 40
+                 )
+                )
                 [ sortIndicator model "model"
                 , sortHeaderLabel model "model" "Model"
                 ]
                 :: Html.th
-                    [ HA.class (sortHeaderClass model "params" "px-2 py-1 text-right")
-                    , Html.Events.onClick (Sort "params")
-                    ]
+                    (([ HA.class (sortHeaderClass model "params" "px-2 py-1 text-right whitespace-nowrap bg-white")
+                      , Html.Events.onClick (Sort "params")
+                      , stickyDividerAttr
+                      ]
+                        ++ stickyHeaderAttrs 49
+                        ++ stickyColumnAttrs stickyModelWidth stickyParamsWidth 39
+                     )
+                    )
                     [ sortIndicator model "params"
                     , sortHeaderLabel model "params" "Params"
                     ]
                 :: Html.th
-                    [ HA.class (sortHeaderClass model "mean" "px-2 py-1 text-right")
-                    , Html.Events.onClick (Sort "mean")
-                    , HA.title "Mean score across selected tasks (only tasks with a score)"
-                    ]
+                    ([ HA.class (sortHeaderClass model "mean" "px-2 py-1 text-right whitespace-nowrap bg-white")
+                     , Html.Events.onClick (Sort "mean")
+                     , HA.title "Mean score across selected tasks (only tasks with a score)"
+                     ]
+                        ++ stickyHeaderAttrs 30
+                    )
                     [ sortIndicator model "mean"
                     , sortHeaderLabel model "mean" "Mean"
                     ]
@@ -1428,11 +1592,37 @@ viewHeader model tasks =
 
 viewHeaderCell : Model -> ValidTask -> Html Msg
 viewHeaderCell model task =
+    let
+        theme =
+            capabilityTheme task
+
+        tooltipParts =
+            [ String.trim task.description
+            , if String.isEmpty (String.trim task.capability) then
+                ""
+
+              else
+                "Capability: " ++ String.trim task.capability
+            , if String.isEmpty (String.trim task.metric) then
+                ""
+
+              else
+                "Metric: " ++ String.trim task.metric
+            ]
+                |> List.filter (\part -> not (String.isEmpty part))
+
+        tooltip =
+            String.join " | " tooltipParts
+    in
     Html.th
-        [ HA.class (sortHeaderClass model task.id "pl-0 pr-2 py-1 text-right")
-        , Html.Events.onClick (Sort task.id)
-        , HA.title (task.description ++ " (" ++ task.metric ++ ")")
-        ]
+        ([ HA.class (sortHeaderClass model task.id "pl-2 pr-2 py-1 text-right whitespace-nowrap")
+         , Html.Events.onClick (Sort task.id)
+         , HA.title tooltip
+         , HA.style "background-color" theme.bg
+         , HA.style "color" theme.text
+         ]
+            ++ stickyHeaderAttrs 30
+        )
         [ sortIndicator model task.id
         , sortHeaderLabel model task.id task.name
         , if String.isEmpty task.url then
@@ -1442,7 +1632,8 @@ viewHeaderCell model task =
             Html.a
                 [ HA.href task.url
                 , HA.target "_blank"
-                , HA.class "ml-1 text-blue-600 underline"
+                , HA.class "ml-1 underline"
+                , HA.style "color" theme.text
                 , Html.Events.stopPropagationOn "click" (Json.Decode.succeed ( NoOp, False ))
                 ]
                 [ Html.text "\u{2197}" ]
@@ -1495,7 +1686,7 @@ viewModelRow appModel lb m =
         modelScores =
             Dict.get m.id lb.scoresByModel |> Maybe.withDefault Dict.empty
     in
-    Html.tr [ HA.class "hover:bg-gray-100 transition-colors" ]
+    Html.tr [ HA.class "group hover:bg-gray-100 transition-colors" ]
         (let
             orgColorClass =
                 orgColor lb.orgColors m.org
@@ -1509,18 +1700,28 @@ viewModelRow appModel lb m =
 
             nameEl =
                 if String.isEmpty m.link then
-                    Html.text m.name
+                    Html.span [ HA.class "truncate", HA.title m.name ] [ Html.text m.name ]
 
                 else
-                    Html.a [ HA.href m.link, HA.class "underline", HA.target "_blank" ] [ Html.text m.name ]
+                    Html.a [ HA.href m.link, HA.class "underline truncate", HA.target "_blank", HA.title m.name ] [ Html.text m.name ]
          in
-         Html.td [ HA.class "px-2 py-1 text-left" ]
-            [ Html.span [ HA.class "flex items-center" ]
+         Html.td
+            ([ HA.class "px-2 py-1 text-left bg-white group-hover:bg-gray-100"
+             ]
+                ++ stickyColumnAttrs "0" stickyModelWidth 20
+            )
+            [ Html.span [ HA.class "flex items-center min-w-0" ]
                 [ orgDot, nameEl ]
             ]
-            :: Html.td [ HA.class "px-2 py-1 text-right font-mono text-gray-500" ]
+            :: Html.td
+                (([ HA.class "px-2 py-1 text-right font-mono text-gray-500 whitespace-nowrap bg-white group-hover:bg-gray-100"
+                  , stickyDividerAttr
+                  ]
+                    ++ stickyColumnAttrs stickyModelWidth stickyParamsWidth 19
+                 )
+                )
                 [ Html.text (formatParams m.paramsM) ]
-            :: Html.td [ HA.class "px-2 py-1 text-right font-mono font-medium" ]
+            :: Html.td [ HA.class "px-2 py-1 text-right font-mono font-medium whitespace-nowrap" ]
                 [ case meanScore lb m.id of
                     Just avg ->
                         Html.text (Round.round 1 avg)
@@ -1554,6 +1755,9 @@ viewModelRow appModel lb m =
 viewScoreCell : Model -> Leaderboard -> ValidTask -> ValidModel -> List ValidScore -> Maybe ValidScore -> Html Msg
 viewScoreCell appModel lb task m scoreList displayScore =
     let
+        hasScores =
+            not (List.isEmpty scoreList)
+
         hasMultiple =
             List.length scoreList >= 2
 
@@ -1593,7 +1797,7 @@ viewScoreCell appModel lb task m scoreList displayScore =
                     else
                         ""
                    )
-                ++ (if hasMultiple then
+                ++ (if hasScores then
                         " relative cursor-help"
 
                     else
@@ -1601,7 +1805,7 @@ viewScoreCell appModel lb task m scoreList displayScore =
                    )
 
         hoverAttrs =
-            if hasMultiple then
+            if hasScores then
                 [ Html.Events.onMouseEnter (HoverCell (Just ( m.id, task.id )))
                 , Html.Events.onMouseLeave (HoverCell Nothing)
                 ]
@@ -1616,7 +1820,7 @@ viewScoreCell appModel lb task m scoreList displayScore =
         ([ case displayScore of
             Just s ->
                 Html.div [ HA.class "flex items-center justify-end gap-1" ]
-                    [ if hasMultiple then
+                    [ if hasScores then
                         viewDotGrid lb.orgColors scoreList
 
                       else
@@ -1684,7 +1888,7 @@ viewScoreTooltip orgColors modelOrg cell scoreList =
                 |> Maybe.map .score
     in
     Html.div
-        [ HA.class "absolute z-10 bg-white border border-gray-300 rounded shadow-lg p-2 text-sm whitespace-nowrap"
+        [ HA.class "absolute z-50 bg-white border border-gray-300 rounded shadow-lg p-2 text-sm whitespace-nowrap"
         , HA.style "bottom" "100%"
         , HA.style "right" "0"
         , HA.style "padding-bottom" "8px"
