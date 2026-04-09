@@ -66,6 +66,8 @@ lfm2-vl-450m,blink,42.61,Liquid AI,http://arxiv.org/pdf/2511.23404,
 lfm2-vl-450m,infovqa,44.56,Liquid AI,http://arxiv.org/pdf/2511.23404,(val)
 lfm2-vl-450m,ocrbench,657,Liquid AI,http://arxiv.org/pdf/2511.23404,
 lfm2-vl-450m,mm-ifeval,33.09,Liquid AI,http://arxiv.org/pdf/2511.23404,
+lfm2-vl-450m,mmmb,54.29,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+lfm2-vl-450m,countbench,47.64,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 lfm2-vl-1.6b,mmstar,49.87,Liquid AI,http://arxiv.org/pdf/2511.23404,
 lfm2-vl-1.6b,mmbench,69.16,Liquid AI,http://arxiv.org/pdf/2511.23404,(dev)
 lfm2-vl-1.6b,rwqa,65.75,Liquid AI,http://arxiv.org/pdf/2511.23404,
@@ -126,17 +128,28 @@ internvl3.5-2b,infovqa,69.29,Liquid AI,http://arxiv.org/pdf/2511.23404,(val)
 internvl3.5-2b,ocrbench,834,Liquid AI,http://arxiv.org/pdf/2511.23404,
 internvl3.5-2b,mm-ifeval,47.31,Liquid AI,http://arxiv.org/pdf/2511.23404,
 smolvlm2-500m,mmstar,37.73,Liquid AI,http://arxiv.org/pdf/2511.23404,
+smolvlm2-500m,mmstar,38.20,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,mmbench,51.29,Liquid AI,http://arxiv.org/pdf/2511.23404,(dev)
+smolvlm2-500m,mmbench,52.32,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,(dev en)
 smolvlm2-500m,rwqa,51.37,Liquid AI,http://arxiv.org/pdf/2511.23404,
+smolvlm2-500m,rwqa,49.90,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,mme,1456,Liquid AI,http://arxiv.org/pdf/2511.23404,
 smolvlm2-500m,seedbench,60.34,Liquid AI,http://arxiv.org/pdf/2511.23404,
 smolvlm2-500m,pope,85.83,Liquid AI,http://arxiv.org/pdf/2511.23404,
+smolvlm2-500m,pope,82.67,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,mmmu,33.89,Liquid AI,http://arxiv.org/pdf/2511.23404,
+smolvlm2-500m,mmmu,34.10,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,mathvista,34.50,Liquid AI,http://arxiv.org/pdf/2511.23404,
 smolvlm2-500m,blink,40.45,Liquid AI,http://arxiv.org/pdf/2511.23404,
+smolvlm2-500m,blink,40.70,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,infovqa,24.64,Liquid AI,http://arxiv.org/pdf/2511.23404,(val)
+smolvlm2-500m,infovqa,24.64,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,(val)
 smolvlm2-500m,ocrbench,562,Liquid AI,http://arxiv.org/pdf/2511.23404,
+smolvlm2-500m,ocrbench,609,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-500m,mm-ifeval,11.56,Liquid AI,http://arxiv.org/pdf/2511.23404,
+smolvlm2-500m,mm-ifeval,11.27,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+smolvlm2-500m,mmmb,46.79,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+smolvlm2-500m,countbench,61.81,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 smolvlm2-2.2b,mmstar,46.00,Liquid AI,http://arxiv.org/pdf/2511.23404,
 smolvlm2-2.2b,mmbench,69.24,Liquid AI,http://arxiv.org/pdf/2511.23404,(dev)
 smolvlm2-2.2b,rwqa,57.50,Liquid AI,http://arxiv.org/pdf/2511.23404,
@@ -156,6 +169,17 @@ lfm2.5-vl-1.6b,infovqa,62.71,Liquid AI,https://www.liquid.ai/blog/introducing-lf
 lfm2.5-vl-1.6b,ocrbenchv2,41.44,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai#vision-and-text-benchmark-results,(val)
 lfm2.5-vl-1.6b,rwqa,64.84,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai#vision-and-text-benchmark-results,
 lfm2.5-vl-1.6b,mmmu,40.56,Liquid AI,https://www.liquid.ai/blog/introducing-lfm2-5-the-next-generation-of-on-device-ai#vision-and-text-benchmark-results,
+liquid-lfm2.5-vl-450m,mmstar,43.00,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,rwqa,58.43,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,mmbench,60.91,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,(dev en)
+liquid-lfm2.5-vl-450m,mmmu,32.67,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,pope,86.93,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,blink,43.92,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,infovqa,43.02,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,(val)
+liquid-lfm2.5-vl-450m,ocrbench,684,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,mm-ifeval,45.00,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,mmmb,68.09,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
+liquid-lfm2.5-vl-450m,countbench,73.31,Liquid AI,https://www.liquid.ai/blog/lfm2-5-vl-450m,
 qwen3.5-397b-a17b,mmmu-pro,79.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
 qwen3.5-397b-a17b,mmmu,85.0,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
 qwen3.5-397b-a17b,mmstar,78.7,Qwen,https://qwen.ai/blog?id=qwen3.5#vision-language,
